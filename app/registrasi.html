@@ -90,34 +90,35 @@
                                 <div class="row">
                                     <div class="form-group col-lg-6">
                                         <label>Username</label>
-                                        <input class="form-control">
+                                        <input class="form-control username" id="username">
                                     </div>
                                     <div class="form-group col-lg-6">
                                         <label>Password</label>
-                                        <input type="password" class="form-control">
+                                        <input type="password" id="password" class="form-control">
                                     </div>
                                     <div class="form-group col-lg-6">
                                         <label>Nama</label>
-                                        <input type="nama_masyarakat_pelapor" class="form-control">
+                                        <input type="text" id="nama_masyarakat_pelapor" class="form-control">
                                     </div>
                                     <div class="form-group col-lg-6">
                                         <label>No KTP</label>
-                                        <input type="no_ktp"class="form-control">
+                                        <input type="text" id="no_ktp" class="form-control">
                                     </div>
                                     <div class="form-group col-lg-6">
                                         <label>No Telephone</label>
-                                        <input type="telp"class="form-control">
+                                        <input type="text" id="telp" class="form-control">
                                     </div>
                                     <div class="form-group col-lg-6">
                                         <label>Alamat</label>
-                                        <input type="alamat"class="form-control">
+                                        <textarea class="form-control" id="alamat"></textarea>
+                                        <!-- <input type="alamat"class="form-control"> -->
                                     </div>
-                                    <div class="checkbox col-lg-12">
+                                    <!-- <div class="checkbox col-lg-12">
                                         <input type="checkbox" class="i-checks" checked> Sigh up for our newsletter
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="text-center">
-                                    <button type="button" name="login" class="btn btn-success btn-default loginbtn">Registrasi</button>
+                                    <button type="button" id="registrasi" onclick="simpan_registrasi();" name="registrasi" class="btn btn-success btn-default loginbtn">Registrasi</button>
                                     <button type="button" name="cancel" class="btn btn-success btn-default block">Cancel</button>
                                 </div>
                             </form>
@@ -188,6 +189,7 @@
                 var telp = $('#telp').val();
                 var alamat = $('#alamat').val();
 
+
                 $.ajax({
                     url: "http://localhost/tugas_akhir/ajax_proses_login.php",
                     type: 'POST',
@@ -205,6 +207,38 @@
                         }
                     }
                 });
+            }
+
+            function simpan_registrasi()
+            {
+                var username=$('#username').val();
+                // console.log(username);
+                var pass = $('#password').val();
+                // console.log(pass);
+                var nama_masyarakat_pelapor = $('#nama_masyarakat_pelapor').val();
+                var telp = $('#telp').val();
+                var alamat = $('#alamat').val();
+                var no_ktp = $('#no_ktp').val();
+
+                $.ajax({
+                    url: "http://localhost/bule/brian/app/ajax_proses_registrasi.php",
+                    type: 'POST',
+                    data: {username: username, pass: pass, nama : nama_masyarakat_pelapor,telp:telp,alamat:alamat,no_ktp:no_ktp},
+                    dataType: 'json',
+                    success: function (resp) {
+                        console.log(resp);
+                        if (resp.status == 'Ok') {
+                            alert('Anda Berhasil Registrasi');
+                            // window.localStorage.setItem('sudah_login', 1);
+                            // window.localStorage.setItem('id_profile,resp.data.id_profile');
+                            window.location.href = 'login.html';
+
+                        } else {
+                            alert('Registrasi Gagal');
+                        }
+                    }
+                });
+                
             }
         </script>
 
