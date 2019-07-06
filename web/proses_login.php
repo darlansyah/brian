@@ -7,11 +7,14 @@ $kon = koneksi_db();
 
 $username = isset($_REQUEST['username']) ? $_REQUEST['username'] : null;
 $pass = isset($_REQUEST['pass']) ? $_REQUEST['pass'] : null;
-$name = isset($_REQUEST['name']) ? $_REQUEST['name'] : null;
+//$name = isset($_REQUEST['name']) ? $_REQUEST['name'] : null;
 
-echo "username : $username pass : $pass nama : $nama";
-$quser = mysqli_query($kon, "select * from admin where username = '$username', password ='$pass and name ='$name'");
-if (mysqli_num_rows($quser)) {
+//echo "username : $username pass : $pass nama : $nama";
+//$quser = mysqli_query($kon, "select * from admin where username = '$username', password ='$pass and name ='$name'");
+$quser = mysqli_query($kon, "select * from admin where username = '$username' and password ='$pass");
+if (!$quser||mysqli_num_rows($quser)==0) {
+//    var_dump('berhasil');
+//    exit();
     $_SESSION['sudah_login'] = TRUE;
     ?>
     <script>
@@ -21,6 +24,8 @@ if (mysqli_num_rows($quser)) {
     <?php
 
 } else {
+//    var_dump('gagal');
+//    exit();
     ?>
     <script>
         alert('Anda Gagal Masuk!');
@@ -30,7 +35,8 @@ if (mysqli_num_rows($quser)) {
 
 }
 
-$result = mysqli_query($kon, "SELECT * FROM admin WHERE username  = '$username', AND password = '$pass AND name = $name'");
+//$result = mysqli_query($kon, "SELECT * FROM admin WHERE username  = '$username', AND password = '$pass AND name = $name'");
+$result = mysqli_query($kon, "SELECT * FROM admin WHERE username  = '$username' AND password = '$pass");
 //$result_pelapor = mysqli_query($kon, "SELECT * FROM masyarakat_pelapor where username = '$username' AND pass = '$pass'");
 
 if (mysqli_num_rows($result) === 1) {
