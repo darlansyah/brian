@@ -4,7 +4,7 @@ include '../functions/kumpulan_fungsi.php';
 $kon = koneksi_db();
 
 $username = isset($_REQUEST['username']) ? $_REQUEST['username'] : null;
-$pass = isset($_REQUEST['pass']) ? md5($_REQUEST['pass']) : null;
+$pass = isset($_REQUEST['pass']) ? $_REQUEST['pass'] : null;
 $nama = isset($_REQUEST['nama']) ? $_REQUEST['nama'] : null;
 $no_ktp = isset($_REQUEST['no_ktp']) ? $_REQUEST['no_ktp'] : null;
 $telp = isset($_REQUEST['telp']) ? $_REQUEST['telp'] : null;

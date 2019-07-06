@@ -180,41 +180,39 @@
                     ============================================ -->
         <script src="../js/main.js"></script>
         <script>
-            $('#login').click(proses_login);
-            function proses_login() {
-       //                alert('Anda Berhasil Masuk');
-                var username = $('#username').val();
-                var pass = $('#pass').val();
-                var nama_masyarakat_pelapor = $('#nama_masyarakat_pelapor').val();
-                var telp = $('#telp').val();
-                var alamat = $('#alamat').val();
-
-
-                $.ajax({
-                    url: "http://localhost/tugas_akhir/ajax_proses_login.php",
-                    type: 'POST',
-                    data: {username: username, pass: pass},
-                    dataType: 'json',
-                    success: function (resp) {
-                        if (resp.status == 'ok') {
-                            alert('Anda Berhasil Masuk');
-                            window.localStorage.setItem('sudah_login', 1);
-                            window.localStorage.setItem('id_profile,resp.data.id_profile');
-                            window.location.href = 'index.html';
-
-                        } else {
-                            alert('Username anda kurang tepat');
-                        }
-                    }
-                });
-            }
+//            $('#login').click(proses_login);
+//            function proses_login() {
+//       //                alert('Anda Berhasil Masuk');
+//                var username = $('#username').val();
+//                var pass = $('#pass').val();
+//                var nama_masyarakat_pelapor = $('#nama_masyarakat_pelapor').val();
+//                var telp = $('#telp').val();
+//                var alamat = $('#alamat').val();
+//
+//
+//                $.ajax({
+//                    url: "http://localhost/tugas_akhir/ajax_proses_login.php",
+//                    type: 'POST',
+//                    data: {username: username, pass: pass},
+//                    dataType: 'json',
+//                    success: function (resp) {
+//                        if (resp.status == 'ok') {
+//                            alert('Anda Berhasil Masuk');
+//                            window.localStorage.setItem('sudah_login', 1);
+//                            window.localStorage.setItem('id_profile,resp.data.id_profile');
+//                            window.location.href = 'index.html';
+//
+//                        } else {
+//                            alert('Username anda kurang tepat');
+//                        }
+//                    }
+//                });
+//            }
 
             function simpan_registrasi()
             {
                 var username=$('#username').val();
-                // console.log(username);
                 var pass = $('#password').val();
-                // console.log(pass);
                 var nama_masyarakat_pelapor = $('#nama_masyarakat_pelapor').val();
                 var telp = $('#telp').val();
                 var alamat = $('#alamat').val();
@@ -223,7 +221,7 @@
                 $.ajax({
                     url: "http://localhost/brian/app/ajax_proses_registrasi.php",
                     type: 'POST',
-                    data: {username: username, pass: pass, nama : nama_masyarakat_pelapor,telp:telp,alamat:alamat,no_ktp:no_ktp},
+                    data: {username: username, pass: pass, nama: nama_masyarakat_pelapor, telp: telp, alamat: alamat, no_ktp: no_ktp},
                     dataType: 'json',
                     success: function (resp) {
                         console.log(resp);

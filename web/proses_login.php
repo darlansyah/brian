@@ -40,9 +40,7 @@ $result = mysqli_query($kon, "SELECT * FROM admin WHERE username  = '$username' 
 //$result_pelapor = mysqli_query($kon, "SELECT * FROM masyarakat_pelapor where username = '$username' AND pass = '$pass'");
 
 if (!$result||mysqli_num_rows($result) == 0) {
-//    while($row = mysqli_fetch_object($result)){
-//    var_dump($row);
-//    exit();
+
     $row=mysqli_fetch_assoc($result);
     $_SESSION['sudah_login'] = TRUE;
     $_SESSION['level_user'] = $row['level_user'];

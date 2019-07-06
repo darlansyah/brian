@@ -4,7 +4,7 @@ include '../functions/kumpulan_fungsi.php';
 $kon = koneksi_db();
 
 $username = isset($_POST['username']) ? $_POST['username'] : '';
-$pass = isset($_POST['pass']) ? md5($_POST['pass']) : '';
+$pass = isset($_POST['pass']) ? $_POST['pass'] : '';
 $nama = isset($_POST['nama']) ? $_POST['nama'] : '';
 $telp = isset($_POST['telp']) ? $_POST['telp'] : '';
 $alamat = isset($_POST['alamat']) ? $_POST['alamat'] : '';

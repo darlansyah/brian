@@ -385,5 +385,63 @@
                         ============================================ -->
             <script src="../js/main.js"></script>
      <script>
+                $.ajax({
+                    url: "http://localhost/brian/web/ambil_data_pos.php",
+                    type: 'POST',
+                    dataType: 'json',
+                    success: function (resp) {
+                        console.log(resp);
+                        //                                                alert('ajax jalan!!');
+                        //                                                console.log(resp.length);
+                        //                                                console.log(resp[0].nama_masyarakat_pelapor);
+                        var no;
+                        for (i = 0; i < resp.length; i++) {
+                            no = i + 1;
+                            $('tbody').append('<tr><td>' + no + '</td><td>' + resp[i].nama_pos + '</td><td>' + resp[i].alamat_pos + '</td><td>' + resp[i].longitude_pos + '</td><td>' + resp[i].latitude_pos + '</td><td><button id="' + resp[i].id_pos + '" class="btn btn-outline-primary btn-sm mg-r-5 inputClass"><div><i class="fa fa-pencil"></i></div></button> <button id="' + resp[i].id_pos + '" class="btn btn-outline-danger btn-sm mg-r-5 delateClass"><div><i class="fa fa-trash"></i></div></button></td>');
+                        }
+
+                        $('.inputClass').each(function () {
+                            $(this).click(function () {
+                                var id = $(this).attr('id');
+                                //Do whatever the edit function should do with the id
+                                edit_data(id);
+                            });
+                        });
+                        $('.delateClass').each(function () {
+                            $(this).click(function () {
+                                var id = $(this).attr('id');
+                                //Do whatever the edit function should do with the id
+                                hapus_data(id);
+                            });
+                        });
+
+                    }
+                });
+                function edit_data(id) {
+                    alert('ini id-nya' + id);
+                    window.localStorage.setItem('id_mp', id);
+                    window.location.href = '../app/pelapor_ubah.html';
+                }
+
+                function hapus_data(id) {
+                    alert('ini id-nya' + id);
+                    window.localStorage.setItem('id_mp', id);
+                    $.ajax({
+                        url: "http://localhost/brian/web/ajax_pelapor_hapus.php",
+                        type: 'POST',
+                        dataType: 'json',
+                        data: {id_mp: id},
+                        success: function (response) {
+                            if (response.status == "Ok") {
+                                alert("Data Berhasil Dihapus");
+                                window.location.href = "../app/data_pelapor.html";
+                            } else {
+                                alert("Data Gagal Dihapus");
+                                window.location.href = "../app/data_pelapor.html";
+                            }
+                        }
+                    });
+                }
+            </script>
     </body>
 </html>
