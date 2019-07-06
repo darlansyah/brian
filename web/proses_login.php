@@ -17,20 +17,20 @@ if (!$quser||mysqli_num_rows($quser)==0) {
 //    exit();
     $_SESSION['sudah_login'] = TRUE;
     ?>
-    <script>
+<!--    <script>
         alert('Anda Berhasil Masuk!');
         window.location.href = "index.php";
-    </script>
+    </script>-->
     <?php
 
 } else {
 //    var_dump('gagal');
 //    exit();
     ?>
-    <script>
+<!--    <script>
         alert('Anda Gagal Masuk!');
         window.location.href = "login.php";
-    </script>
+    </script>-->
     <?php
 
 }
@@ -39,12 +39,16 @@ if (!$quser||mysqli_num_rows($quser)==0) {
 $result = mysqli_query($kon, "SELECT * FROM admin WHERE username  = '$username' AND password = '$pass");
 //$result_pelapor = mysqli_query($kon, "SELECT * FROM masyarakat_pelapor where username = '$username' AND pass = '$pass'");
 
-if (mysqli_num_rows($result) === 1) {
-    $row = mysqli_fetch_object($result);
+if (!$result||mysqli_num_rows($result) == 0) {
+//    while($row = mysqli_fetch_object($result)){
+//    var_dump($row);
+//    exit();
+    $row=mysqli_fetch_assoc($result);
     $_SESSION['sudah_login'] = TRUE;
-    $_SESSION['level_user'] = $row->level_user;
+    $_SESSION['level_user'] = $row['level_user'];
     header('location:index.php');
-} else if (mysqli_num_rows($result_pelapor) === 1) {
+//    }    
+} else if (mysqli_num_rows($result_pelapor) == 0) {
     $row = mysqli_fetch_object($result);
     $_SESSION['sudah_login'] = TRUE;
     $_SESSION['level_user'] = 'pelapor';

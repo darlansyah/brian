@@ -39,6 +39,8 @@ include '../templeting/contenthtml.php';
             <div class="row">
                 <?php
                 if ($_SESSION['level_user'] == "admin") {
+//                    var_dump($_SESSION['level_user']);
+//                    exit();
                     ?>
 
                     <a href ="data_user.php">
