@@ -1,6 +1,6 @@
 <?php
 
-include 'kumpulan_fungsi.php';
+include '../functions/kumpulan_fungsi.php';
 
 $kon = koneksi_db();
 $query = mysqli_query($kon, "select * from masyarakat_pelapor");

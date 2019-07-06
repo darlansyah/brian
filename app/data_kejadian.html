@@ -76,30 +76,6 @@
 
                             <li><a title="Dekstop" href="index.html" aria-expanded="false"><i class="fa fa-desktop icon-wrap sub-icon-mg" aria-hidden="true"></i> <span class="mini-click-non">Dekstop</span></a></li>
 
-                            <li class="#">
-                                <a class="has-arrow" href="#">
-                                    <i class='fa big-icon fa-reorder icon-wrap'></i>
-                                    <span class='mini-click-non'>User</span>
-                                </a>
-                                <ul class="submenu-angle" aria-expanded="true">
-                                    <li><a title="Identitas Pelapor" href="user_tambah.php"><i class="fa fa-user sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro"> User</span></a></li>
-                                </ul>
-                                <ul class='submenu-angle' aria-expanded='true'>
-                                    <li><a title="Data Pelapor" href="data_user.php"><i class='fa fa-table sub-icon-mg' aria-hidden="true"></i> <span class="mini-sub-pro">Data User</span></a></li>
-                                </ul>
-                            </li>
-                            <li class="#">
-                                <a class="has-arrow" href="index.html">
-                                    <i class="fa big-icon fa-bullseye icon-wrap"></i>
-                                    <span class="mini-click-non">Lapor</span>
-                                </a>
-                                <ul class="submenu-angle" aria-expanded="true">
-                                    <li><a title="Identitas Pelapor" href="identitas_pelapor.html"><i class="fa fa-user sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Identitas Pelapor</span></a></li>
-                                </ul>
-                                <ul class="submenu-angle" aria-expanded="true">
-                                    <li><a title="Data Pelapor" href="data_pelapor.html"><i class="fa fa-table sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data Pelapor</span></a></li>
-                                </ul>
-                            </li>
                             <li calss="#">
                                 <a class="has-arrow" href="" aria-expanded="false"><i class="fa big-icon fa-fire-extinguisher icon-wrap"></i> <span class="mini-click-non">Kejadian</span></a>
                                 <ul class="submenu-angle" aria-expanded="true">
@@ -216,26 +192,26 @@
 
                                             <li><a data-toggle="collapse" data-target="#demo" href="#">LAPOR <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
                                                 <ul id="demo" class="collapse dropdown-header-top">
-                                                    <li><a href="identitas_pelapor.html">IDENTITAS PELAPOR</a></li>
+<!--                                                    <li><a href="identitas_pelapor.html">IDENTITAS PELAPOR</a></li>-->
                                                     <li><a href="data_pelapor.html">DATA PELAPOR</a></li>
                                                 </ul>
                                             </li>
                                             <li><a data-toggle="collapse" data-target="#Tablesmob" href="#">KEJADIAN <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
                                                 <ul id="Tablesmob" class="collapse dropdown-header-top">
-                                                    <li><a href="lapor_kejadian.html">LAPOR KEJADIAN</a></li>
+<!--                                                    <li><a href="lapor_kejadian.html">LAPOR KEJADIAN</a></li>-->
                                                     <li><a href="data_kejadian.html">DATA KEJADIAN</a></li>
                                                 </ul>
                                             </li>
                                             <li><a data-toggle="collapse" data-target="#Tablesmob" href="#">PETUGAS DAMKAR <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
                                                 <ul id="Tablesmob" class="collapse dropdown-header-top">
-                                                    <li><a href="identitas_petugas.html">IDENTITAS PETUGAS</a></li>
+<!--                                                    <li><a href="identitas_petugas.html">IDENTITAS PETUGAS</a></li>-->
                                                     <li><a href="data_petugas.html">DATA PETUGAS</a></li>
                                                 </ul>
                                             </li>
                                             <li><a data-toggle="collapse" data-target="#Tablesmob" href="#">POS <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
                                                 <ul id="Tablesmob" class="collapse dropdown-header-top">
-                                                    <li><a href="pos_damkar.html">POS DAMKAR</a></li>
-                                                    <li><a href="data_pos.html">DATA POS</a></li>
+<!--                                                    <li><a href="pos_damkar.html">POS DAMKAR</a></li>-->
+                                                    <li><a href="data_pos.php">DATA POS</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -298,7 +274,6 @@
                                                     <th data-field="action">Action</th>
                                                 </tr>
                                             </thead>
-                                            
                                             <tbody>
                                                 
                                             </tbody>
@@ -390,7 +365,18 @@
                     success: function (resp) {
 //                        
                         for (i = 0; i < resp.length; i++) {
-                            $('tbody').append('<tr><td>' + resp[i].id_kejadian + '</td><td>' + resp[i].id_masyarakat_pelapor + '</td><td>' + resp[i].tanggal_waktu_kejadian + '</td><td>' + resp[i].longitude + '</td><td>' + resp[i].latitude + '</td><td>' + resp[i].deskripsi_kejadian + '</td><td>' + resp[i].gambar + '</td><td><button id="' + resp[i].id_kejadian + '" class="btn btn-outline-primary btn-sm mg-r-5 inputClass"><div><i class="fa fa-pencil"></i></div></button> <button id="' + resp[i].id_kejadian + '" class="btn btn-outline-danger btn-sm mg-r-5 deleteClass"><div><i class="fa fa-trash"></i></div></button></td>');
+                            $('tbody').append('<tr><td>' + resp[i].id_kejadian 
+                                    + '</td><td>' + resp[i].nama_pelapor 
+                                    + '</td><td>' + resp[i].tanggal_waktu_kejadian 
+                                    + '</td><td>' + resp[i].longitude 
+                                    + '</td><td>' + resp[i].latitude 
+                                    + '</td><td>' + resp[i].deskripsi_kejadian 
+                                    + '</td><td>' + resp[i].gambar 
+                                    + '</td><td><button id="' 
+                                    + resp[i].id_kejadian 
+                                    + '" class="btn btn-outline-primary btn-sm mg-r-5 inputClass"><div><i class="fa fa-pencil"></i></div></button>\n\
+                                    <button id="' 
+                                    + resp[i].id_kejadian + '" class="btn btn-outline-danger btn-sm mg-r-5 deleteClass"><div><i class="fa fa-trash"></i></div></button></td>');
                         }
 
                         $('.inputClass').each(function () {
@@ -413,7 +399,7 @@
                 function edit_data(id) {
                     alert('ini Edit id-nya' + id);
                     window.localStorage.setItem('id_kj', id);
-                    window.location.href = 'kejadian_ubah.html';
+                    window.location.href = '../app/kejadian_ubah.html';
                 }
 
                 function hapus_data(id) {
@@ -427,14 +413,14 @@
                         success: function (response) {
                             if (response.status == "Ok") {
                                 alert("Data Berhasil Dihapus");
-                                window.location.href = "data_kejadian.html";
+                                window.location.href = "../app/data_kejadian.html";
                             } else {
                                 alert("Data Gagal Dihapus");
-                                window.location.href = "data_kejadian.html";
+                                window.location.href = "../app/data_kejadian.html";
                             }
                         }
                     });
                 }
             </script>
-    
+        </body>
 </html>

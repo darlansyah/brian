@@ -76,6 +76,7 @@
 
                             <li><a title="Dekstop" href="index.html" aria-expanded="false"><i class="fa fa-desktop icon-wrap sub-icon-mg" aria-hidden="true"></i> <span class="mini-click-non">Dekstop</span></a></li>
 
+
                             <li calss="#">
                                 <a class="has-arrow" href="" aria-expanded="false"><i class="fa big-icon fa-fire-extinguisher icon-wrap"></i> <span class="mini-click-non">Kejadian</span></a>
                                 <ul class="submenu-angle" aria-expanded="true">
@@ -88,13 +89,19 @@
                             <li calss="#">
                                 <a class="has-arrow" href="" aria-expanded="false"><i class="fa big-icon fa-users icon-wrap"></i> <span class="mini-click-non">Petugas Damkar</span></a>
                                 <ul class="submenu-angle" aria-expanded="true">
+                                    <li><a title="Identitas Petugas" href="identitas_petugas.html"><i class="fa fa-user sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Identitas Petugas</span></a></li>
+                                </ul>
+                                <ul class="submenu-angle" aria-expanded="true">
                                     <li><a title="Data Petugas" href="data_petugas.html"><i class="fa fa-table sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data Petugas</span></a></li>
                                 </ul>
                             </li>
                             <li calss="#">
                                 <a class="has-arrow" href="" aria-expanded="false"><i class="fa big-icon fa-home icon-wrap"></i> <span class="mini-click-non">POS</span></a>
                                 <ul class="submenu-angle" aria-expanded="true">
-                                    <li><a title="Data Pos" href="data_pos.php"><i class="fa fa-table sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data Pos</span></a></li>
+                                    <li><a title="Pos Damkar" href="pos_damkar.html"><i class="fa fa-home sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Pos Damkar</span></a></li>
+                                </ul>
+                                <ul class="submenu-angle" aria-expanded="true">
+                                    <li><a title="Data Pos" href="data_pos.html"><i class="fa fa-table sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data Pos</span></a></li>
                                 </ul>
                             </li>
                             <li><a title="Landing Page" href="#" aria-expanded="false"><i class="fa fa-bookmark icon-wrap sub-icon-mg" aria-hidden="true"></i> <span class="mini-click-non">Landing Page</span></a></li>
@@ -186,26 +193,26 @@
 
                                             <li><a data-toggle="collapse" data-target="#demo" href="#">LAPOR <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
                                                 <ul id="demo" class="collapse dropdown-header-top">
-<!--                                                    <li><a href="identitas_pelapor.html">IDENTITAS PELAPOR</a></li>-->
+                                                    <li><a href="identitas_pelapor.html">IDENTITAS PELAPOR</a></li>
                                                     <li><a href="data_pelapor.html">DATA PELAPOR</a></li>
                                                 </ul>
                                             </li>
                                             <li><a data-toggle="collapse" data-target="#Tablesmob" href="#">KEJADIAN <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
                                                 <ul id="Tablesmob" class="collapse dropdown-header-top">
-<!--                                                    <li><a href="lapor_kejadian.html">LAPOR KEJADIAN</a></li>-->
+                                                    <li><a href="lapor_kejadian.html">LAPOR KEJADIAN</a></li>
                                                     <li><a href="data_kejadian.html">DATA KEJADIAN</a></li>
                                                 </ul>
                                             </li>
                                             <li><a data-toggle="collapse" data-target="#Tablesmob" href="#">PETUGAS DAMKAR <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
                                                 <ul id="Tablesmob" class="collapse dropdown-header-top">
-<!--                                                    <li><a href="identitas_petugas.html">IDENTITAS PETUGAS</a></li>-->
+                                                    <li><a href="identitas_petugas.html">IDENTITAS PETUGAS</a></li>
                                                     <li><a href="data_petugas.html">DATA PETUGAS</a></li>
                                                 </ul>
                                             </li>
                                             <li><a data-toggle="collapse" data-target="#Tablesmob" href="#">POS <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
                                                 <ul id="Tablesmob" class="collapse dropdown-header-top">
-<!--                                                    <li><a href="pos_damkar.html">POS DAMKAR</a></li>-->
-                                                    <li><a href="data_pos.php">DATA POS</a></li>
+                                                    <li><a href="pos_damkar.html">POS DAMKAR</a></li>
+                                                    <li><a href="data_pos.html">DATA POS</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -233,51 +240,61 @@
                 </div>
             </div>
             <!-- sub main -->
-
-                        <!-- Static Table Start -->
-            <div class="data-table-area mg-tb-15">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="sparkline13-list">
-                                <div class="sparkline13-hd">
-                                    <div class="main-sparkline13-hd">
-                                        <h1><span class="table-project-n">Data</span> Petugas</h1>
-                                    </div>
-                                </div>
-                                <div class="sparkline13-graph">
-                                    <div class="datatable-dashv1-list custom-datatable-overright">
-                                        <div id="toolbar">
-                                            <select class="form-control">
-                                                <option value="">Export Basic</option>
-                                                <option value="all">Export All</option>
-                                                <option value="selected">Export Selected</option>
-                                            </select>
+            <!-- Single pro tab review Start-->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="review-tab-pro-inner">
+                            <ul id="myTab3" class="tab-review-design">
+                                <li class="active"><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i> Pos Pemadam Kebakaran</a></li>
+                                <li><a href="pos_picture.php"><i class="fa fa-file-image-o" aria-hidden="true"></i> Pictures Pos</a></li>
+                            </ul>
+                            <div id="myTabContent" class="tab-content custom-product-edit">
+                                <div class="product-tab-list tab-pane fade active in" id="description">
+                                    <form action="../pos/pos_simpan.php" method="post">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                <div class="review-content-section">
+                                                    <div class="input-group mg-b-pro-edt">
+                                                        <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                                                        <input type="text" class="form-control" name="nama_pos" placeholder="Nama Pos">
+                                                    </div>
+                                                    <div class="input-group mg-b-pro-edt">
+                                                        <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                                                        <input type="text" class="form-control"  name="longitude_pos" placeholder="Longitude">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                <div class="review-content-section">
+                                                    <div class="input-group mg-b-pro-edt">
+                                                        <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                                                        <input type="text" class="form-control"  name="alamat_pos" placeholder="Alamat Pos">
+                                                    </div>
+                                                    <div class="input-group mg-b-pro-edt">
+                                                        <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                                                        <input type="text" class="form-control"  name="latitude_pos" placeholder="Latitude">
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"
-                                               data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
-                                            <thead>
-                                                <tr>
-                                                    <th data-field="id">No</th>
-                                                    <th data-field="name" data-editable="true">No Induk Petugas</th>
-                                                    <th data-field="company" data-editable="true">Nama Petugas</th>
-                                                    <th data-field="price" data-editable="true">Nama Pos</th>
-                                                    <th data-field="action">Action</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <div class="text-center mg-b-pro-edt custom-pro-edt-ds">
+                                                    <button type="submit" class="btn btn-primary waves-effect waves-light m-r-10">Simpan
+                                                    </button>
+                                                    <a href="data_pos.html" class="btn btn-primary waves-effect waves-light m-r-10">Batal </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Static Table End -->
-      
+
 
             <!-- footer -->
             <div class="footer-copyright-area">
@@ -349,62 +366,5 @@
             <!-- main JS
                         ============================================ -->
             <script src="../js/main.js"></script>
-     <script>
-            $.ajax({
-                url: "http://localhost/brian/web/ambil_data_petugas.php",
-                type: 'POST',
-                dataType: 'json',
-                success: function (resp) {
-//                                                alert('ajax jalan!!');
-//                                                console.log(resp.length);
-//                                                console.log(resp[0].nama_masyarakat_pelapor);
-                    var no;
-                    for (i = 0; i < resp.length; i++) {
-                        no = i + 1;
-                        $('tbody').append('<tr><td>' + no + '</td><td>' + resp[i].no_induk_pegawai + '</td><td>' + resp[i].nama_petugas + '</td><td>' + resp[i].id_pos + '</td><td>' + '</td><td><button id="' + resp[i].id_petugas + '" class="btn btn-outline-primary btn-sm mg-r-5 inputClass"><div><i class="fa fa-pencil"></i></div></button> <button id="' + resp[i].id_petugas + '" class="btn btn-outline-danger btn-sm mg-r-5 delateClass"><div><i class="fa fa-trash"></i></div></button></td>');
-                    }
-
-                    $('.inputClass').each(function () {
-                        $(this).click(function () {
-                            var id = $(this).attr('id');
-                            //Do whatever the edit function should do with the id
-                            edit_data(id);
-                        });
-                    });
-                    $('.delateClass').each(function () {
-                        $(this).click(function () {
-                            var id = $(this).attr('id');
-                            //Do whatever the edit function should do with the id
-                            hapus_data(id);
-                        });
-                    });
-                }
-            });
-            function edit_data(id) {
-                alert('ini id-nya' + id);
-                window.localStorage.setItem('id_ptgs', id);
-                window.location.href = 'petugas_ubah.html';
-            }
-
-            function hapus_data(id) {
-                alert('ini id-nya' + id);
-                window.localStorage.setItem('id_ptgs', id);
-                $.ajax({
-                    url: "http://localhost/brian/ajax_petugas_hapus.php",
-                    type: 'POST',
-                    dataType: 'json',
-                    data: {id_ptgs: id},
-                    success: function (response) {
-                        if (response.status == "Ok") {
-                            alert("Data Berhasil Dihapus");
-                            window.location.href = "data_petugas.html";
-                        } else {
-                            alert("Data Gagal Dihapus");
-                            window.location.href = "data_petugas.html";
-                        }
-                    }
-                });
-            }
-        </script>
     </body>
 </html>

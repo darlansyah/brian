@@ -73,29 +73,14 @@
                 <div class="left-custom-menu-adp-wrap comment-scrollbar">
                     <nav class="sidebar-nav left-sidebar-menu-pro">
                         <ul class="metismenu" id="menu1">
-
-                            <li><a title="Dekstop" href="index.html" aria-expanded="false"><i class="fa fa-desktop icon-wrap sub-icon-mg" aria-hidden="true"></i> <span class="mini-click-non">Dekstop</span></a></li>
-
                             <li class="#">
-                                <a class="has-arrow" href="#">
-                                    <i class='fa big-icon fa-reorder icon-wrap'></i>
-                                    <span class='mini-click-non'>User</span>
-                                </a>
-                                <ul class="submenu-angle" aria-expanded="true">
-                                    <li><a title="Identitas Pelapor" href="user_tambah.php"><i class="fa fa-user sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro"> User</span></a></li>
-                                </ul>
-                                <ul class='submenu-angle' aria-expanded='true'>
-                                    <li><a title="Data Pelapor" href="data_user.php"><i class='fa fa-table sub-icon-mg' aria-hidden="true"></i> <span class="mini-sub-pro">Data User</span></a></li>
-                                </ul>
-                            </li>
-                            <li class="#">
-                                <a class="has-arrow" href="#">
+                                <a class="has-arrow" href="index.html">
                                     <i class="fa big-icon fa-bullseye icon-wrap"></i>
                                     <span class="mini-click-non">Lapor</span>
                                 </a>
-                                <ul class="submenu-angle" aria-expanded="true">
-                                    <li><a title="Identitas Pelapor" href="identitas_pelapor.html"><i class="fa fa-user sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Identitas Pelapor</span></a></li>
-                                </ul>
+                                <!--                        <ul class="submenu-angle" aria-expanded="true">
+                                                            <li><a title="Identitas Pelapor" href="identitas_pelapor.html"><i class="fa fa-user sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Identitas Pelapor</span></a></li>
+                                                        </ul>-->
                                 <ul class="submenu-angle" aria-expanded="true">
                                     <li><a title="Data Pelapor" href="data_pelapor.html"><i class="fa fa-table sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data Pelapor</span></a></li>
                                 </ul>
@@ -216,25 +201,25 @@
 
                                             <li><a data-toggle="collapse" data-target="#demo" href="#">LAPOR <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
                                                 <ul id="demo" class="collapse dropdown-header-top">
-                                                    <li><a href="identitas_pelapor.html">IDENTITAS PELAPOR</a></li>
+                                                    <!--                                                    <li><a href="identitas_pelapor.html">IDENTITAS PELAPOR</a></li>-->
                                                     <li><a href="data_pelapor.html">DATA PELAPOR</a></li>
                                                 </ul>
                                             </li>
                                             <li><a data-toggle="collapse" data-target="#Tablesmob" href="#">KEJADIAN <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
                                                 <ul id="Tablesmob" class="collapse dropdown-header-top">
-                                                    <li><a href="lapor_kejadian.html">LAPOR KEJADIAN</a></li>
+                                                    <!--                                                    <li><a href="lapor_kejadian.html">LAPOR KEJADIAN</a></li>-->
                                                     <li><a href="data_kejadian.html">DATA KEJADIAN</a></li>
                                                 </ul>
                                             </li>
                                             <li><a data-toggle="collapse" data-target="#Tablesmob" href="#">PETUGAS DAMKAR <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
                                                 <ul id="Tablesmob" class="collapse dropdown-header-top">
-                                                    <li><a href="identitas_petugas.html">IDENTITAS PETUGAS</a></li>
+                                                    <!--                                                    <li><a href="identitas_petugas.html">IDENTITAS PETUGAS</a></li>-->
                                                     <li><a href="data_petugas.html">DATA PETUGAS</a></li>
                                                 </ul>
                                             </li>
                                             <li><a data-toggle="collapse" data-target="#Tablesmob" href="#">POS <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
                                                 <ul id="Tablesmob" class="collapse dropdown-header-top">
-                                                    <li><a href="pos_damkar.html">POS DAMKAR</a></li>
+                                                    <!--                                                    <li><a href="pos_damkar.html">POS DAMKAR</a></li>-->
                                                     <li><a href="data_pos.php">DATA POS</a></li>
                                                 </ul>
                                             </li>
@@ -264,127 +249,85 @@
             </div>
             <!-- sub main -->
 
-            
-        <div class="section-admin container-fluid">
-            <div class="row admin text-center">
-                <div class="col-md-12">
+            <div class="google-maps-area mg-t-15 mg-b-15">
+                <div class="container-fluid">
                     <div class="row">
-                        <a href ="data_user.html">
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                                <div class="admin-content analysis-progrebar-ctn res-mg-t-15">
-                                    <h4 class="text-left text-uppercase"><b>Admin & User</b></h4>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="sparkline9-list">
+                                <div class="sparkline9-hd">
+                                    <div class="main-sparkline9-hd">
+                                        <center><h1>Google Map <span class="table-project-n"></span></h1></center>
+                                    </div>
+                                </div>
+                                <div class="sparkline9-graph">
+                                    <div class="google-map-single">
+                                        <div id="map1"></div>
+                                    </div>
+                                </div>
 
-                                    <div class="row vertical-center-box vertical-center-box-tablet">
-                                        <div class="col-xs-3 mar-bot-15 text-left">
-                                            <label class="label bg-green">30% <i class="fa fa-level-up" aria-hidden="true"></i></label>
-                                        </div>
-                                        <div class="col-xs-9 cus-gh-hd-pro">
-                                            <h2 class="text-right no-margin">10,000</h2>
-                                        </div>
-                                    </div>
-                                    <div class="progress progress-mini">
-                                        <div style="width: 78%;" class="progress-bar bg-green"></div>
-                                    </div>
-                                </div>
                             </div>
-                        </a>
-                        <a href ="data_kejadian.html">
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="margin-bottom:1px;">
-                                <div class="admin-content analysis-progrebar-ctn res-mg-t-30">
-                                    <h4 class="text-left text-uppercase"><b>Kejadian</b></h4>
-                                    <div class="row vertical-center-box vertical-center-box-tablet">
-                                        <div class="text-left col-xs-3 mar-bot-15">
-                                            <label class="label bg-red">15% <i class="fa fa-level-down" aria-hidden="true"></i></label>
-                                        </div>
-                                        <div class="col-xs-9 cus-gh-hd-pro">
-                                            <h2 class="text-right no-margin">5,000</h2>
-                                        </div>
-                                    </div>
-                                    <div class="progress progress-mini">
-                                        <div style="width: 38%;" class="progress-bar progress-bar-danger bg-red"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href ="data_petugas.html">
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                                <div class="admin-content analysis-progrebar-ctn res-mg-t-30">
-                                    <h4 class="text-left text-uppercase"><b>Petugas</b></h4>
-                                    <div class="row vertical-center-box vertical-center-box-tablet">
-                                        <div class="text-left col-xs-3 mar-bot-15">
-                                            <label class="label bg-blue">50% <i class="fa fa-level-up" aria-hidden="true"></i></label>
-                                        </div>
-                                        <div class="col-xs-9 cus-gh-hd-pro">
-                                            <h2 class="text-right no-margin">$70,000</h2>
-                                        </div>
-                                    </div>
-                                    <div class="progress progress-mini">
-                                        <div style="width: 60%;" class="progress-bar bg-blue"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href ="data_pos.html">
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                                <div class="admin-content analysis-progrebar-ctn res-mg-t-30">
-                                    <h4 class="text-left text-uppercase"><b>Pos</b></h4>
-                                    <div class="row vertical-center-box vertical-center-box-tablet">
-                                        <div class="text-left col-xs-3 mar-bot-15">
-                                            <label class="label bg-purple">80% <i class="fa fa-level-up" aria-hidden="true"></i></label>
-                                        </div>
-                                        <div class="col-xs-9 cus-gh-hd-pro">
-                                            <h2 class="text-right no-margin">$200,000</h2>
-                                        </div>
-                                    </div>
-                                    <div class="progress progress-mini">
-                                        <div style="width: 60%;" class="progress-bar bg-purple"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <!-- Static Table Start -->
-        <div class="static-table-area mg-t-15">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="sparkline8-list">
-                            <div class="sparkline8-hd">
-                                <div class="main-sparkline8-hd">
-                                    <center><h1>10 Kejadian Terakhir || <a href="data_kejadian.html"> Lihat Data </a></h1></center>
-                                </div>
-                            </div>
-                            <div class="sparkline8-graph">
-                                <div class="static-table-list">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>Nama Pelapor</th>
-                                                <th>Telephone</th>
-                                                <th>Waktu Kejadian</th>
-                                                <th>Longitude</th>
-                                                <th>Latitude</th>
-                                                <th>Deskripsi Kejadian</th>
-                                                <th>Gambar</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
 
-                                        </tbody>
-                                    </table>
+            <div class="single-pro-review-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="review-tab-pro-inner">
+                                <ul id="myTab3" class="tab-review-design">
+                                    <li class="active"><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i> Lapor Kejadian Kebakaran</a></li>
+                                    <li><a href="#"><i class="fa fa-file-image-o" aria-hidden="true"></i> Pictures</a></li>
+                                </ul>
+                                <div id="myTabContent" class="tab-content custom-product-edit">
+                                    <div class="product-tab-list tab-pane fade active in" id="description">
+                                        <form action="../app/data_kejadian.html" method="post">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+                                                    <div class="review-content-section">
+                                                        <div class="input-group mg-b-pro-edt">
+                                                            <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                                                            <input type="text" class="form-control" name="longitude" placeholder="Longitude">
+                                                        </div>
+                                                        <div class="input-group mg-b-pro-edt">
+                                                            <span class="input-group-addon"><i class="fa fa-sticky-note" aria-hidden="true"></i></span>
+                                                            <input type="text" class="form-control" name="deskripsi_kejadian" placeholder="Deskripsi Kejadian">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="review-content-section">
+                                                        <div class="input-group mg-b-pro-edt">
+                                                            <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                                                            <input type="text" class="form-control" name="latitude" placeholder="Latitude">
+                                                        </div>
+                                                        <div class="input-group mg-b-pro-edt">
+                                                            <span class="input-group-addon"><i class="fa fa-camera" aria-hidden="true"></i></span>
+                                                            <input type="text" class="form-control" name="gambar" placeholder="Upload Gambar">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="text-center mg-b-pro-edt custom-pro-edt-ds">
+                                                        <button type="submit" class="btn btn-primary waves-effect waves-light m-r-10">Simpan
+                                                        </button>
+                                                        <a href="data_kejadian.php" class="btn btn-primary waves-effect waves-light m-r-10">Batal </a>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Static Table End -->
 
             <!-- footer -->
             <div class="footer-copyright-area">

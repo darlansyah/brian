@@ -3,7 +3,7 @@ $user = null;
 $pos = null;
 if ($_SESSION['level_user'] == 'admin') {
     $user = " ";
-} elseif ($_SESSION['level_user'] == 'user') {
+} elseif ($_SESSION['level_user'] == 'petugas') {
     $user = null;
 }
 ?>

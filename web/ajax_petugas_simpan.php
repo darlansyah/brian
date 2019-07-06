@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include 'kumpulan_fungsi.php';
+include '../functions/kumpulan_fungsi.php';
 $kon = koneksi_db();
 
 $id_petugas = isset($_REQUEST['id_petugas']) ? $_REQUEST['id_petugas'] : 0;

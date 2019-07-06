@@ -1,6 +1,6 @@
 <?php
 
-include 'kumpulan_fungsi.php';
+include '../functions/kumpulan_fungsi.php';
 $id_masyarakat_pelapor = isset($_REQUEST['id_mp']) ? $_REQUEST['id_mp'] : 0;
 $kon = koneksi_db();
 

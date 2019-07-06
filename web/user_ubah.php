@@ -60,7 +60,7 @@ include '../templeting/contenthtml.php';
                                         </div>
                                         <div class="input-group mg-b-pro-edt">
                                             <span class="input-group-addon"><i class="fa fa-lock" aria-hidden="true"></i></span>
-                                            <input type="text" class="form-control" name="password" value="<?= $result->username ?>" placeholder="Password">
+                                            <input type="text" class="form-control" name="password" value="<?= $result->password ?>" placeholder="Password">
                                         </div>
                                         <div class="input-group mg-b-pro-edt">
 

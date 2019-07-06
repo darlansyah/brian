@@ -32,9 +32,9 @@ include '../templeting/contenthtml.php';
                         <li><a href="#"><i class="fa fa-file-image-o" aria-hidden="true"></i> Pictures</a></li>
                     </ul>
                     <div id="myTabContent" class="tab-content custom-product-edit">
-                        <div class="product-tab-list tab-pane fade active in" id="description">
-                            <form action="../kejadian/kejadian_simpan.php" method="post">
-                                <input type="hidden" value="<?= $id_kejadian ?>" name="id_kejadian">
+                        <form action="../kejadian/kejadian_simpan.php" method="post">
+                            <input type="hidden" value="<?= $id_kejadian ?>" name="id_kejadian">
+                            <div class="product-tab-list tab-pane fade active in" id="description">
                                 <input required type="hidden" name="tanggal_waktu_kejadian" class="form-control" placeholder="Tanggal Waktu Kejadian"
                                        value="<?php echo $result->tanggal_waktu_kejadian ?>">
                                 <div class="row">
@@ -73,13 +73,13 @@ include '../templeting/contenthtml.php';
                                         </div>
                                     </div>
                                 </div>
-                            </form>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <?php

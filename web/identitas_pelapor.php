@@ -20,7 +20,6 @@ include '../templeting/contenthtml.php';
                     <form action="../masyarakat_pelapor/masyarakat_pelapor_simpan.php" method="post">
                         <div class="product-tab-list tab-pane fade active in" id="description">
                             <div class="row">
-
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <div class="review-content-section">
                                         <div class="input-group mg-b-pro-edt">
@@ -52,7 +51,6 @@ include '../templeting/contenthtml.php';
                                         <button type="submit" class="btn btn-primary waves-effect waves-light m-r-10">Simpan
                                         </button>
                                         <a href="index.php" class="btn btn-primary waves-effect waves-light m-r-10">Batal </a>
-
                                     </div>
                                 </div>
                             </div>

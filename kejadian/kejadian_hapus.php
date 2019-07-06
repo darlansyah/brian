@@ -1,10 +1,8 @@
 <?php
 
-//session_start();
+session_start();
 include '../functions/kumpulan_fungsi.php';
 $id_kejadian = $_GET['id'];
-//var_dump($id_kejadian);
-//die;
 $kon = koneksi_db();
 
 // $id_pelapor= isset($_REQUEST['id_pelapor']) ? $_REQUEST['id_pelapor'] : 0;

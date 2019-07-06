@@ -33,7 +33,7 @@ include '../templeting/contenthtml.php';
                 </ul>
                 <div id="myTabContent" class="tab-content custom-product-edit">
                     <form action="../masyarakat_pelapor/masyarakat_pelapor_simpan.php" method="post">
-                        <input type="hidden" value="<?= $id_masyarakat_pelapor?>" name="id_masyarakat_pelapor">
+                        <input type="hidden" value="<?= $id_masyarakat_pelapor ?>" name="id_masyarakat_pelapor">
                         <div class="product-tab-list tab-pane fade active in" id="description">
                             <div class="row">
 
@@ -41,11 +41,11 @@ include '../templeting/contenthtml.php';
                                     <div class="review-content-section">
                                         <div class="input-group mg-b-pro-edt">
                                             <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
-                                            <input type="text" class="form-control" name="nama_masyarakat_pelapor" value="<?=$result->nama_masyarakat_pelapor; ?>" placeholder="Nama">
+                                            <input type="text" class="form-control" name="nama_masyarakat_pelapor" value="<?= $result->nama_masyarakat_pelapor; ?>" placeholder="Nama">
                                         </div>
                                         <div class="input-group mg-b-pro-edt">
                                             <span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
-                                            <input type="text" class="form-control" name="telp" value="<?=$result->telp; ?>"  placeholder="No Telephone">
+                                            <input type="text" class="form-control" name="telp" value="<?= $result->telp; ?>"  placeholder="No Telephone">
                                         </div>
                                     </div>
                                 </div>
@@ -53,11 +53,11 @@ include '../templeting/contenthtml.php';
                                     <div class="review-content-section">
                                         <div class="input-group mg-b-pro-edt">
                                             <span class="input-group-addon"><i class="fa fa-sticky-note" aria-hidden="true"></i></span>
-                                            <input type="text" class="form-control" name="no_ktp" value="<?=$result->no_ktp; ?>"   placeholder="No KTP">
+                                            <input type="text" class="form-control" name="no_ktp" value="<?= $result->no_ktp; ?>"   placeholder="No KTP">
                                         </div>
                                         <div class="input-group mg-b-pro-edt">
                                             <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
-                                            <input type="text" class="form-control" name="alamat" value="<?=$result->alamat; ?>"  placeholder="Alamat">
+                                            <input type="text" class="form-control" name="alamat" value="<?= $result->alamat; ?>"  placeholder="Alamat">
                                         </div>
                                     </div>
                                 </div>

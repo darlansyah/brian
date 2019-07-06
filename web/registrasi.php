@@ -101,18 +101,7 @@
                                         <label>Nama</label>
                                         <input type="text" class="form-control" name="nama_masyarakat_pelapor">
                                     </div>
-                                    <div class="form-group col-lg-6">
-                                        <label>No KTP</label>
-                                        <input type="text"class="form-control" name="no_ktp">
-                                    </div>
-                                    <div class="form-group col-lg-6">
-                                        <label>No Telephone</label>
-                                        <input type="text"class="form-control" name="telp">
-                                    </div>
-                                    <div class="form-group col-lg-6">
-                                        <label>Alamat</label>
-                                        <input type="text"class="form-control" name="alamat">
-                                    </div>
+
                                     <div class="checkbox col-lg-12">
                                         <input type="checkbox" class="i-checks" checked> Sigh up for our newsletter
                                     </div>

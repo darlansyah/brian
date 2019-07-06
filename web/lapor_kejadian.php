@@ -20,6 +20,28 @@ authentication();
 ?>
 
 <!-- Single pro tab review Start-->
+<div class="google-maps-area mg-t-15 mg-b-15">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="sparkline9-list">
+                    <div class="sparkline9-hd">
+                        <div class="main-sparkline9-hd">
+                            <center><h1>Google Map <span class="table-project-n"></span></h1></center>
+                        </div>
+                    </div>
+                    <div class="sparkline9-graph">
+                        <div class="google-map-single">
+                            <div id="map1"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="single-pro-review-area">
     <div class="container-fluid">
         <div class="row">

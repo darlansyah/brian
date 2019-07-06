@@ -1,6 +1,6 @@
 <?php
 
-include 'kumpulan_fungsi.php';
+include '../functions/kumpulan_fungsi.php';
 $id_mp = $_REQUEST['id_mp'];
 
 $kon = koneksi_db();

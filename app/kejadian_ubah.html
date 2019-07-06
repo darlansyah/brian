@@ -76,30 +76,6 @@
 
                             <li><a title="Dekstop" href="index.html" aria-expanded="false"><i class="fa fa-desktop icon-wrap sub-icon-mg" aria-hidden="true"></i> <span class="mini-click-non">Dekstop</span></a></li>
 
-                            <li class="#">
-                                <a class="has-arrow" href="#">
-                                    <i class='fa big-icon fa-reorder icon-wrap'></i>
-                                    <span class='mini-click-non'>User</span>
-                                </a>
-                                <ul class="submenu-angle" aria-expanded="true">
-                                    <li><a title="Identitas Pelapor" href="user_tambah.php"><i class="fa fa-user sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro"> User</span></a></li>
-                                </ul>
-                                <ul class='submenu-angle' aria-expanded='true'>
-                                    <li><a title="Data Pelapor" href="data_user.php"><i class='fa fa-table sub-icon-mg' aria-hidden="true"></i> <span class="mini-sub-pro">Data User</span></a></li>
-                                </ul>
-                            </li>
-                            <li class="#">
-                                <a class="has-arrow" href="#">
-                                    <i class="fa big-icon fa-bullseye icon-wrap"></i>
-                                    <span class="mini-click-non">Lapor</span>
-                                </a>
-                                <ul class="submenu-angle" aria-expanded="true">
-                                    <li><a title="Identitas Pelapor" href="identitas_pelapor.html"><i class="fa fa-user sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Identitas Pelapor</span></a></li>
-                                </ul>
-                                <ul class="submenu-angle" aria-expanded="true">
-                                    <li><a title="Data Pelapor" href="data_pelapor.html"><i class="fa fa-table sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data Pelapor</span></a></li>
-                                </ul>
-                            </li>
                             <li calss="#">
                                 <a class="has-arrow" href="" aria-expanded="false"><i class="fa big-icon fa-fire-extinguisher icon-wrap"></i> <span class="mini-click-non">Kejadian</span></a>
                                 <ul class="submenu-angle" aria-expanded="true">
@@ -265,38 +241,58 @@
             <!-- sub main -->
 
             <!-- Static Table Start -->
-            <div class="data-table-area mg-tb-15">
+            <div class="single-pro-review-area">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="sparkline13-list">
-                                <div class="sparkline13-hd">
-                                    <div class="main-sparkline13-hd">
-                                        <h1><span class="table-project-n">Data</span> Pelapor</h1>
-                                    </div>
-                                </div>
-                                <div class="sparkline13-graph">
-                                    <div class="datatable-dashv1-list custom-datatable-overright">
-                                        <div id="toolbar">
-                                            <select class="form-control">
-                                                <option value="">Export Basic</option>
-                                                <option value="all">Export All</option>
-                                                <option value="selected">Export Selected</option>
-                                            </select>
-                                        </div>
-                                        <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"
-                                               data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
-                                            <thead>
-                                                <tr>
-                                                    <th data-field="id">No</th>
-                                                    <th data-field="name" data-editable="true">Nama</th>
-                                                    <th data-field="company" data-editable="true">No KTP</th>
-                                                    <th data-field="price" data-editable="true">No Telephone</th>
-                                                    <th data-field="date" data-editable="true">Alamat</th>
-                                                    <th data-field="action">Action</th>
-                                                </tr>
-                                            </thead>
-                                        </table>
+                            <div class="review-tab-pro-inner">
+                                <ul id="myTab3" class="tab-review-design">
+                                    <li class="active"><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i> Edit Kejadian Kebakaran</a></li>
+                                    <li><a href="#"><i class="fa fa-file-image-o" aria-hidden="true"></i> Pictures</a></li>
+                                </ul>
+                                <div id="myTabContent" class="tab-content custom-product-edit">
+                                    <div class="product-tab-list tab-pane fade active in" id="description">
+                                        <form action="../app/kejadian_ubah.html" method="post">
+                                            <input type="hidden" value="<?= $id_kejadian ?>" name="id_kejadian">
+                                            <input required type="hidden" name="tanggal_waktu_kejadian" class="form-control" placeholder="Tanggal Waktu Kejadian"
+                                                   value="<?php echo $result->tanggal_waktu_kejadian ?>">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="review-content-section">
+                                                        <div class="input-group mg-b-pro-edt">
+                                                            <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                                                            <input required id="longitude" type="text" name="longitude" class="form-control" placeholder="Longitude" value="">
+                                                        </div>
+                                                        <div class="input-group mg-b-pro-edt">
+                                                            <span class="input-group-addon"><i class="fa fa-sticky-note" aria-hidden="true"></i></span>
+                                                            <input required id="deskripsi_kejadian" type="text" name="deskripsi_kejadian" class="form-control" placeholder="Deskripsi Kejadian" value="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="review-content-section">
+                                                        <div class="input-group mg-b-pro-edt">
+                                                            <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                                                            <input required id="latitude" type="text" name="latitude" class="form-control" placeholder="Latitude" value="">
+                                                        </div>
+                                                        <div class="input-group mg-b-pro-edt">
+                                                            <span class="input-group-addon"><i class="fa fa-camera" aria-hidden="true"></i></span>
+                                                            <input required id="gambar" type="text" name="gambar" class="form-control" placeholder="Gambar" value="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="text-center mg-b-pro-edt custom-pro-edt-ds">
+                                                        <button type="submit" class="btn btn-primary waves-effect waves-light m-r-10">Update
+                                                        </button>
+                                                        <button type="submit" class="btn btn-primary waves-effect waves-light m-r-10">Batal
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -379,54 +375,54 @@
             <script>
                 var id_kj = window.localStorage.getItem('id_kj');
 
-            $.ajax({
-                url: "http://localhost/brian/ambil_id_kejadian.php",
-                type: 'POST',
-                dataType: 'json',
-                data: {id_kj: id_kj},
-                success: function (resp) {
-                    $('#id_masyarakat_pelapor').val(resp.id_masyarakat_pelapor);
-                    $('#tanggal_waktu_kejadian').val(resp.tanggal_waktu_kejadian);
-                    $('#longitude').val(resp.longitude);
-                    $('#latitude').val(resp.latitude);
-                    $('#deskripsi_kejadian').val(resp.deskripsi_kejadian);
-                    $('#gambar').val(resp.gambar);
-                    $('#id_kj').val(resp.id_kejadian);
-                }
-            });
-
-            $("#btn_simpan").click(simpan_data);
-            function simpan_data() {
-
-//                    alert("tombol simpan telah di klik")
-                var id_masyarakat_pelapor = $("#id_masyarakat_pelapor").val();
-                var tanggal_waktu_kejadian = $("#tanggal_waktu_kejadian").val();
-                var longitude = $("#longitude").val();
-                var latitude = $("#latitude").val();
-                var deskripsi_kejadian = $("#deskripsi_kejadian").val();
-                var gambar = $("#gambar").val();
-                var id_kj = $("#id_kj").val();
-
-                console.log("id_masyarakat_pelapor: " + id_masyarakat_pelapor + "tanggal_waktu_kejadian: " + tanggal_waktu_kejadian + " longitude : " + longitude + " latitude : " + latitude + " deskripsi_kejadian : " + deskripsi_kejadian + " gambar : " + gambar);
                 $.ajax({
-                    url: "http://localhost/brian/ajax_kejadian_simpan.php",
+                    url: "http://localhost/brian/web/ambil_id_kejadian.php",
                     type: 'POST',
                     dataType: 'json',
-                    data: {id_kejadian: id_kj, id_masyarakat_pelapor: id_masyarakat_pelapor, longitude: longitude, latitude: latitude, deskripsi_kejadian: deskripsi_kejadian, gambar: gambar},
-                    success: function (response) {
-                        window.localStorage.removeItem('id_kj');
-                        if (response.status == "Ok") {
-                            alert("Data Berhasil disimpan");
-                            window.location.href = "lapor_kejadian.html";
-                        } else {
-                            alert("Data Gagal disimpan");
-                            window.location.href = "lapor_kejadian.html";
-                        }
+                    data: {id_kj: id_kj},
+                    success: function (resp) {
+                        $('#id_masyarakat_pelapor').val(resp.id_masyarakat_pelapor);
+                        $('#tanggal_waktu_kejadian').val(resp.tanggal_waktu_kejadian);
+                        $('#longitude').val(resp.longitude);
+                        $('#latitude').val(resp.latitude);
+                        $('#deskripsi_kejadian').val(resp.deskripsi_kejadian);
+                        $('#gambar').val(resp.gambar);
+                        $('#id_kj').val(resp.id_kejadian);
                     }
                 });
-            }
+
+                $("#btn_simpan").click(simpan_data);
+                function simpan_data() {
+
+//                    alert("tombol simpan telah di klik")
+                    var id_masyarakat_pelapor = $("#id_masyarakat_pelapor").val();
+                    var tanggal_waktu_kejadian = $("#tanggal_waktu_kejadian").val();
+                    var longitude = $("#longitude").val();
+                    var latitude = $("#latitude").val();
+                    var deskripsi_kejadian = $("#deskripsi_kejadian").val();
+                    var gambar = $("#gambar").val();
+                    var id_kj = $("#id_kj").val();
+
+                    console.log("id_masyarakat_pelapor: " + id_masyarakat_pelapor + "tanggal_waktu_kejadian: " + tanggal_waktu_kejadian + " longitude : " + longitude + " latitude : " + latitude + " deskripsi_kejadian : " + deskripsi_kejadian + " gambar : " + gambar);
+                    $.ajax({
+                        url: "http://localhost/brian/web/ajax_kejadian_simpan.php",
+                        type: 'POST',
+                        dataType: 'json',
+                        data: {id_kejadian: id_kj, id_masyarakat_pelapor: id_masyarakat_pelapor, longitude: longitude, latitude: latitude, deskripsi_kejadian: deskripsi_kejadian, gambar: gambar},
+                        success: function (response) {
+                            window.localStorage.removeItem('id_kj');
+                            if (response.status == "Ok") {
+                                alert("Data Berhasil disimpan");
+                                window.location.href = "../app/data_kejadian.html";
+                            } else {
+                                alert("Data Gagal disimpan");
+                                window.location.href = "../app/data_kejadian.html";
+                            }
+                        }
+                    });
+                }
 
 
-        </script>
+            </script>
     </body>
 </html>

@@ -6,22 +6,14 @@ authentication();
 $kon = koneksi_db();
 
 $id_kejadian = isset($_REQUEST['id_kejadian']) ? $_REQUEST['id_kejadian'] : '';
-//var_dump($id_kejadian);
-//exit();
-//$id_masyarakat_pelapor = isset($_REQUEST['id_masyarakat_pelapor']) ? $_REQUEST['id_masyarakat_pelapor'] : 0;
 $id_masyarakat_pelapor=isset($_POST['id_masyarakat_pelapor'])?$_POST['id_masyarakat_pelapor']:'';
-//var_dump($id_masyarakat_pelapor);
-//exit();
 $longitude = isset($_REQUEST['longitude']) ? $_REQUEST['longitude'] : '';
-//var_dump($longitude);
-//exit();
 $latitude = isset($_REQUEST['latitude']) ? $_REQUEST['latitude'] : '';
 $deskripsi_kejadian = isset($_REQUEST['deskripsi_kejadian']) ? $_REQUEST['deskripsi_kejadian'] : '';
 $gambar = isset($_REQUEST['gambar']) ? $_REQUEST['gambar'] : '';
 
 if ($id_kejadian != null) {
-//    var_dump('test');
-//    exit();
+
     $query = mysqli_query($kon, "UPDATE kejadian SET 
                                                  longitude = '$longitude',
                                                  latitude = '$latitude',
@@ -34,8 +26,6 @@ if ($id_kejadian != null) {
 
 // star my script
 if ($query) {
-//    var_dump('berhasil');
-//    exit();
     echo "<script>
     alert('Data Berasil Masuk');
    document.location.href ='../web/data_kejadian.php';

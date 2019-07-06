@@ -7,8 +7,9 @@ $kon = koneksi_db();
 
 $username = isset($_REQUEST['username']) ? $_REQUEST['username'] : null;
 $pass = isset($_REQUEST['pass']) ? $_REQUEST['pass'] : null;
+$name = isset($_REQUEST['name']) ? $_REQUEST['name'] : null;
 
-echo "usernm : $username pass : $pass";
+echo "username : $username pass : $pass nama : $nama";
 $quser = mysqli_query($kon, "select * from admin where username = '$username', password ='$pass and name ='$name'");
 if (mysqli_num_rows($quser)) {
     $_SESSION['sudah_login'] = TRUE;
@@ -29,8 +30,8 @@ if (mysqli_num_rows($quser)) {
 
 }
 
-$result = mysqli_query($kon, "SELECT * FROM admin WHERE username  = '$username' AND password = '$pass'");
-$result_pelapor = mysqli_query($kon, "SELECT * FROM masyarakat_pelapor where username = '$username' AND pass = '$pass'");
+$result = mysqli_query($kon, "SELECT * FROM admin WHERE username  = '$username', AND password = '$pass AND name = $name'");
+//$result_pelapor = mysqli_query($kon, "SELECT * FROM masyarakat_pelapor where username = '$username' AND pass = '$pass'");
 
 if (mysqli_num_rows($result) === 1) {
     $row = mysqli_fetch_object($result);

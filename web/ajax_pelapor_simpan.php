@@ -1,11 +1,7 @@
 <?php
 
-include 'kumpulan_fungsi.php';
+include '../functions/kumpulan_fungsi.php';
 $kon = koneksi_db();
-
-
-//var_dump($_POST);
-//die;
 
 $id_masyarakat_pelapor = isset($_REQUEST['id_masyarakat_pelapor']) ? $_REQUEST['id_masyarakat_pelapor'] : 0;
 $nama_masyarakat_pelapor = isset($_REQUEST['nama_masyarakat_pelapor']) ? $_REQUEST['nama_masyarakat_pelapor'] : '';

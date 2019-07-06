@@ -13,8 +13,8 @@ if ($_SESSION['level_user'] != 'admin') {
 require '../functions/kumpulan_fungsi.php';
 authentication();
 $kon = koneksi_db();
-$query = mysqli_query($kon, "SELECT * FROM `user`  
-ORDER BY `user`.`id_user` ASC");
+$query = mysqli_query($kon, "SELECT * FROM `admin`  
+ORDER BY `admin`.`id_user`  DESC");
 
 
 

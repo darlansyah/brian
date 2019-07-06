@@ -1,6 +1,6 @@
 <?php
 
-include 'kumpulan_fungsi.php';
+include '../functions/kumpulan_fungsi.php';
 $id_kejadian= isset($_REQUEST['id_kj']) ? $_REQUEST['id_kj'] : 0;
 $kon = koneksi_db();
 

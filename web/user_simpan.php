@@ -18,7 +18,7 @@ $kon = koneksi_db();
 $id_user = isset($_REQUEST['id_user']) ? $_REQUEST['id_user'] : 0;
 $username = isset($_REQUEST['username']) ? $_REQUEST['username'] : '';
 $password = isset($_REQUEST['password']) ? $_REQUEST['password'] : '';
-$level_user = isset($_REQUEST['level_user']) ? $_REQUEST['level_user'] : 'user';
+$level_user = isset($_REQUEST['level_user']) ? $_REQUEST['level_user'] : 'petugas';
 
 //$id_profil = isset($_REQUEST['id_profil']) ? $_REQUEST['id_profil'] : '';
 //var_dump($level_user);
