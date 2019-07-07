@@ -262,11 +262,11 @@
                                                     <th data-field="name" data-editable="true">No Induk Petugas</th>
                                                     <th data-field="company" data-editable="true">Nama Petugas</th>
                                                     <th data-field="price" data-editable="true">Nama Pos</th>
-                                                    <th data-field="action">Action</th>
+
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                
+
                                             </tbody>
                                         </table>
                                     </div>
@@ -277,7 +277,7 @@
                 </div>
             </div>
             <!-- Static Table End -->
-      
+
 
             <!-- footer -->
             <div class="footer-copyright-area">
@@ -341,7 +341,7 @@
             <script src="../js/calendar/fullcalendar-active.js"></script>
             <!-- plugins JS
                         ============================================ -->
-            <script src="../js/plugins.js"></script>  
+            <script src="../js/plugins.js"></script>
             <!-- Google map JS
                         ============================================ -->
             <script src="../js/google.maps/google.maps-active.js"></script>
@@ -361,7 +361,8 @@
                     var no;
                     for (i = 0; i < resp.length; i++) {
                         no = i + 1;
-                        $('tbody').append('<tr><td>' + no + '</td><td>' + resp[i].no_induk_pegawai + '</td><td>' + resp[i].nama_petugas + '</td><td>' + resp[i].id_pos + '</td><td>' + '</td><td><button id="' + resp[i].id_petugas + '" class="btn btn-outline-primary btn-sm mg-r-5 inputClass"><div><i class="fa fa-pencil"></i></div></button> <button id="' + resp[i].id_petugas + '" class="btn btn-outline-danger btn-sm mg-r-5 delateClass"><div><i class="fa fa-trash"></i></div></button></td>');
+                        $('tbody').append('<tr><td>' + no + '</td><td>' + resp[i].no_induk_pegawai + '</td><td>'
+                        + resp[i].nama_petugas + '</td><td>' + resp[i].id_pos + '</td>');
                     }
 
                     $('.inputClass').each(function () {
@@ -380,31 +381,9 @@
                     });
                 }
             });
-            function edit_data(id) {
-                alert('ini id-nya' + id);
-                window.localStorage.setItem('id_ptgs', id);
-                window.location.href = 'petugas_ubah.html';
-            }
 
-            function hapus_data(id) {
-                alert('ini id-nya' + id);
-                window.localStorage.setItem('id_ptgs', id);
-                $.ajax({
-                    url: "http://localhost/brian/ajax_petugas_hapus.php",
-                    type: 'POST',
-                    dataType: 'json',
-                    data: {id_ptgs: id},
-                    success: function (response) {
-                        if (response.status == "Ok") {
-                            alert("Data Berhasil Dihapus");
-                            window.location.href = "data_petugas.html";
-                        } else {
-                            alert("Data Gagal Dihapus");
-                            window.location.href = "data_petugas.html";
-                        }
-                    }
-                });
-            }
+
+
         </script>
     </body>
 </html>
