@@ -39,7 +39,7 @@ $no_ktp = isset($_POST['no_ktp']) ? $_POST['no_ktp'] : '';
     // echo json_encode($data_response);
 
 
-    // --------------------------------------- ini codingan darlann -----------------------------------------------------------------------
+    // --------------------------------------- ini codingan darlan -----------------------------------------------------------------------
     $query = "INSERT INTO masyarakat_pelapor values ('','$no_ktp','$nama','$telp','$alamat','$username','$pass');";
 
     if(mysqli_query($kon, $query)) {
