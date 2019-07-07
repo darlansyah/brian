@@ -84,19 +84,15 @@ if (!empty($_SESSION['sudah_login'])) {
                     <div class="hpanel">
                         <div class="panel-body">
                             <form action="proses_login.php" id="proses_login" method="POST">
-                                <div class="form-group">
-                                    <label class="control-label" for="username">Nama</label>
-                                    <input type="text" placeholder="Nama" title="Please enter you nama" required="" value="" name="nama" id="username" class="form-control">
-                                    <span class="help-block small">Masukan Nama Anda</span>
-                                </div>
+
                                 <div class="form-group">
                                     <label class="control-label" for="username">Username</label>
-                                    <input type="text" placeholder="Username" title="Please enter you username" required="" value="" name="username" id="username" class="form-control">
+                                    <input type="text" placeholder="Username" title="Please enter you username" required="" name="username" class="form-control">
                                     <span class="help-block small">Masukan Username Anda</span>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label" for="password">Password</label>
-                                    <input type="password" title="Please enter your password" placeholder="******" required="" value="" name="pass" id="password" class="form-control">
+                                    <input type="password" title="Please enter your password" placeholder="******" required="" name="pass" class="form-control">
                                     <span class="help-block small">Masukan Password Anda</span>
                                 </div>
 
