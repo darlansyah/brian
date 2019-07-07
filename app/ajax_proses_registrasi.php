@@ -10,6 +10,7 @@ $telp = isset($_POST['telp']) ? $_POST['telp'] : '';
 $alamat = isset($_POST['alamat']) ? $_POST['alamat'] : '';
 $no_ktp = isset($_POST['no_ktp']) ? $_POST['no_ktp'] : '';
 
+
 // if ($id_masyarakat_pelapor != 0) {
 //     $query = mysqli_query($kon, "UPDATE masyarakat_pelapor SET nama_masyarakat_pelapor='$nama_masyarakat_pelapor',
 //                                                 no_ktp = '$no_ktp',
@@ -20,17 +21,34 @@ $no_ktp = isset($_POST['no_ktp']) ? $_POST['no_ktp'] : '';
     // $query1=mysqli_query($kon,"insert into user values('','','$username','$pass','$nama','user')");
     // $query = mysqli_query($kon, "INSERT INTO masyarakat_pelapor values ('','$no_ktp','$nama','$telp','$alamat')");
 
-    $query="insert into user values('','','$username','$pass','$nama','user');";
-    $query.="INSERT INTO masyarakat_pelapor values ('','$no_ktp','$nama','$telp','$alamat');";
+    // $query="insert into user values('','','$username','$pass','$nama','user');";
+    // $query.="INSERT INTO masyarakat_pelapor values ('','$no_ktp','$nama','$telp','$alamat');";
+
+
 
 // }
-    if(mysqli_multi_query($kon, $query)) {
-        $status = 'Ok';    
-    } 
-    
+    // if(mysqli_multi_query($kon, $query)) {
+    //     $status = 'Ok';
+    // }
+    //
+    // else {
+    //     $status = 'Gagal';
+    // }
+    //
+    // $data_response = array ('status'=>$status);
+    // echo json_encode($data_response);
+
+
+    // --------------------------------------- ini codingan darlann -----------------------------------------------------------------------
+    $query = "INSERT INTO masyarakat_pelapor values ('','$no_ktp','$nama','$telp','$alamat','$username','$pass');";
+
+    if(mysqli_query($kon, $query)) {
+        $status = 'Ok';
+    }
+
     else {
         $status = 'Gagal';
     }
-    
+
     $data_response = array ('status'=>$status);
     echo json_encode($data_response);
