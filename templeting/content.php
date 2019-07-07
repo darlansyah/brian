@@ -26,7 +26,7 @@ if ($_SESSION['level_user'] == 'admin') {
                         ?>
                         <li class="#">
                             <a class="has-arrow" href="#">
-                                <i class='fa big-icon fa-reorder icon-wrap'></i>
+                                <i class='fa big-icon fa-users icon-wrap'></i>
                                 <span class='mini-click-non'>Admin</span>
                             </a>
                             <ul class="submenu-angle" aria-expanded="true">

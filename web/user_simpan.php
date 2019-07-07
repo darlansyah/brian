@@ -28,8 +28,9 @@ if ($id_user != 0) {
     $query = mysqli_query($kon, "UPDATE admin SET id_profile = '1',
                                                  username = '$username',
                                                  password = '$password',
-                                                 level_user = '$level_user',
-                                                 name = '$nama'
+                                                 name = '$nama',                                                 
+                                                 level_user = '$level_user'
+                                                 
                                                  where id_user = $id_user");
 } else {
     $query = mysqli_query($kon, "INSERT INTO admin values ('',1,'$username','$password','$nama','$level_user')");

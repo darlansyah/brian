@@ -45,10 +45,10 @@ include '../templeting/contenthtml.php';
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                             <div class="admin-content analysis-progrebar-ctn res-mg-t-15">
                                 <h4 class="text-left text-uppercase"><b>Admin & Petugas</b></h4>
-                                        <h2 class="text-left text-uppercase"><b>
-                                    <?php
-                                    echo $num_admin;
-                                    ?>
+                                <h2 class="text-left text-uppercase"><b>
+                                        <?php
+                                        echo $num_admin;
+                                        ?>
                                     </b></h2>
                             </div>
                         </div>
@@ -56,49 +56,49 @@ include '../templeting/contenthtml.php';
                     <?php
                 }
                 ?>
-            
+
                 <a href ="data_kejadian.php">
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="margin-bottom:1px;">
                         <div class="admin-content analysis-progrebar-ctn res-mg-t-30">
                             <h4 class="text-left text-uppercase"><b>Kejadian</b></h4>
                             <h2 class="text-left text-uppercase"><b>
-                                <?php
-                                                echo $num_kejadian;
-                                ?>
-                                    </b></h2>
-                           
-                       </div>
+                                    <?php
+                                    echo $num_kejadian;
+                                    ?>
+                                </b></h2>
+
+                        </div>
                     </div>
                 </a>
                 <a href ="data_petugas.php">
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                         <div class="admin-content analysis-progrebar-ctn res-mg-t-30">
                             <h4 class="text-left text-uppercase"><b>Petugas</b></h4>
-                           <h2 class="text-left text-uppercase"><b><?php
-                           echo $num_petugas;
-                           ?>
-                           </b></h2>
-                           
+                            <h2 class="text-left text-uppercase"><b><?php
+                                    echo $num_petugas;
+                                    ?>
+                                </b></h2>
+
                         </div>
                     </div>
                 </a>
-                 <a href ="data_pos.php">
+                <a href ="data_pos.php">
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                         <div class="admin-content analysis-progrebar-ctn res-mg-t-30">
                             <h4 class="text-left text-uppercase"><b>Pos</b></h4>
-                                    <h2 class="text-left text-uppercase"><b>
-                               <?php
-                               echo $num_pos
-                               ?>
-                                            
+                            <h2 class="text-left text-uppercase"><b>
+                                    <?php
+                                    echo $num_pos
+                                    ?>
+
                                 </b></h2>
-                           </div>
                         </div>
                     </div>
-                </a>
             </div>
+            </a>
         </div>
     </div>
+</div>
 
 <!-- Static Table Start -->
 <div class="static-table-area mg-t-15">
@@ -140,7 +140,7 @@ include '../templeting/contenthtml.php';
                                             <td><?php echo $result->latitude ?></td>
                                             <td><?php echo $result->deskripsi_kejadian ?></td>
                                             <td><?php echo $result->gambar ?></td>
-<!--                                            <td>
+    <!--                                            <td>
                                                 <a href="kejadian_ubah.php?id=<?= $result->id_kejadian; ?>"
                                                    class="btn btn-outline-primary btn-sm mg-r-5"><div><i class="fa fa-edit"></i></div></a>
                                                 <a href="../kejadian/kejadian_hapus.php?id=<?= $result->id_kejadian; ?>"
