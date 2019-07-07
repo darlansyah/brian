@@ -391,7 +391,7 @@
             <script src="../js/calendar/fullcalendar-active.js"></script>
             <!-- plugins JS
                         ============================================ -->
-            <script src="../js/plugins.js"></script>  
+            <script src="../js/plugins.js"></script>
             <!-- Google map JS
                         ============================================ -->
             <script src="../js/google.maps/google.maps-active.js"></script>
@@ -399,5 +399,13 @@
             <!-- main JS
                         ============================================ -->
             <script src="../js/main.js"></script>
+
+
+            <script>
+            if (localStorage) {
+              console.log(localStorage);
+            }
+            console.log(localStorage.getItem('sudah_login'));
+            </script>
     </body>
 </html>
