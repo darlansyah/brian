@@ -62,6 +62,13 @@
     </head>
 
     <body>
+        <!-- cek apa udah login ? -->
+        <script>
+            if (!(localStorage.getItem('sudah_login') == 1)) {
+                window.location.href = 'login.html';
+            }
+        </script>
+        <!-- end cek apa udah login ? -->
 
         <!-- sidebar -->
         <div class="left-sidebar-pro">
@@ -260,7 +267,7 @@
                                                     <th data-field="company" data-editable="true">Alamat Pos</th>
                                                     <th data-field="price" data-editable="true">Longitude Pos</th>
                                                     <th data-field="date" data-editable="true">Latitude Pos</th>
-                                               
+
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -349,22 +356,22 @@
                         ============================================ -->
             <script src="../js/main.js"></script>
             <script>
-                $.ajax({
-                    url: "http://localhost/brian/web/ambil_data_pos.php",
-                    type: 'POST',
-                    dataType: 'json',
-                    success: function (resp) {
-                        console.log(resp);
-                        //                                                alert('ajax jalan!!');
-                        //                                                console.log(resp.length);
-                        //                                                console.log(resp[0].nama_masyarakat_pelapor);
-                        var no;
-                        for (i = 0; i < resp.length; i++) {
-                            no = i + 1;
-                            $('tbody').append('<tr><td>' + no + '</td><td>' + resp[i].nama_pos + '</td><td>' + resp[i].alamat_pos + '</td><td>' + resp[i].longitude_pos + '</td><td>' + resp[i].latitude_pos +'</td></td>');
-                        }
+            $.ajax({
+                url: "http://localhost/brian/web/ambil_data_pos.php",
+                type: 'POST',
+                dataType: 'json',
+                success: function (resp) {
+                    console.log(resp);
+                    //                                                alert('ajax jalan!!');
+                    //                                                console.log(resp.length);
+                    //                                                console.log(resp[0].nama_masyarakat_pelapor);
+                    var no;
+                    for (i = 0; i < resp.length; i++) {
+                        no = i + 1;
+                        $('tbody').append('<tr><td>' + no + '</td><td>' + resp[i].nama_pos + '</td><td>' + resp[i].alamat_pos + '</td><td>' + resp[i].longitude_pos + '</td><td>' + resp[i].latitude_pos + '</td></td>');
                     }
-                });
+                }
+            });
 
             </script>
     </body>

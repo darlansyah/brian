@@ -62,6 +62,13 @@
     </head>
 
     <body>
+        <!-- cek apa udah login ? -->
+        <script>
+            if (!(localStorage.getItem('sudah_login') == 1)) {
+                window.location.href = 'login.html';
+            }
+        </script>
+        <!-- end cek apa udah login ? -->
 
         <!-- sidebar -->
         <div class="left-sidebar-pro">

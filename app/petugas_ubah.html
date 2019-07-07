@@ -62,6 +62,13 @@
     </head>
 
     <body>
+        <!-- cek apa udah login ? -->
+        <script>
+            if (!(localStorage.getItem('sudah_login') == 1)) {
+                window.location.href = 'login.html';
+            }
+        </script>
+        <!-- end cek apa udah login ? -->
 
         <!-- sidebar -->
         <div class="left-sidebar-pro">
@@ -212,28 +219,28 @@
                                             </li>
 
                                             <li><a data-toggle="collapse" data-target="#demo" href="data_pelapor.html"> DATA LAPOR <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-<!--                                                <ul id="demo" class="collapse dropdown-header-top">
-                                                <li><a href="identitas_pelapor.html">IDENTITAS PELAPOR</a></li>
-                                                    <li><a href="data_pelapor.html">DATA PELAPOR</a></li>
-                                                </ul>-->
+                                                <!--                                                <ul id="demo" class="collapse dropdown-header-top">
+                                                                                                <li><a href="identitas_pelapor.html">IDENTITAS PELAPOR</a></li>
+                                                                                                    <li><a href="data_pelapor.html">DATA PELAPOR</a></li>
+                                                                                                </ul>-->
                                             </li>
                                             <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_kejadian.html">DATA KEJADIAN <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-<!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
-                                                <li><a href="lapor_kejadian.html">LAPOR KEJADIAN</a></li>
-                                                    <li><a href="data_kejadian.html">DATA KEJADIAN</a></li>
-                                                </ul>-->
+                                                <!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
+                                                                                                <li><a href="lapor_kejadian.html">LAPOR KEJADIAN</a></li>
+                                                                                                    <li><a href="data_kejadian.html">DATA KEJADIAN</a></li>
+                                                                                                </ul>-->
                                             </li>
                                             <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_petugas.html">DATA PETUGAS<span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-<!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
-                                                <li><a href="identitas_petugas.html">IDENTITAS PETUGAS</a></li>
-                                                    <li><a href="data_petugas.html">DATA PETUGAS</a></li>
-                                                </ul>-->
+                                                <!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
+                                                                                                <li><a href="identitas_petugas.html">IDENTITAS PETUGAS</a></li>
+                                                                                                    <li><a href="data_petugas.html">DATA PETUGAS</a></li>
+                                                                                                </ul>-->
                                             </li>
                                             <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_pos.html">DATA POS <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-<!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
-                                                <li><a href="pos_damkar.html">POS DAMKAR</a></li>
-                                                    <li><a href="data_pos.php">DATA POS</a></li>
-                                                </ul>-->
+                                                <!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
+                                                                                                <li><a href="pos_damkar.html">POS DAMKAR</a></li>
+                                                                                                    <li><a href="data_pos.php">DATA POS</a></li>
+                                                                                                </ul>-->
                                             </li>
                                         </ul>
                                     </nav>
@@ -375,48 +382,48 @@
             <script src="../js/main.js"></script>
             <script>
 
-                var id_ptgs = window.localStorage.getItem('id_ptgs');
+            var id_ptgs = window.localStorage.getItem('id_ptgs');
 
+            $.ajax({
+                url: "http://localhost/tugas_akhir/ambil_data_petugas.php",
+                type: 'POST',
+                dataType: 'json',
+                data: {id_ptgs: id_ptgs},
+                success: function (resp) {
+                    $('#no_induk_pegawai').val(resp.no_induk_pegawai);
+                    $('#nama_petugas').val(resp.nama_petugas);
+                    $('#id_pos').val(resp.id_pos);
+                    $('#id_kj').val(resp.id_kejadian);
+                }
+            });
+
+            $("#btn_simpan").click(simpan_data);
+            function simpan_data() {
+
+                //                    alert("tombol simpan telah di klik")
+                var no_induk_pegawai = $("#no_induk_pegawai").val();
+                var nama_petugas = $("#nama_petugas").val();
+                var id_pos = $("#id_pos").val();
+                var id_kj = $("#id_kj").val();
+
+                console.log("no_induk_pegawai : " + no_induk_pegawai + " nama_petugas : " + nama_petugas + " id_pos : " + id_pos);
                 $.ajax({
-                    url: "http://localhost/tugas_akhir/ambil_data_petugas.php",
+                    url: "http://localhost/tugas_akhir/ajax_petugas_simpan.php",
                     type: 'POST',
                     dataType: 'json',
-                    data: {id_ptgs: id_ptgs},
-                    success: function (resp) {
-                        $('#no_induk_pegawai').val(resp.no_induk_pegawai);
-                        $('#nama_petugas').val(resp.nama_petugas);
-                        $('#id_pos').val(resp.id_pos);
-                        $('#id_kj').val(resp.id_kejadian);
+                    data: {id_petugas: id_ptgs, no_induk_pegawai: no_induk_pegawai, nama_petugas: nama_petugas, id_pos: id_pos},
+                    success: function (response) {
+                        window.localStorage.removeItem('id_ptgs');
+                        if (response.status == "Ok") {
+                            alert("Data Berhasil disimpan");
+                            window.location.href = "data_petugas.html";
+                        } else {
+                            alert("Data Gagal disimpan");
+                            window.location.href = "data_petugas.html";
+                        }
                     }
                 });
-
-                $("#btn_simpan").click(simpan_data);
-                function simpan_data() {
-
-                    //                    alert("tombol simpan telah di klik")
-                    var no_induk_pegawai = $("#no_induk_pegawai").val();
-                    var nama_petugas = $("#nama_petugas").val();
-                    var id_pos = $("#id_pos").val();
-                    var id_kj = $("#id_kj").val();
-
-                    console.log("no_induk_pegawai : " + no_induk_pegawai + " nama_petugas : " + nama_petugas + " id_pos : " + id_pos);
-                    $.ajax({
-                        url: "http://localhost/tugas_akhir/ajax_petugas_simpan.php",
-                        type: 'POST',
-                        dataType: 'json',
-                        data: {id_petugas: id_ptgs, no_induk_pegawai: no_induk_pegawai, nama_petugas: nama_petugas, id_pos: id_pos},
-                        success: function (response) {
-                            window.localStorage.removeItem('id_ptgs');
-                            if (response.status == "Ok") {
-                                alert("Data Berhasil disimpan");
-                                window.location.href = "data_petugas.html";
-                            } else {
-                                alert("Data Gagal disimpan");
-                                window.location.href = "data_petugas.html";
-                            }
-                        }
-                    });
-                }
+            }
 
             </script>
     </body>

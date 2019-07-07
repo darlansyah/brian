@@ -62,6 +62,13 @@
     </head>
 
     <body>
+        <!-- cek apa udah login ? -->
+        <script>
+            if (!(localStorage.getItem('sudah_login') == 1)) {
+                window.location.href = 'login.html';
+            }
+        </script>
+        <!-- end cek apa udah login ? -->
 
         <!-- sidebar -->
         <div class="left-sidebar-pro">
@@ -182,28 +189,28 @@
                                             </li>
 
                                             <li><a data-toggle="collapse" data-target="#demo" href="data_pelapor.html"> DATA LAPOR <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-<!--                                                <ul id="demo" class="collapse dropdown-header-top">
-                                                <li><a href="identitas_pelapor.html">IDENTITAS PELAPOR</a></li>
-                                                    <li><a href="data_pelapor.html">DATA PELAPOR</a></li>
-                                                </ul>-->
+                                                <!--                                                <ul id="demo" class="collapse dropdown-header-top">
+                                                                                                <li><a href="identitas_pelapor.html">IDENTITAS PELAPOR</a></li>
+                                                                                                    <li><a href="data_pelapor.html">DATA PELAPOR</a></li>
+                                                                                                </ul>-->
                                             </li>
                                             <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_kejadian.html">DATA KEJADIAN <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-<!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
-                                                <li><a href="lapor_kejadian.html">LAPOR KEJADIAN</a></li>
-                                                    <li><a href="data_kejadian.html">DATA KEJADIAN</a></li>
-                                                </ul>-->
+                                                <!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
+                                                                                                <li><a href="lapor_kejadian.html">LAPOR KEJADIAN</a></li>
+                                                                                                    <li><a href="data_kejadian.html">DATA KEJADIAN</a></li>
+                                                                                                </ul>-->
                                             </li>
                                             <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_petugas.html">DATA PETUGAS<span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-<!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
-                                                <li><a href="identitas_petugas.html">IDENTITAS PETUGAS</a></li>
-                                                    <li><a href="data_petugas.html">DATA PETUGAS</a></li>
-                                                </ul>-->
+                                                <!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
+                                                                                                <li><a href="identitas_petugas.html">IDENTITAS PETUGAS</a></li>
+                                                                                                    <li><a href="data_petugas.html">DATA PETUGAS</a></li>
+                                                                                                </ul>-->
                                             </li>
                                             <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_pos.html">DATA POS <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-<!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
-                                                <li><a href="pos_damkar.html">POS DAMKAR</a></li>
-                                                    <li><a href="data_pos.php">DATA POS</a></li>
-                                                </ul>-->
+                                                <!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
+                                                                                                <li><a href="pos_damkar.html">POS DAMKAR</a></li>
+                                                                                                    <li><a href="data_pos.php">DATA POS</a></li>
+                                                                                                </ul>-->
                                             </li>
                                         </ul>
                                     </nav>
@@ -347,37 +354,37 @@
                         ============================================ -->
             <script src="../js/main.js"></script>
             <script>
-                $.ajax({
-                    url: "http://localhost/brian/web/ambil_data_petugas.php",
-                    type: 'POST',
-                    dataType: 'json',
-                    success: function (resp) {
-                        //                                                alert('ajax jalan!!');
-                        //                                                console.log(resp.length);
-                        //                                                console.log(resp[0].nama_masyarakat_pelapor);
-                        var no;
-                        for (i = 0; i < resp.length; i++) {
-                            no = i + 1;
-                            $('tbody').append('<tr><td>' + no + '</td><td>' + resp[i].no_induk_pegawai + '</td><td>'
-                                    + resp[i].nama_petugas + '</td><td>' + resp[i].id_pos + '</td>');
-                        }
-
-                        $('.inputClass').each(function () {
-                            $(this).click(function () {
-                                var id = $(this).attr('id');
-                                //Do whatever the edit function should do with the id
-                                edit_data(id);
-                            });
-                        });
-                        $('.delateClass').each(function () {
-                            $(this).click(function () {
-                                var id = $(this).attr('id');
-                                //Do whatever the edit function should do with the id
-                                hapus_data(id);
-                            });
-                        });
+            $.ajax({
+                url: "http://localhost/brian/web/ambil_data_petugas.php",
+                type: 'POST',
+                dataType: 'json',
+                success: function (resp) {
+                    //                                                alert('ajax jalan!!');
+                    //                                                console.log(resp.length);
+                    //                                                console.log(resp[0].nama_masyarakat_pelapor);
+                    var no;
+                    for (i = 0; i < resp.length; i++) {
+                        no = i + 1;
+                        $('tbody').append('<tr><td>' + no + '</td><td>' + resp[i].no_induk_pegawai + '</td><td>'
+                                + resp[i].nama_petugas + '</td><td>' + resp[i].id_pos + '</td>');
                     }
-                });
+
+                    $('.inputClass').each(function () {
+                        $(this).click(function () {
+                            var id = $(this).attr('id');
+                            //Do whatever the edit function should do with the id
+                            edit_data(id);
+                        });
+                    });
+                    $('.delateClass').each(function () {
+                        $(this).click(function () {
+                            var id = $(this).attr('id');
+                            //Do whatever the edit function should do with the id
+                            hapus_data(id);
+                        });
+                    });
+                }
+            });
 
 
 

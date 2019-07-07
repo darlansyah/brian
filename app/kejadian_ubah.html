@@ -62,6 +62,13 @@
     </head>
 
     <body>
+        <!-- cek apa udah login ? -->
+        <script>
+            if (!(localStorage.getItem('sudah_login') == 1)) {
+                window.location.href = 'login.html';
+            }
+        </script>
+        <!-- end cek apa udah login ? -->
 
         <!-- sidebar -->
         <div class="left-sidebar-pro">
@@ -188,28 +195,28 @@
                                             </li>
 
                                             <li><a data-toggle="collapse" data-target="#demo" href="data_pelapor.html"> DATA LAPOR <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-<!--                                                <ul id="demo" class="collapse dropdown-header-top">
-                                                <li><a href="identitas_pelapor.html">IDENTITAS PELAPOR</a></li>
-                                                    <li><a href="data_pelapor.html">DATA PELAPOR</a></li>
-                                                </ul>-->
+                                                <!--                                                <ul id="demo" class="collapse dropdown-header-top">
+                                                                                                <li><a href="identitas_pelapor.html">IDENTITAS PELAPOR</a></li>
+                                                                                                    <li><a href="data_pelapor.html">DATA PELAPOR</a></li>
+                                                                                                </ul>-->
                                             </li>
                                             <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_kejadian.html">DATA KEJADIAN <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-<!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
-                                                <li><a href="lapor_kejadian.html">LAPOR KEJADIAN</a></li>
-                                                    <li><a href="data_kejadian.html">DATA KEJADIAN</a></li>
-                                                </ul>-->
+                                                <!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
+                                                                                                <li><a href="lapor_kejadian.html">LAPOR KEJADIAN</a></li>
+                                                                                                    <li><a href="data_kejadian.html">DATA KEJADIAN</a></li>
+                                                                                                </ul>-->
                                             </li>
                                             <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_petugas.html">DATA PETUGAS<span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-<!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
-                                                <li><a href="identitas_petugas.html">IDENTITAS PETUGAS</a></li>
-                                                    <li><a href="data_petugas.html">DATA PETUGAS</a></li>
-                                                </ul>-->
+                                                <!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
+                                                                                                <li><a href="identitas_petugas.html">IDENTITAS PETUGAS</a></li>
+                                                                                                    <li><a href="data_petugas.html">DATA PETUGAS</a></li>
+                                                                                                </ul>-->
                                             </li>
                                             <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_pos.html">DATA POS <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-<!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
-                                                <li><a href="pos_damkar.html">POS DAMKAR</a></li>
-                                                    <li><a href="data_pos.php">DATA POS</a></li>
-                                                </ul>-->
+                                                <!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
+                                                                                                <li><a href="pos_damkar.html">POS DAMKAR</a></li>
+                                                                                                    <li><a href="data_pos.php">DATA POS</a></li>
+                                                                                                </ul>-->
                                             </li>
                                         </ul>
                                     </nav>
@@ -370,54 +377,54 @@
                         ============================================ -->
             <script src="../js/main.js"></script>
             <script>
-                var id_kj = window.localStorage.getItem('id_kj');
+            var id_kj = window.localStorage.getItem('id_kj');
 
-                $.ajax({
-                    url: "http://localhost/brian/web/ambil_id_kejadian.php",
-                    type: 'POST',
-                    dataType: 'json',
-                    data: {id_kj: id_kj},
-                    success: function (resp) {
-                        $('#id_masyarakat_pelapor').val(resp.id_masyarakat_pelapor);
-                        $('#tanggal_waktu_kejadian').val(resp.tanggal_waktu_kejadian);
-                        $('#longitude').val(resp.longitude);
-                        $('#latitude').val(resp.latitude);
-                        $('#deskripsi_kejadian').val(resp.deskripsi_kejadian);
-                        $('#gambar').val(resp.gambar);
-                        $('#id_kj').val(resp.id_kejadian);
-                    }
-                });
+            $.ajax({
+                url: "http://localhost/brian/web/ambil_id_kejadian.php",
+                type: 'POST',
+                dataType: 'json',
+                data: {id_kj: id_kj},
+                success: function (resp) {
+                    $('#id_masyarakat_pelapor').val(resp.id_masyarakat_pelapor);
+                    $('#tanggal_waktu_kejadian').val(resp.tanggal_waktu_kejadian);
+                    $('#longitude').val(resp.longitude);
+                    $('#latitude').val(resp.latitude);
+                    $('#deskripsi_kejadian').val(resp.deskripsi_kejadian);
+                    $('#gambar').val(resp.gambar);
+                    $('#id_kj').val(resp.id_kejadian);
+                }
+            });
 
-                $("#btn_simpan").click(simpan_data);
-                function simpan_data() {
+            $("#btn_simpan").click(simpan_data);
+            function simpan_data() {
 
 //                    alert("tombol simpan telah di klik")
-                    var id_masyarakat_pelapor = $("#id_masyarakat_pelapor").val();
-                    var tanggal_waktu_kejadian = $("#tanggal_waktu_kejadian").val();
-                    var longitude = $("#longitude").val();
-                    var latitude = $("#latitude").val();
-                    var deskripsi_kejadian = $("#deskripsi_kejadian").val();
-                    var gambar = $("#gambar").val();
-                    var id_kj = $("#id_kj").val();
+                var id_masyarakat_pelapor = $("#id_masyarakat_pelapor").val();
+                var tanggal_waktu_kejadian = $("#tanggal_waktu_kejadian").val();
+                var longitude = $("#longitude").val();
+                var latitude = $("#latitude").val();
+                var deskripsi_kejadian = $("#deskripsi_kejadian").val();
+                var gambar = $("#gambar").val();
+                var id_kj = $("#id_kj").val();
 
-                    console.log("id_masyarakat_pelapor: " + id_masyarakat_pelapor + "tanggal_waktu_kejadian: " + tanggal_waktu_kejadian + " longitude : " + longitude + " latitude : " + latitude + " deskripsi_kejadian : " + deskripsi_kejadian + " gambar : " + gambar);
-                    $.ajax({
-                        url: "http://localhost/brian/web/ajax_kejadian_simpan.php",
-                        type: 'POST',
-                        dataType: 'json',
-                        data: {id_kejadian: id_kj, id_masyarakat_pelapor: id_masyarakat_pelapor, longitude: longitude, latitude: latitude, deskripsi_kejadian: deskripsi_kejadian, gambar: gambar},
-                        success: function (response) {
-                            window.localStorage.removeItem('id_kj');
-                            if (response.status == "Ok") {
-                                alert("Data Berhasil disimpan");
-                                window.location.href = "../app/data_kejadian.html";
-                            } else {
-                                alert("Data Gagal disimpan");
-                                window.location.href = "../app/data_kejadian.html";
-                            }
+                console.log("id_masyarakat_pelapor: " + id_masyarakat_pelapor + "tanggal_waktu_kejadian: " + tanggal_waktu_kejadian + " longitude : " + longitude + " latitude : " + latitude + " deskripsi_kejadian : " + deskripsi_kejadian + " gambar : " + gambar);
+                $.ajax({
+                    url: "http://localhost/brian/web/ajax_kejadian_simpan.php",
+                    type: 'POST',
+                    dataType: 'json',
+                    data: {id_kejadian: id_kj, id_masyarakat_pelapor: id_masyarakat_pelapor, longitude: longitude, latitude: latitude, deskripsi_kejadian: deskripsi_kejadian, gambar: gambar},
+                    success: function (response) {
+                        window.localStorage.removeItem('id_kj');
+                        if (response.status == "Ok") {
+                            alert("Data Berhasil disimpan");
+                            window.location.href = "../app/data_kejadian.html";
+                        } else {
+                            alert("Data Gagal disimpan");
+                            window.location.href = "../app/data_kejadian.html";
                         }
-                    });
-                }
+                    }
+                });
+            }
 
 
             </script>
