@@ -185,34 +185,31 @@
                                     <nav id="dropdown">
                                         <ul class="mobile-menu-nav">
                                             <li><a data-toggle="collapse" data-target="#Charts" href="index.html">Home <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                                <ul class="collapse dropdown-header-top">
-                                                    <li><a href="index.html">INDEX</a></li>
-                                                </ul>
                                             </li>
 
-                                            <li><a data-toggle="collapse" data-target="#demo" href="#">LAPOR <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                                <ul id="demo" class="collapse dropdown-header-top">
-<!--                                                    <li><a href="identitas_pelapor.html">IDENTITAS PELAPOR</a></li>-->
+                                            <li><a data-toggle="collapse" data-target="#demo" href="data_pelapor.html"> DATA LAPOR <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+<!--                                                <ul id="demo" class="collapse dropdown-header-top">
+                                                <li><a href="identitas_pelapor.html">IDENTITAS PELAPOR</a></li>
                                                     <li><a href="data_pelapor.html">DATA PELAPOR</a></li>
-                                                </ul>
+                                                </ul>-->
                                             </li>
-                                            <li><a data-toggle="collapse" data-target="#Tablesmob" href="#">KEJADIAN <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
-<!--                                                    <li><a href="lapor_kejadian.html">LAPOR KEJADIAN</a></li>-->
+                                            <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_kejadian.html">DATA KEJADIAN <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+<!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
+                                                <li><a href="lapor_kejadian.html">LAPOR KEJADIAN</a></li>
                                                     <li><a href="data_kejadian.html">DATA KEJADIAN</a></li>
-                                                </ul>
+                                                </ul>-->
                                             </li>
-                                            <li><a data-toggle="collapse" data-target="#Tablesmob" href="#">PETUGAS DAMKAR <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
-<!--                                                    <li><a href="identitas_petugas.html">IDENTITAS PETUGAS</a></li>-->
+                                            <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_petugas.html">DATA PETUGAS<span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+<!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
+                                                <li><a href="identitas_petugas.html">IDENTITAS PETUGAS</a></li>
                                                     <li><a href="data_petugas.html">DATA PETUGAS</a></li>
-                                                </ul>
+                                                </ul>-->
                                             </li>
-                                            <li><a data-toggle="collapse" data-target="#Tablesmob" href="#">POS <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
-<!--                                                    <li><a href="pos_damkar.html">POS DAMKAR</a></li>-->
+                                            <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_pos.html">DATA POS <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+<!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
+                                                <li><a href="pos_damkar.html">POS DAMKAR</a></li>
                                                     <li><a href="data_pos.php">DATA POS</a></li>
-                                                </ul>
+                                                </ul>-->
                                             </li>
                                         </ul>
                                     </nav>
@@ -275,7 +272,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                
+
                                             </tbody>
                                         </table>
                                     </div>
@@ -365,17 +362,17 @@
                     success: function (resp) {
 //                        
                         for (i = 0; i < resp.length; i++) {
-                            $('tbody').append('<tr><td>' + resp[i].id_kejadian 
-                                    + '</td><td>' + resp[i].nama_pelapor 
-                                    + '</td><td>' + resp[i].tanggal_waktu_kejadian 
-                                    + '</td><td>' + resp[i].longitude 
-                                    + '</td><td>' + resp[i].latitude 
-                                    + '</td><td>' + resp[i].deskripsi_kejadian 
-                                    + '</td><td>' + resp[i].gambar 
-                                    + '</td><td><button id="' 
-                                    + resp[i].id_kejadian 
+                            $('tbody').append('<tr><td>' + resp[i].id_kejadian
+                                    + '</td><td>' + resp[i].nama_pelapor
+                                    + '</td><td>' + resp[i].tanggal_waktu_kejadian
+                                    + '</td><td>' + resp[i].longitude
+                                    + '</td><td>' + resp[i].latitude
+                                    + '</td><td>' + resp[i].deskripsi_kejadian
+                                    + '</td><td>' + resp[i].gambar
+                                    + '</td><td><button id="'
+                                    + resp[i].id_kejadian
                                     + '" class="btn btn-outline-primary btn-sm mg-r-5 inputClass"><div><i class="fa fa-pencil"></i></div></button>\n\
-                                    <button id="' 
+                                    <button id="'
                                     + resp[i].id_kejadian + '" class="btn btn-outline-danger btn-sm mg-r-5 deleteClass"><div><i class="fa fa-trash"></i></div></button></td>');
                         }
 
@@ -422,5 +419,5 @@
                     });
                 }
             </script>
-        </body>
+    </body>
 </html>
