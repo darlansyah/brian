@@ -18,6 +18,7 @@ $kon = koneksi_db();
 $id_user = isset($_REQUEST['id_user']) ? $_REQUEST['id_user'] : 0;
 $username = isset($_REQUEST['username']) ? $_REQUEST['username'] : '';
 $password = isset($_REQUEST['password']) ? $_REQUEST['password'] : '';
+$nama = isset($_REQUEST['nama']) ? $_REQUEST['nama'] : '';
 $level_user = isset($_REQUEST['level_user']) ? $_REQUEST['level_user'] : 'petugas';
 
 //$id_profil = isset($_REQUEST['id_profil']) ? $_REQUEST['id_profil'] : '';
@@ -27,10 +28,11 @@ if ($id_user != 0) {
     $query = mysqli_query($kon, "UPDATE admin SET id_profile = '1',
                                                  username = '$username',
                                                  password = '$password',
-                                                 level_user = '$level_user'
+                                                 level_user = '$level_user',
+                                                 name = '$nama'
                                                  where id_user = $id_user");
 } else {
-    $query = mysqli_query($kon, "INSERT INTO admin values ('',1,'$username','$password','$level_user')");
+    $query = mysqli_query($kon, "INSERT INTO admin values ('',1,'$username','$password','$nama','$level_user')");
 }
 
 // star my script
@@ -60,4 +62,3 @@ if ($query) {
         //";
 //}
 //
-           

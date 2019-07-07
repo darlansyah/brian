@@ -34,6 +34,10 @@ include '../templeting/contenthtml.php';
 
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <div class="review-content-section">
+                                      <div class="input-group mg-b-pro-edt">
+                                          <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                                          <input type="text" class="form-control" name="nama" placeholder="Nama">
+                                      </div>
                                         <div class="input-group mg-b-pro-edt">
                                             <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
                                             <input type="text" class="form-control" name="username" placeholder="Username">

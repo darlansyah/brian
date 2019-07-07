@@ -16,6 +16,7 @@ $kon = koneksi_db();
 
 $id_user = $_GET['id'];
 $query = mysqli_query($kon, "SELECT * FROM admin WHERE id_user= '$id_user'");
+
 if (mysqli_num_rows($query) > 0) {
     $result = mysqli_fetch_object($query);
 } else {
@@ -54,6 +55,10 @@ include '../templeting/contenthtml.php';
 
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <div class="review-content-section">
+                                      <div class="input-group mg-b-pro-edt">
+                                          <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                                          <input type="text" class="form-control" name="nama" value="<?= $result->name ?>" placeholder="Nama">
+                                      </div>
                                         <div class="input-group mg-b-pro-edt">
                                             <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
                                             <input type="text" class="form-control" name="username" value="<?= $result->username ?>" placeholder="Username">
