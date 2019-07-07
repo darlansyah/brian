@@ -1,12 +1,17 @@
-<?php
+<!-- <?php
 
 session_start();
 session_destroy();
 ?>
 <script>
-    alert('Anda Berhasil Logout!');
-    window.location.href = "index.php";
+alert('Anda Berhasil Logout!');
+window.location.href = "index.php";
 </script>
 <?php
 
-exit;
+exit; -->
+
+<script type="text/javascript">
+  localStorage.clear();
+  window.location.href = 'login.html';
+</script>
