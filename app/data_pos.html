@@ -179,34 +179,31 @@
                                     <nav id="dropdown">
                                         <ul class="mobile-menu-nav">
                                             <li><a data-toggle="collapse" data-target="#Charts" href="index.html">Home <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                                <ul class="collapse dropdown-header-top">
-                                                    <li><a href="index.html">INDEX</a></li>
-                                                </ul>
                                             </li>
 
-                                            <li><a data-toggle="collapse" data-target="#demo" href="#">LAPOR <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                                <ul id="demo" class="collapse dropdown-header-top">
-                                                    <li><a href="identitas_pelapor.html">IDENTITAS PELAPOR</a></li>
-                                                    <li><a href="data_pelapor.html">DATA PELAPOR</a></li>
-                                                </ul>
+                                            <li><a data-toggle="collapse" data-target="#demo" href="data_pelapor.html"> DATA LAPOR <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+                                                <!--                                                <ul id="demo" class="collapse dropdown-header-top">
+                                                                                                <li><a href="identitas_pelapor.html">IDENTITAS PELAPOR</a></li>
+                                                                                                    <li><a href="data_pelapor.html">DATA PELAPOR</a></li>
+                                                                                                </ul>-->
                                             </li>
-                                            <li><a data-toggle="collapse" data-target="#Tablesmob" href="#">KEJADIAN <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
-                                                    <li><a href="lapor_kejadian.html">LAPOR KEJADIAN</a></li>
-                                                    <li><a href="data_kejadian.html">DATA KEJADIAN</a></li>
-                                                </ul>
+                                            <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_kejadian.html">DATA KEJADIAN <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+                                                <!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
+                                                                                                <li><a href="lapor_kejadian.html">LAPOR KEJADIAN</a></li>
+                                                                                                    <li><a href="data_kejadian.html">DATA KEJADIAN</a></li>
+                                                                                                </ul>-->
                                             </li>
-                                            <li><a data-toggle="collapse" data-target="#Tablesmob" href="#">PETUGAS DAMKAR <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
-                                                    <li><a href="identitas_petugas.html">IDENTITAS PETUGAS</a></li>
-                                                    <li><a href="data_petugas.html">DATA PETUGAS</a></li>
-                                                </ul>
+                                            <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_petugas.html">DATA PETUGAS<span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+                                                <!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
+                                                                                                <li><a href="identitas_petugas.html">IDENTITAS PETUGAS</a></li>
+                                                                                                    <li><a href="data_petugas.html">DATA PETUGAS</a></li>
+                                                                                                </ul>-->
                                             </li>
-                                            <li><a data-toggle="collapse" data-target="#Tablesmob" href="#">POS <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
-                                                    <li><a href="pos_damkar.html">POS DAMKAR</a></li>
-                                                    <li><a href="data_pos.html">DATA POS</a></li>
-                                                </ul>
+                                            <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_pos.html">DATA POS <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+                                                <!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
+                                                                                                <li><a href="pos_damkar.html">POS DAMKAR</a></li>
+                                                                                                    <li><a href="data_pos.php">DATA POS</a></li>
+                                                                                                </ul>-->
                                             </li>
                                         </ul>
                                     </nav>
@@ -234,85 +231,52 @@
             </div>
             <!-- sub main -->
 
-                        <!-- Static Table Start -->
-          <div class="data-table-area mg-tb-15">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="sparkline13-list">
-                    <div class="sparkline13-hd">
-                        <div class="main-sparkline13-hd">
-                            <h1><span class="table-project-n">Data</span> Pos</h1>
-                        </div>
-                    </div>
-                    <div class="sparkline13-graph">
-                        <div class="datatable-dashv1-list custom-datatable-overright">
-                            <div id="toolbar">
-                                <select class="form-control">
-                                    <option value="">Export Basic</option>
-                                    <option value="all">Export All</option>
-                                    <option value="selected">Export Selected</option>
-                                </select>
+            <!-- Static Table Start -->
+            <div class="data-table-area mg-tb-15">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="sparkline13-list">
+                                <div class="sparkline13-hd">
+                                    <div class="main-sparkline13-hd">
+                                        <h1><span class="table-project-n">Data</span> Pos</h1>
+                                    </div>
+                                </div>
+                                <div class="sparkline13-graph">
+                                    <div class="datatable-dashv1-list custom-datatable-overright">
+                                        <div id="toolbar">
+                                            <select class="form-control">
+                                                <option value="">Export Basic</option>
+                                                <option value="all">Export All</option>
+                                                <option value="selected">Export Selected</option>
+                                            </select>
+                                        </div>
+                                        <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"
+                                               data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
+                                            <thead>
+                                                <tr>
+                                                    <th data-field="id">ID</th>
+                                                    <th data-field="name" data-editable="true">Nama Pos</th>
+                                                    <th data-field="company" data-editable="true">Alamat Pos</th>
+                                                    <th data-field="price" data-editable="true">Longitude Pos</th>
+                                                    <th data-field="date" data-editable="true">Latitude Pos</th>
+                                               
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
-                            <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"
-                                   data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
-                                <thead>
-                                    <tr>
-                                        <th data-field="id">ID</th>
-                                        <th data-field="name" data-editable="true">Nama Pos</th>
-                                        <th data-field="company" data-editable="true">Alamat Pos</th>
-                                        <th data-field="price" data-editable="true">Longitude Pos</th>
-                                        <th data-field="date" data-editable="true">Latitude Pos</th>
-                                        <?php
-                                        if ($_SESSION['level_user'] == 'admin') {
-                                            ?>
-                                            <th data-field="action">Action</th>
-                                            <?php
-                                        }
-                                        ?>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-                                    $no = 1;
-                                    while ($result = mysqli_fetch_object($query)) {
-                                        ?>
-                                        <tr>
-                                            <td><?php echo $no++; ?></td>
-                                            <td><?php echo $result->nama_pos ?></td>
-                                            <td><?php echo $result->alamat_pos ?></td>
-                                            <td><?php echo $result->longitude_pos ?></td>
-                                            <td><?php echo $result->latitude_pos ?></td>
-                                            <?php
-                                            if ($_SESSION['level_user'] == 'admin') {
-                                                ?>
-                                                <td>
-                                                    <a href="pos_ubah.php?id=<?= $result->id_pos; ?>"
-                                                       class="btn btn-outline-primary btn-sm mg-r-5"><div><i class="fa fa-edit"></i></div></a>
-                                                    <a href="../pos/pos_hapus.php?id=<?= $result->id_pos; ?>"
-                                                       onclick="return confirm('Anda Yakin Akan Menghapus <?php echo $result->nama_pos ?>?')"
-                                                       class="btn btn-outline-danger btn-sm mg-r-5"><div><i class="fa fa-trash-o"></i></div></a>
-                                                </td>
-                                                <?php
-                                            }
-                                            ?>
-
-                                        </tr>
-                                        <?php
-                                    }
-                                    ?>
-
-                                </tbody>
-                            </table>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
             <!-- Static Table End -->
-      
+
 
             <!-- footer -->
             <div class="footer-copyright-area">
@@ -384,7 +348,7 @@
             <!-- main JS
                         ============================================ -->
             <script src="../js/main.js"></script>
-     <script>
+            <script>
                 $.ajax({
                     url: "http://localhost/brian/web/ambil_data_pos.php",
                     type: 'POST',
@@ -397,51 +361,11 @@
                         var no;
                         for (i = 0; i < resp.length; i++) {
                             no = i + 1;
-                            $('tbody').append('<tr><td>' + no + '</td><td>' + resp[i].nama_pos + '</td><td>' + resp[i].alamat_pos + '</td><td>' + resp[i].longitude_pos + '</td><td>' + resp[i].latitude_pos + '</td><td><button id="' + resp[i].id_pos + '" class="btn btn-outline-primary btn-sm mg-r-5 inputClass"><div><i class="fa fa-pencil"></i></div></button> <button id="' + resp[i].id_pos + '" class="btn btn-outline-danger btn-sm mg-r-5 delateClass"><div><i class="fa fa-trash"></i></div></button></td>');
+                            $('tbody').append('<tr><td>' + no + '</td><td>' + resp[i].nama_pos + '</td><td>' + resp[i].alamat_pos + '</td><td>' + resp[i].longitude_pos + '</td><td>' + resp[i].latitude_pos +'</td></td>');
                         }
-
-                        $('.inputClass').each(function () {
-                            $(this).click(function () {
-                                var id = $(this).attr('id');
-                                //Do whatever the edit function should do with the id
-                                edit_data(id);
-                            });
-                        });
-                        $('.delateClass').each(function () {
-                            $(this).click(function () {
-                                var id = $(this).attr('id');
-                                //Do whatever the edit function should do with the id
-                                hapus_data(id);
-                            });
-                        });
-
                     }
                 });
-                function edit_data(id) {
-                    alert('ini id-nya' + id);
-                    window.localStorage.setItem('id_mp', id);
-                    window.location.href = '../app/pelapor_ubah.html';
-                }
 
-                function hapus_data(id) {
-                    alert('ini id-nya' + id);
-                    window.localStorage.setItem('id_mp', id);
-                    $.ajax({
-                        url: "http://localhost/brian/web/ajax_pelapor_hapus.php",
-                        type: 'POST',
-                        dataType: 'json',
-                        data: {id_mp: id},
-                        success: function (response) {
-                            if (response.status == "Ok") {
-                                alert("Data Berhasil Dihapus");
-                                window.location.href = "../app/data_pelapor.html";
-                            } else {
-                                alert("Data Gagal Dihapus");
-                                window.location.href = "../app/data_pelapor.html";
-                            }
-                        }
-                    });
-                }
             </script>
     </body>
 </html>
