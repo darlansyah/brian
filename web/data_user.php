@@ -51,6 +51,7 @@ include '../templeting/contenthtml.php';
                                         <th data-field="name" data-editable="true">ID Profile</th>
                                         <th data-field="company" data-editable="true">Username</th>
                                         <th data-field="price" data-editable="true">Password</th>
+                                        <th data-field="price" data-editable="true">Nama</th>
                                         <th data-field="date" data-editable="true">Level User</th>
                                         <th data-field="action">Action</th>
                                     </tr>
@@ -65,6 +66,7 @@ include '../templeting/contenthtml.php';
                                             <td><?php echo $result->id_profile ?></td>
                                             <td><?php echo $result->username ?></td>
                                             <td><?php echo $result->password ?></td>
+                                            <td><?php echo $result->name ?></td>
                                             <td><?php echo $result->level_user ?></td>
                                             <td>
                                                 <a href="user_ubah.php?id=<?= $result->id_user; ?>"
