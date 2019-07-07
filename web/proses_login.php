@@ -18,6 +18,7 @@ if (mysqli_num_rows($result) == 1) {
     $row = mysqli_fetch_assoc($result);
     $_SESSION['sudah_login'] = TRUE;
     $_SESSION['level_user'] = $row['level_user'];
+    $_SESSION['nama'] = $row['name'];
     header('location:index.php');
 } else {
     ?>

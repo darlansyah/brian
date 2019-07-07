@@ -35,7 +35,7 @@
                                         <li class="nav-item">
                                             <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
                                                 <i class="fa fa-user adminpro-user-rounded header-riht-inf" aria-hidden="true"></i>
-                                                <span class="admin-name"> <?= $_SESSION['level_user']?> || Logout</span>
+                                                <span class="admin-name"> <?= $_SESSION['nama']; ?>  || <?= $_SESSION['level_user']?> || Logout</span>
                                                 <i class="fa fa-angle-down adminpro-icon adminpro-down-arrow"></i>
                                             </a>
                                             <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
@@ -68,7 +68,7 @@
                                         <li><a href="index.php">INDEX</a></li>
                                     </ul>
                                 </li>
-                                
+
                                 <li><a data-toggle="collapse" data-target="#demo" href="#">LAPOR <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
                                     <ul id="demo" class="collapse dropdown-header-top">
 <!--                                        <li><a href="identitas_pelapor.php">IDENTITAS PELAPOR</a></li>-->
