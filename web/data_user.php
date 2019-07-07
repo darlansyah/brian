@@ -13,10 +13,11 @@ if ($_SESSION['level_user'] != 'admin') {
 require '../functions/kumpulan_fungsi.php';
 authentication();
 $kon = koneksi_db();
-$query = mysqli_query($kon, "SELECT * FROM `admin`  
+$query = mysqli_query($kon, "SELECT * FROM `admin`
 ORDER BY `admin`.`id_user`  DESC");
 
-
+// var_dump($query);
+// die;
 
 
 include '../templeting/headerhtml.php';
@@ -48,11 +49,11 @@ include '../templeting/contenthtml.php';
                                 <thead>
                                     <tr>
                                         <th data-field="id">ID</th>
-                                        <th data-field="name" data-editable="true">ID Profile</th>
-                                        <th data-field="company" data-editable="true">Username</th>
-                                        <th data-field="price" data-editable="true">Password</th>
-                                        <th data-field="price" data-editable="true">Nama</th>
-                                        <th data-field="date" data-editable="true">Level User</th>
+                                        <th data-field="id_profil" data-editable="true">ID Profile</th>
+                                        <th data-field="username" data-editable="true">Username</th>
+                                        <th data-field="password" data-editable="true">Password</th>
+                                        <th data-field="nama" data-editable="true">Nama</th>
+                                        <th >Level User</th>
                                         <th data-field="action">Action</th>
                                     </tr>
                                 </thead>
