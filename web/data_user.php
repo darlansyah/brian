@@ -1,6 +1,6 @@
 <?php
 session_start();
-// cek apakah ini admin ?
+
 if ($_SESSION['level_user'] != 'admin') {
     ?>
     <script>
@@ -13,12 +13,8 @@ if ($_SESSION['level_user'] != 'admin') {
 require '../functions/kumpulan_fungsi.php';
 authentication();
 $kon = koneksi_db();
-$query = mysqli_query($kon, "SELECT * FROM `admin`
-ORDER BY `admin`.`id_user`  DESC");
-
-// var_dump($query);
-// die;
-
+$query = mysqli_query($kon, "SELECT * FROM `user`
+ORDER BY `user`.`id_user`  DESC");
 
 include '../templeting/headerhtml.php';
 include '../templeting/content.php';
@@ -32,16 +28,16 @@ include '../templeting/contenthtml.php';
                 <div class="sparkline13-list">
                     <div class="sparkline13-hd">
                         <div class="main-sparkline13-hd">
-                            <h1><span class="table-project-n">Data</span> Admin</h1>
+                            <h1><span class="table-project-n">Data</span> User</h1>
                         </div>
                     </div>
                     <div class="sparkline13-graph">
                         <div class="datatable-dashv1-list custom-datatable-overright">
                             <div id="toolbar">
                                 <select class="form-control">
-                                    <option value="">Export Basic</option>
-                                    <option value="all">Export All</option>
-                                    <option value="selected">Export Selected</option>
+                                    <option value="">Admin</option>
+                                    <option value="all">Petugas</option>
+                                    <option value="selected">User</option>
                                 </select>
                             </div>
                             <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"
@@ -52,7 +48,6 @@ include '../templeting/contenthtml.php';
                                         <th data-field="id_profil" data-editable="true">ID Profile</th>
                                         <th data-field="username" data-editable="true">Username</th>
                                         <th data-field="password" data-editable="true">Password</th>
-                                        <th data-field="nama" data-editable="true">Nama</th>
                                         <th >Level User</th>
                                         <th data-field="action">Action</th>
                                     </tr>
@@ -67,7 +62,6 @@ include '../templeting/contenthtml.php';
                                             <td><?php echo $result->id_profile ?></td>
                                             <td><?php echo $result->username ?></td>
                                             <td><?php echo $result->password ?></td>
-                                            <td><?php echo $result->name ?></td>
                                             <td><?php echo $result->level_user ?></td>
                                             <td>
                                                 <a href="user_ubah.php?id=<?= $result->id_user; ?>"
@@ -90,7 +84,6 @@ include '../templeting/contenthtml.php';
         </div>
     </div>
 </div>
-
 
 <?php
 include '../templeting/footer.php';

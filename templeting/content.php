@@ -24,7 +24,7 @@ if ($_SESSION['level_user'] == 'admin') {
                     <?php
                     if ($_SESSION['level_user'] == 'admin') {
                         ?>
-                        <li class="#">
+<!--                        <li class="#">
                             <a class="has-arrow" href="#">
                                 <i class='fa big-icon fa-users icon-wrap'></i>
                                 <span class='mini-click-non'>Admin</span>
@@ -35,7 +35,7 @@ if ($_SESSION['level_user'] == 'admin') {
                             <ul class='submenu-angle' aria-expanded='true'>
                                 <li><a title="Data Admin" href="data_user.php"><i class='fa fa-table sub-icon-mg' aria-hidden="true"></i> <span class="mini-sub-pro">Data Admin</span></a></li>
                             </ul>
-                        </li>
+                        </li>-->
                     <?php }
                     ?>
                     <li class="#">

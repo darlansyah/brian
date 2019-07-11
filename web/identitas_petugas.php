@@ -29,17 +29,25 @@ $result = mysqli_query($kon, "SELECT * FROM pos");
                                                 <span class="input-group-addon"><i class="fa fa-sticky-note" aria-hidden="true"></i></span>
                                                 <input type="text" class="form-control" name="no_induk_pegawai" placeholder="No Induk Petugas">
                                             </div>
-                                            Nama Pos : <select name="id_pos">
-                                                <?php
-                                                while ($row = mysqli_fetch_object($result)) {
-                                                    ?>
-                                                    <option value="<?= $row->id_pos ?>"><?= $row->nama_pos ?></option>
+                                            <div class="input-group mg-b-pro-edt">
+                                                <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                                                <input type="text" class="form-control" name="username" placeholder="Username">
+                                            </div>
+                                            Nama Pos : 
+                                            <div class="input-group mg-b-pro-edt">
+                                                <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                                                <select class="form-control" name="id_pos">
                                                     <?php
-                                                }
-                                                ?>
+                                                    while ($row = mysqli_fetch_object($result)) {
+                                                        ?>
+                                                        <option value="<?= $row->id_pos ?>"><?= $row->nama_pos ?></option>
+                                                        <?php
+                                                    }
+                                                    ?>
 
 
-                                            </select>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -48,8 +56,23 @@ $result = mysqli_query($kon, "SELECT * FROM pos");
                                                 <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
                                                 <input type="text" class="form-control"  name="nama_petugas" placeholder="Nama Petugas">
                                             </div>
+                                            <div class="input-group mg-b-pro-edt">
+                                                <span class="input-group-addon"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                                                <input type="text" class="form-control" name="password" placeholder="Password">
+                                            </div>
+                                            <div class="input-group mg-b-pro-edt">                                                
+                                            </div>
+                                            <div class="input-group mg-b-pro-edt">                                                
+                                            </div>
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <div class="i-checks pull-left">
+                                                    <label>
+                                                        <input type="checkbox" name="level_user" value="admin"> <i></i> Level Admin </label>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

@@ -3,7 +3,9 @@ session_start();
 require '../functions/kumpulan_fungsi.php';
 authentication();
 $kon = koneksi_db();
-$query = mysqli_query($kon, "SELECT petugas.*,pos.nama_pos FROM `petugas` INNER JOIN pos ON petugas.id_pos = pos.id_pos
+$query = mysqli_query($kon, "SELECT * FROM `petugas` 
+INNER JOIN pos ON petugas.id_pos = pos.id_pos
+JOIN user on user.id_profile = petugas.id_petugas
 ORDER BY petugas.`id_petugas`  DESC");
 
 include '../templeting/headerhtml.php';
@@ -38,9 +40,11 @@ include '../templeting/contenthtml.php';
                                     <tr>
 
                                         <th data-field="id">No</th>
-                                        <th data-field="company" data-editable="true">No Induk Petugas</th>
-                                        <th data-field="price" data-editable="true">Nama Petugas</th>
-                                        <th data-field="date" data-editable="true">Nama Pos</th>
+                                        <th data-field="nip" data-editable="true">No Induk Petugas</th>
+                                        <th data-field="nama" data-editable="true">Nama Petugas</th>
+                                        <th data-field="pos" data-editable="true">Nama Pos</th>
+                                        <th data-field="username" data-editable="true">Username</th>
+                                        <th data-field="level" data-editable="true">Level User</th>
                                         <th data-field="action">Action</th>
                                     </tr>
                                 </thead>
@@ -55,6 +59,8 @@ include '../templeting/contenthtml.php';
                                             <td><?php echo $result->no_induk_pegawai ?></td>
                                             <td><?php echo $result->nama_petugas ?></td>
                                             <td><?php echo $result->nama_pos ?></td>
+                                            <td><?php echo $result->username ?></td>
+                                            <td><?php echo $result->level_user ?></td>
                                             <td>
                                                 <a href="petugas_ubah.php?id=<?= $result->id_petugas; ?>"
                                                    class="btn btn-outline-primary btn-sm mg-r-5"><div><i class="fa fa-edit"></i></div></a>

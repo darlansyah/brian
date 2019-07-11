@@ -18,37 +18,37 @@ $no_ktp = isset($_POST['no_ktp']) ? $_POST['no_ktp'] : '';
 //                                                 alamat = '$alamat'
 //                                                 WHERE id_masyarakat_pelapor='$id_masyarakat_pelapor'");
 // } else {
-    // $query1=mysqli_query($kon,"insert into user values('','','$username','$pass','$nama','user')");
-    // $query = mysqli_query($kon, "INSERT INTO masyarakat_pelapor values ('','$no_ktp','$nama','$telp','$alamat')");
-
-    // $query="insert into user values('','','$username','$pass','$nama','user');";
-    // $query.="INSERT INTO masyarakat_pelapor values ('','$no_ktp','$nama','$telp','$alamat');";
-
-
-
+// $query1=mysqli_query($kon,"insert into user values('','','$username','$pass','$nama','user')");
+// $query = mysqli_query($kon, "INSERT INTO masyarakat_pelapor values ('','$no_ktp','$nama','$telp','$alamat')");
+// $query="insert into user values('','','$username','$pass','$nama','user');";
+// $query.="INSERT INTO masyarakat_pelapor values ('','$no_ktp','$nama','$telp','$alamat');";
 // }
-    // if(mysqli_multi_query($kon, $query)) {
-    //     $status = 'Ok';
-    // }
-    //
+// if(mysqli_multi_query($kon, $query)) {
+//     $status = 'Ok';
+// }
+//
     // else {
-    //     $status = 'Gagal';
-    // }
-    //
+//     $status = 'Gagal';
+// }
+//
     // $data_response = array ('status'=>$status);
-    // echo json_encode($data_response);
+// echo json_encode($data_response);
 
 
-    // --------------------------------------- ini codingan darlan -----------------------------------------------------------------------
-    $query = "INSERT INTO masyarakat_pelapor values ('','$no_ktp','$nama','$telp','$alamat','$username','$pass');";
+$query = mysqli_query ($kon,"INSERT INTO masyarakat_pelapor values ('','$no_ktp','$nama','$telp','$alamat');");
+$last_id_pelapor = mysqli_insert_id($kon);
 
-    if(mysqli_query($kon, $query)) {
-        $status = 'Ok';
-    }
 
-    else {
-        $status = 'Gagal';
-    }
 
-    $data_response = array ('status'=>$status);
-    echo json_encode($data_response);
+$query_user = mysqli_query($kon, "INSERT INTO user values ('',$last_id_pelapor,'$username','$pass','user')");
+
+if($query) {
+$status = 'Ok';
+}
+
+else {
+$status = 'Gagal';
+}
+
+$data_response = array ('status' => $status);
+echo json_encode($data_response);

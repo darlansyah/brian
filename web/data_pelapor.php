@@ -4,7 +4,8 @@ require '../functions/kumpulan_fungsi.php';
 authentication();
 $kon = koneksi_db();
 $query = mysqli_query($kon, "SELECT * FROM `masyarakat_pelapor`  
-ORDER BY `masyarakat_pelapor`.`id_masyarakat_pelapor`  DESC");
+    JOIN user on user.id_profile = masyarakat_pelapor.id_masyarakat_pelapor 
+ORDER BY masyarakat_pelapor.`id_masyarakat_pelapor`  DESC");
 
 
 include '../templeting/headerhtml.php';
@@ -64,7 +65,7 @@ include '../templeting/contenthtml.php';
                                                 <a href="../masyarakat_pelapor/masyarakat_pelapor_hapus.php?id=<?= $result->id_masyarakat_pelapor; ?>"
                                                    onclick="return confirm('Anda yakin akan menghapus <?php echo $result->nama_masyarakat_pelapor ?>?')"
                                                    class=""><i class="fa fa-trash-o"></i></a>
-<!--                                                   <a href="lapor_kejadian.php?id=<?= $result->id_masyarakat_pelapor; ?>"
+    <!--                                                   <a href="lapor_kejadian.php?id=<?= $result->id_masyarakat_pelapor; ?>"
                                                    class="btn btn-outline-primary btn-sm mg-r-5"><div><i class="fa fa-edit"></i></div></a>-->
                                             </td>
                                         </tr>

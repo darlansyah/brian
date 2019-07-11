@@ -62,13 +62,7 @@
     </head>
 
     <body>
-        <!-- cek apa udah login ? -->
-        <script>
-            if (!(localStorage.getItem('sudah_login') == 1)) {
-                window.location.href = 'login.html';
-            }
-        </script>
-        <!-- end cek apa udah login ? -->
+
         <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -126,7 +120,6 @@
                                 </div>
                                 <div class="text-center">
                                     <button type="button" id="registrasi" onclick="simpan_registrasi();" name="registrasi" class="btn btn-success btn-default loginbtn">Registrasi</button>
-                                    <button type="button" name="cancel" class="btn btn-success btn-default block">Cancel</button>
                                 </div>
                             </form>
                         </div>

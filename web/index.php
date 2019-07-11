@@ -7,7 +7,7 @@ $kon = koneksi_db();
 $query = mysqli_query($kon, "SELECT masyarakat_pelapor.telp, masyarakat_pelapor.nama_masyarakat_pelapor as nama_masyarakat,kejadian.* FROM masyarakat_pelapor INNER JOIN kejadian ON masyarakat_pelapor.id_masyarakat_pelapor = kejadian.id_masyarakat_pelapor order by tanggal_waktu_kejadian desc limit 10");
 
 // admin & petugas
-$res_admin = mysqli_query($kon, "SELECT * FROM admin");
+$res_admin = mysqli_query($kon, "SELECT * FROM user");
 $num_admin = mysqli_num_rows($res_admin);
 
 // total kejadian

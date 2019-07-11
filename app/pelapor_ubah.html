@@ -185,13 +185,15 @@
                                             <div class="header-right-info">
                                                 <ul class="nav navbar-nav mai-top-nav header-right-menu">
                                                     <li class="nav-item">
-                                                        <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
+                                                        <a href="logout.html" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
                                                             <i class="fa fa-user adminpro-user-rounded header-riht-inf" aria-hidden="true"></i>
-                                                            <span class="admin-name">Logout</span>
+                                                            <span class="admin-name">Akun</span>
                                                             <i class="fa fa-angle-down adminpro-icon adminpro-down-arrow"></i>
                                                         </a>
                                                         <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
-                                                            <li><a href="login.html"><span class="fa fa-lock author-log-ic"></span>Log Out</a>
+                                                            <li><a href="pelapor_ubah.html"><span class="fa fa-lock author-log-ic"></span>Profile</a>
+                                                            </li>
+                                                            <li><a href="logout.html"><span class="fa fa-lock author-log-ic"></span>Log Out</a>
                                                             </li>
                                                         </ul>
                                                     </li>
@@ -277,47 +279,45 @@
                                 <li class="active"><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i> Edit Identitas Pelapor</a></li>
                             </ul>
                             <div id="myTabContent" class="tab-content custom-product-edit">
-                                <form action="../app/data_pelapor.html" method="post">
-                                    <input type="hidden" value="<?= $id_masyarakat_pelapor ?>" name="id_masyarakat_pelapor">
-                                    <div class="product-tab-list tab-pane fade active in" id="description">
-                                        <div class="row">
+                                <div class="product-tab-list tab-pane fade active in" id="description">
+                                    <div class="row">
 
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                <div class="review-content-section">
-                                                    <div class="input-group mg-b-pro-edt">
-                                                        <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
-                                                        <input required id="nama_masyarakat_pelapor" type="text" name="nama_masyarakat_pelapor" class="form-control" placeholder="Nama Masyarakat Pelapor" value="">
-                                                    </div>
-                                                    <div class="input-group mg-b-pro-edt">
-                                                        <span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
-                                                        <input required id="telp" type="text" name="telp" class="form-control" placeholder="Telephone" value="">
-                                                    </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="review-content-section">
+                                                <div class="input-group mg-b-pro-edt">
+                                                    <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                                                    <input required id="nama_masyarakat_pelapor" type="text" name="nama_masyarakat_pelapor" class="form-control" placeholder="Nama Masyarakat Pelapor" value="">
                                                 </div>
-                                            </div>
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                <div class="review-content-section">
-                                                    <div class="input-group mg-b-pro-edt">
-                                                        <span class="input-group-addon"><i class="fa fa-sticky-note" aria-hidden="true"></i></span>
-                                                        <input required id="no_ktp" type="text" name="no_ktp" class="form-control" placeholder="No KTP" value="">
-                                                    </div>
-                                                    <div class="input-group mg-b-pro-edt">
-                                                        <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
-                                                        <input required id="alamat" type="text" name="alamat" class="form-control" placeholder="alamat" value="">
-                                                    </div>
+                                                <div class="input-group mg-b-pro-edt">
+                                                    <span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                                                    <input required id="telp" type="text" name="telp" class="form-control" placeholder="Telephone" value="">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <div class="text-center mg-b-pro-edt custom-pro-edt-ds">
-                                                    <button type="submit" class="btn btn-primary waves-effect waves-light m-r-10">Update
-                                                    </button>
-                                                    <button type="submit" class="btn btn-primary waves-effect waves-light m-r-10">Batal
-                                                    </button>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="review-content-section">
+                                                <div class="input-group mg-b-pro-edt">
+                                                    <span class="input-group-addon"><i class="fa fa-sticky-note" aria-hidden="true"></i></span>
+                                                    <input readonly id="no_ktp" type="text" name="no_ktp" class="form-control" placeholder="No KTP" value="">
+                                                </div>
+                                                <div class="input-group mg-b-pro-edt">
+                                                    <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                                                    <input required id="alamat" type="text" name="alamat" class="form-control" placeholder="alamat" value="">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="text-center mg-b-pro-edt custom-pro-edt-ds">
+                                                <button id="btn_simpan" type="button" class="btn btn-primary waves-effect waves-light m-r-10">Update
+                                                </button>
+                                                <button type="button" onclick="window.history.back()" class="btn btn-primary waves-effect waves-light m-r-10">Batal
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -397,50 +397,46 @@
             <script src="../js/main.js"></script>
             <script>
 
-            var id_mp = window.localStorage.getItem('id_mp');
+                                                    var id_mp = window.localStorage.getItem('id_profile');
+                                                    $.ajax({
+                                                        url: "http://localhost/brian/web/ambil_id_pelapor.php",
+                                                        type: 'POST',
+                                                        dataType: 'json',
+                                                        data: {id_mp: id_mp},
+                                                        success: function (resp) {
+                                                            $('#nama_masyarakat_pelapor').val(resp.nama_masyarakat_pelapor);
+                                                            $('#no_ktp').val(resp.no_ktp);
+                                                            $('#telp').val(resp.telp);
+                                                            $('#alamat').val(resp.alamat);
+                                                            $('#id_mp').val(resp.id_masyarakat_pelapor);
+                                                        }
+                                                    });
+                                                    $("#btn_simpan").click(simpan_data);
+                                                    function simpan_data() {
 
-            $.ajax({
-                url: "http://localhost/brian/web/ambil_id_pelapor.php",
-                type: 'POST',
-                dataType: 'json',
-                data: {id_mp: id_mp},
-                success: function (resp) {
-                    $('#nama_masyarakat_pelapor').val(resp.nama_masyarakat_pelapor);
-                    $('#no_ktp').val(resp.no_ktp);
-                    $('#telp').val(resp.telp);
-                    $('#alamat').val(resp.alamat);
-                    $('#id_mp').val(resp.id_masyarakat_pelapor);
-                }
-            });
+                                                        //                    alert("tombol simpan telah di klik")
+                                                        var nama_masyarakat_pelapor = $("#nama_masyarakat_pelapor").val();
+                                                        var no_ktp = $("#no_ktp").val();
+                                                        var telp = $("#telp").val();
+                                                        var alamat = $("#alamat").val();
 
-            $("#btn_simpan").click(simpan_data);
-            function simpan_data() {
-
-                //                    alert("tombol simpan telah di klik")
-                var nama_masyarakat_pelapor = $("#nama_masyarakat_pelapor").val();
-                var no_ktp = $("#no_ktp").val();
-                var telp = $("#telp").val();
-                var alamat = $("#alamat").val();
-                var id_mp = $("#id_mp").val();
-
-                console.log("nama : " + nama_masyarakat_pelapor + " no_ktp : " + no_ktp + " telp : " + telp + " alamat : " + alamat);
-                $.ajax({
-                    url: "http://localhost/brian/web/ajax_pelapor_simpan.php",
-                    type: 'POST',
-                    dataType: 'json',
-                    data: {id_masyarakat_pelapor: id_mp, nama_masyarakat_pelapor: nama_masyarakat_pelapor, no_ktp: no_ktp, telp: telp, alamat: alamat},
-                    success: function (response) {
-                        window.localStorage.removeItem('id_mp');
-                        if (response.status == "Ok") {
-                            alert("Data Berhasil disimpan");
-                            window.location.href = "../app/data_pelapor.html";
-                        } else {
-                            alert("Data Gagal disimpan");
-                            window.location.href = "../app/data_pelapor.html";
-                        }
-                    }
-                });
-            }
+                                                        console.log("nama : " + nama_masyarakat_pelapor + " no_ktp : " + no_ktp + " telp : " + telp + " alamat : " + alamat);
+                                                        $.ajax({
+                                                            url: "http://localhost/brian/web/ajax_pelapor_simpan.php",
+                                                            type: 'POST',
+                                                            dataType: 'json',
+                                                            data: {id_masyarakat_pelapor: id_mp, nama_masyarakat_pelapor: nama_masyarakat_pelapor, no_ktp: no_ktp, telp: telp, alamat: alamat},
+                                                            success: function (response) {
+                                                                if (response.status == "Ok") {
+                                                                    alert("Data Berhasil disimpan");
+                                                                    window.location.href = "../app/index.html";
+                                                                } else {
+                                                                    alert("Data Gagal disimpan");
+                                                                    window.location.href = "../app/index.html";
+                                                                }
+                                                            }
+                                                        });
+                                                    }
 
 
             </script>

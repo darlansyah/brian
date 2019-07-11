@@ -26,12 +26,11 @@ $kon = koneksi_db();
 // echo json_encode($response);
 
 
-// ------------------------------------------- ini kodingan darlan ---------------------------------------------
 $username = isset($_REQUEST['username']) ? $_REQUEST['username'] : null;
 $pass = isset($_REQUEST['pass']) ? $_REQUEST['pass'] : null;
 
 
-$quser = mysqli_query($kon, "SELECT * FROM masyarakat_pelapor WHERE username = '$username' AND password ='$pass'");
+$quser = mysqli_query($kon, "SELECT * FROM user WHERE username = '$username' AND password ='$pass'");
 if (mysqli_num_rows($quser) == 1) {
     $status = 'ok';
     $data = mysqli_fetch_assoc($quser);
