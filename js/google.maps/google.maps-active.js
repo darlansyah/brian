@@ -1,5 +1,4 @@
 
-	
 function initMap() {
         var chicago = new google.maps.LatLng(41.850, -87.650);
 

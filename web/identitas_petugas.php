@@ -35,7 +35,7 @@ $result = mysqli_query($kon, "SELECT * FROM pos");
                                             </div>
                                             Nama Pos : 
                                             <div class="input-group mg-b-pro-edt">
-                                                <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                                                <span class="input-group-addon"><i class="fa fa-bank" aria-hidden="true"></i></span>
                                                 <select class="form-control" name="id_pos">
                                                     <?php
                                                     while ($row = mysqli_fetch_object($result)) {

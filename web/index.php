@@ -44,7 +44,7 @@ include '../templeting/contenthtml.php';
                     <a href ="data_user.php">
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                             <div class="admin-content analysis-progrebar-ctn res-mg-t-15">
-                                <h4 class="text-left text-uppercase"><b>Admin & Petugas</b></h4>
+                                <h4 class="text-left text-uppercase"><b>Data Akun</b></h4>
                                 <h2 class="text-left text-uppercase"><b>
                                         <?php
                                         echo $num_admin;
@@ -116,7 +116,7 @@ include '../templeting/contenthtml.php';
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th>
+                                        <th>No</th>
                                         <th>Nama Pelapor</th>
                                         <th>Telephone</th>
                                         <th>Waktu Kejadian</th>

@@ -364,10 +364,14 @@
                                     ============================================ -->
             <script src="../js/main.js"></script>
             <script>
+                
+                var id_profile = window.localStorage.getItem('id_profile');
+                
             $.ajax({
                 url: "http://localhost/brian/web/ambil_data_kejadian.php",
                 type: 'POST',
                 dataType: 'json',
+                data: {id_profile: id_profile},
                 success: function (resp) {
 //                        
                     for (i = 0; i < resp.length; i++) {

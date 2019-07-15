@@ -92,7 +92,7 @@
                                     <li><a title="Data Pelapor" href="data_pelapor.html"><i class="fa fa-table sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data Pelapor</span></a></li>
                                 </ul>
                             </li>
-                            <li calss="#">
+                            <li class="#">
                                 <a class="has-arrow" href="" aria-expanded="false"><i class="fa big-icon fa-fire-extinguisher icon-wrap"></i> <span class="mini-click-non">Kejadian</span></a>
                                 <ul class="submenu-angle" aria-expanded="true">
                                     <li><a title="Lapor Kejadian" href="lapor_kejadian.html"><i class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Lapor Kejadian</span></a></li>
@@ -101,7 +101,7 @@
                                     <li><a title="Data Kejadian" href="data_kejadian.html"><i class="fa fa-table sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data Kejadian</span></a></li>
                                 </ul>
                             </li>
-                            <li calss="#">
+                            <li class="#">
                                 <a class="has-arrow" href="" aria-expanded="false"><i class="fa big-icon fa-users icon-wrap"></i> <span class="mini-click-non">Petugas Damkar</span></a>
 <!--                                <ul class="submenu-angle" aria-expanded="true">
                                     <li><a title="Identitas Petugas" href="identitas_petugas.html"><i class="fa fa-user sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Identitas Petugas</span></a></li>
@@ -110,7 +110,7 @@
                                     <li><a title="Data Petugas" href="data_petugas.html"><i class="fa fa-table sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data Petugas</span></a></li>
                                 </ul>
                             </li>
-                            <li calss="#">
+                            <li class="#">
                                 <a class="has-arrow" href="" aria-expanded="false"><i class="fa big-icon fa-home icon-wrap"></i> <span class="mini-click-non">POS</span></a>
 <!--                                <ul class="submenu-angle" aria-expanded="true">
                                     <li><a title="Pos Damkar" href="pos_damkar.html"><i class="fa fa-home sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Pos Damkar</span></a></li>
@@ -301,11 +301,11 @@
                                                     <div class="review-content-section">
                                                         <div class="input-group mg-b-pro-edt">
                                                             <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-                                                            <input type="text" class="form-control" name="longitude" placeholder="Longitude">
+                                                            <input type="text" class="form-control data-input" name="longitude" placeholder="Longitude">
                                                         </div>
                                                         <div class="input-group mg-b-pro-edt">
                                                             <span class="input-group-addon"><i class="fa fa-sticky-note" aria-hidden="true"></i></span>
-                                                            <input type="text" class="form-control" name="deskripsi_kejadian" placeholder="Deskripsi Kejadian">
+                                                            <input type="text" class="form-control data-input" name="deskripsi_kejadian" placeholder="Deskripsi Kejadian">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -313,11 +313,11 @@
                                                     <div class="review-content-section">
                                                         <div class="input-group mg-b-pro-edt">
                                                             <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-                                                            <input type="text" class="form-control" name="latitude" placeholder="Latitude">
+                                                            <input type="text" class="form-control data-input" name="latitude" placeholder="Latitude">
                                                         </div>
                                                         <div class="input-group mg-b-pro-edt">
                                                             <span class="input-group-addon"><i class="fa fa-camera" aria-hidden="true"></i></span>
-                                                            <input type="text" class="form-control" name="gambar" placeholder="Upload Gambar">
+                                                            <input type="text" class="form-control data-input" name="gambar" placeholder="Upload Gambar">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -325,9 +325,10 @@
                                             <div class="row">
                                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                     <div class="text-center mg-b-pro-edt custom-pro-edt-ds">
-                                                        <button type="submit" class="btn btn-primary waves-effect waves-light m-r-10">Simpan
+                                                        <button type="submit" id="btnSubmit" class="btn btn-primary waves-effect waves-light m-r-10">Simpan
                                                         </button>
-                                                        <a href="data_kejadian.php" class="btn btn-primary waves-effect waves-light m-r-10">Batal </a>
+                                                        <input type="reset" class="btn btn-primary waves-effect waves-light m-r-10" value="Batal">
+                                                        <!--<a href="data_kejadian.php" class="btn btn-primary waves-effect waves-light m-r-10">Batal </a>-->
 
                                                     </div>
                                                 </div>
@@ -406,12 +407,53 @@
             <script src="../js/plugins.js"></script>
             <!-- Google map JS
             ============================================ -->
-            <script src="../js/google.maps/google.maps-active.js"></script>
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiNUO68DkrsFKFz744_LWMqCNI_GqYciQ&callback=initMap"></script>
+            <script src="../js/google.maps/google.maps-active.js"></script>
             <!-- main JS
             ============================================ -->
             <script src="../js/main.js"></script>
+            <script>
+                $(document).ready(function() {
+                    // Btn submit click event
+                    $('#btnSubmit').click(function(e) {
+//                        e.preventDefault();
+                        var objInputData = $('.data-input');
+                        
+                        for (var x = 0; x < objInputData.length; x++) {
+                            if (objInputData[x].value == '') {
+                                e.preventDefault();
+                                alert('Form data belum lengkap');
+                                return;
+                            }
+                        }
+                        
+                        // Ambil semua nilai dari form tersebut
+                        var longitude = objInputData[0].value;
+                        var latitude = objInputData[2].value;
+                        var deskripsi = objInputData[1].value;
+                        var gambar = objInputData[3].value;
+                        var id_profil = window.localStorage.getItem('id_profile');
+                        
+                        $.ajax({
+                            url: 'http://localhost/brian/web/ajax-proses-pelaporan.php',
+                            type: 'POST',
+                            contentType: 'application/x-www-form-urlencoded',
+                            dataType: 'json',
+                            data: {
+                                'longitude': longitude,
+                                'latitude': latitude,
+                                'deskripsi': deskripsi,
+                                'gambar': gambar,
+                                'id_profile': id_profil
+                            },
+                            success: function(response) {
+                                console.log('ok');
+                                console.log(response);
+                            }
+                        });
+                    });
+                });
+            </script>
 
-
-    </body>
+        </body>
 </html>
