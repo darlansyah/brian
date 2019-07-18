@@ -36,9 +36,6 @@ function initMap() {
 
             });
 			
-			
-			
-			
 		var cairo = {lat: 30.064742, lng: 31.249509};
 
         var maplan = new google.maps.Map(document.getElementById('maplan'), {

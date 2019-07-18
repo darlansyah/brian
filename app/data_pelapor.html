@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- favicon
                     ============================================ -->
-        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
         <!-- Google Fonts
                     ============================================ -->
         <link href="https://fonts.googleapis.com/css?family=Play:400,700" rel="stylesheet">
@@ -38,7 +38,7 @@
         <link rel="stylesheet" href="../css/main.css">
         <!-- morrisjs CSS
                     ============================================ -->
-        <!--<link rel="stylesheet" href="../css/morrisjs/morris.css">-->
+        <link rel="stylesheet" href="../css/morrisjs/morris.css">
         <!-- mCustomScrollbar CSS
                     ============================================ -->
         <link rel="stylesheet" href="../css/scrollbar/jquery.mCustomScrollbar.min.css">
@@ -50,6 +50,16 @@
                     ============================================ -->
         <link rel="stylesheet" href="../css/calendar/fullcalendar.min.css">
         <link rel="stylesheet" href="../css/calendar/fullcalendar.print.min.css">
+        <!-- x-editor CSS
+                    ============================================ -->
+        <link rel="stylesheet" href="../css/editor/select2.css">
+        <link rel="stylesheet" href="../css/editor/datetimepicker.css">
+        <link rel="stylesheet" href="../css/editor/bootstrap-editable.css">
+        <link rel="stylesheet" href="../css/editor/x-editor-style.css">
+        <!-- normalize CSS
+                    ============================================ -->
+        <link rel="stylesheet" href="../css/data-table/bootstrap-table.css">
+        <link rel="stylesheet" href="../css/data-table/bootstrap-editable.css">
         <!-- style CSS
                     ============================================ -->
         <link rel="stylesheet" href="../style.css">
@@ -259,29 +269,35 @@
                                 </div>
                                 <div class="sparkline13-graph">
                                     <div class="datatable-dashv1-list custom-datatable-overright">
-                                        <div id="toolbar">
-                                            <select class="form-control">
-                                                <option value="">Export Basic</option>
-                                                <option value="all">Export All</option>
-                                                <option value="selected">Export Selected</option>
-                                            </select>
-                                        </div>
-                                        <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"
-                                               data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
-                                            <thead>
-                                                <tr>
-                                                    <th data-field="id">No</th>
-                                                    <th data-field="name" data-editable="true">Nama</th>
-                                                    <th data-field="company" data-editable="true">No KTP</th>
-                                                    <th data-field="price" data-editable="true">No Telephone</th>
-                                                    <th data-field="date" data-editable="true">Alamat</th>
-                                                    <th data-field="action">Action</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
+                                        <div class="bootstrap-table">
+                                            <div id="toolbar">
+                                                <select class="form-control">
+                                                    <option value="">Export Basic</option>
+                                                    <option value="all">Export All</option>
+                                                    <option value="selected">Export Selected</option>
+                                                </select>
+                                            </div>
+                                            <div class="fixed-table-container">
+                                                <div class="fixed-table-body">
+                                                    <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"
+                                                           data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
+                                                        <thead>
+                                                            <tr>
+                                                                <th data-field="id">No</th>
+                                                                <th data-field="name" data-editable="true">Nama</th>
+                                                                <th data-field="company" data-editable="true">No KTP</th>
+                                                                <th data-field="price" data-editable="true">No Telephone</th>
+                                                                <th data-field="date" data-editable="true">Alamat</th>
+                                                                <th data-field="action">Action</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
 
-                                            </tbody>
-                                        </table>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -304,8 +320,7 @@
                 </div>
             </div>
             <!-- end footer -->
-
-            <!-- jquery
+    <!-- jquery
                         ============================================ -->
             <script src="../js/vendor/jquery-1.11.3.min.js"></script>
             <!-- bootstrap JS
@@ -337,11 +352,29 @@
                         ============================================ -->
             <script src="../js/metisMenu/metisMenu.min.js"></script>
             <script src="../js/metisMenu/metisMenu-active.js"></script>
+            <!-- data table JS
+                    ============================================ -->
+            <script src="../js/data-table/bootstrap-table.js"></script>
+            <script src="../js/data-table/tableExport.js"></script>
+            <script src="../js/data-table/data-table-active.js"></script>
+            <script src="../js/data-table/bootstrap-table-editable.js"></script>
+            <script src="../js/data-table/bootstrap-editable.js"></script>
+            <script src="../js/data-table/bootstrap-table-resizable.js"></script>
+            <script src="../js/data-table/colResizable-1.5.source.js"></script>
+            <!--  editable JS
+                    ============================================ -->
+<!--            <script src="../js/editable/jquery.mockjax.js"></script>
+            <script src="../js/editable/mock-active.js"></script>
+            <script src="../js/editable/select2.js"></script>
+            <script src="../js/editable/moment.min.js"></script>
+            <script src="../js/editable/bootstrap-datetimepicker.js"></script>
+            <script src="../js/editable/bootstrap-editable.js"></script>
+            <script src="../js/editable/xediable-active.js"></script>-->
             <!-- morrisjs JS
                         ============================================ -->
-            <!--<script src="../js/morrisjs/raphael-min.js"></script>-->
-            <!--<script src="../js/morrisjs/morris.js"></script>-->
-            <!--<script src="../js/morrisjs/morris-active.js"></script>-->
+<!--            <script src="../js/morrisjs/raphael-min.js"></script>
+            <script src="../js/morrisjs/morris.js"></script>
+            <script src="../js/morrisjs/morris-active.js"></script>-->
             <!-- morrisjs JS
                         ============================================ -->
             <script src="../js/sparkline/jquery.sparkline.min.js"></script>
@@ -356,10 +389,10 @@
             <script src="../js/plugins.js"></script>  
             <!-- Google map JS
                         ============================================ -->
-            <!--<script src="../js/google.maps/google.maps-active.js"></script>-->
-            <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiNUO68DkrsFKFz744_LWMqCNI_GqYciQ&callback=initMap"></script>-->
-            <!-- main JS
-                        ============================================ -->
+            <!--            <script src="../js/google.maps/google.maps-active.js"></script>
+                        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiNUO68DkrsFKFz744_LWMqCNI_GqYciQ&callback=initMap"></script>
+                         main JS
+                                    ============================================ -->
             <script src="../js/main.js"></script>
             <script>
 
@@ -369,6 +402,7 @@
                 dataType: 'json',
                 success: function (resp) {
                     console.log(resp);
+                    $('tbody').html('');
                     //                                                alert('ajax jalan!!');
                     //                                                console.log(resp.length);
                     //                                                console.log(resp[0].nama_masyarakat_pelapor);

@@ -200,5 +200,13 @@ function initMap() {
             TILE_SIZE * (0.5 - Math.log((1 + siny) / (1 - siny)) / (4 * Math.PI)));
       }
 
-	
- 
+            // Function untuk menampilkan Google Map
+            function initMap() {
+                // The location of Uluru
+                var uluru = {lat: -7.782804, lng: 110.373020};
+                // The map, centered at Uluru
+                var map = new google.maps.Map(
+                        document.getElementById('map1'), {zoom: 3, center: uluru});
+                // The marker, positioned at Uluru
+                var marker = new google.maps.Marker({position: uluru, map: map});
+            }

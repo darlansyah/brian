@@ -4,12 +4,12 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Aplikasi Pemadam Kebakaran</title>
+        <title>Data Table | jeweler - Material Admin Template</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- favicon
                     ============================================ -->
-        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
         <!-- Google Fonts
                     ============================================ -->
         <link href="https://fonts.googleapis.com/css?family=Play:400,700" rel="stylesheet">
@@ -50,6 +50,16 @@
                     ============================================ -->
         <link rel="stylesheet" href="../css/calendar/fullcalendar.min.css">
         <link rel="stylesheet" href="../css/calendar/fullcalendar.print.min.css">
+        <!-- x-editor CSS
+                    ============================================ -->
+        <link rel="stylesheet" href="../css/editor/select2.css">
+        <link rel="stylesheet" href="../css/editor/datetimepicker.css">
+        <link rel="stylesheet" href="../css/editor/bootstrap-editable.css">
+        <link rel="stylesheet" href="../css/editor/x-editor-style.css">
+        <!-- normalize CSS
+                    ============================================ -->
+        <link rel="stylesheet" href="../css/data-table/bootstrap-table.css">
+        <link rel="stylesheet" href="../css/data-table/bootstrap-editable.css">
         <!-- style CSS
                     ============================================ -->
         <link rel="stylesheet" href="../style.css">
@@ -331,36 +341,44 @@
                         ============================================ -->
             <script src="../js/metisMenu/metisMenu.min.js"></script>
             <script src="../js/metisMenu/metisMenu-active.js"></script>
-            <!-- morrisjs JS
+            <!-- data table JS
                         ============================================ -->
-            <script src="../js/morrisjs/raphael-min.js"></script>
-            <script src="../js/morrisjs/morris.js"></script>
-            <script src="../js/morrisjs/morris-active.js"></script>
-            <!-- morrisjs JS
+            <script src="../js/data-table/bootstrap-table.js"></script>
+            <script src="../js/data-table/tableExport.js"></script>
+            <script src="../js/data-table/data-table-active.js"></script>
+            <script src="../js/data-table/bootstrap-table-editable.js"></script>
+            <script src="../js/data-table/bootstrap-editable.js"></script>
+            <script src="../js/data-table/bootstrap-table-resizable.js"></script>
+            <script src="../js/data-table/colResizable-1.5.source.js"></script>
+            <!--  editable JS
                         ============================================ -->
-            <script src="../js/sparkline/jquery.sparkline.min.js"></script>
-            <script src="../js/sparkline/jquery.charts-sparkline.js"></script>
-            <!-- calendar JS
+            <script src="../js/editable/jquery.mockjax.js"></script>
+            <script src="../js/editable/mock-active.js"></script>
+            <script src="../js/editable/select2.js"></script>
+            <script src="../js/editable/moment.min.js"></script>
+            <script src="../js/editable/bootstrap-datetimepicker.js"></script>
+            <script src="../js/editable/bootstrap-editable.js"></script>
+            <script src="../js/editable/xediable-active.js"></script>
+            <!-- Chart JS
                         ============================================ -->
-            <script src="../js/calendar/moment.min.js"></script>
-            <script src="../js/calendar/fullcalendar.min.js"></script>
-            <script src="../js/calendar/fullcalendar-active.js"></script>
+            <script src="../js/chart/jquery.peity.min.js"></script>
+            <script src="../js/peity/peity-active.js"></script>
+            <!-- tab JS
+                        ============================================ -->
+            <script src="../js/tab.js"></script>
             <!-- plugins JS
                         ============================================ -->
             <script src="../js/plugins.js"></script>
-            <!-- Google map JS
-                        ============================================ -->
-            <script src="../js/google.maps/google.maps-active.js"></script>
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiNUO68DkrsFKFz744_LWMqCNI_GqYciQ&callback=initMap"></script>
             <!-- main JS
                         ============================================ -->
-            <script src="../js/main.js"></script>
+            <script src="../js/main.js"></script>      
             <script>
             $.ajax({
                 url: "http://localhost/brian/web/ambil_data_petugas.php",
                 type: 'POST',
                 dataType: 'json',
                 success: function (resp) {
+                    $('tbody').html('');
                     //                                                alert('ajax jalan!!');
                     //                                                console.log(resp.length);
                     //                                                console.log(resp[0].nama_masyarakat_pelapor);
@@ -387,8 +405,6 @@
                     });
                 }
             });
-
-
 
             </script>
     </body>
