@@ -8,56 +8,56 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- favicon
-                    ============================================ -->
-        <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+        ============================================ -->
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
         <!-- Google Fonts
-                    ============================================ -->
+        ============================================ -->
         <link href="https://fonts.googleapis.com/css?family=Play:400,700" rel="stylesheet">
         <!-- Bootstrap CSS
-                    ============================================ -->
+        ============================================ -->
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <!-- Bootstrap CSS
-                    ============================================ -->
+        ============================================ -->
         <link rel="stylesheet" href="../css/font-awesome.min.css">
         <!-- owl.carousel CSS
-                    ============================================ -->
+        ============================================ -->
         <link rel="stylesheet" href="../css/owl.carousel.css">
         <link rel="stylesheet" href="../css/owl.theme.css">
         <link rel="stylesheet" href="../css/owl.transitions.css">
         <!-- animate CSS
-                    ============================================ -->
+        ============================================ -->
         <link rel="stylesheet" href="../css/animate.css">
         <!-- normalize CSS
-                    ============================================ -->
+        ============================================ -->
         <link rel="stylesheet" href="../css/normalize.css">
         <!-- meanmenu icon CSS
-                    ============================================ -->
+        ============================================ -->
         <link rel="stylesheet" href="../css/meanmenu.min.css">
         <!-- main CSS
-                    ============================================ -->
+        ============================================ -->
         <link rel="stylesheet" href="../css/main.css">
         <!-- morrisjs CSS
-                    ============================================ -->
+        ============================================ -->
         <link rel="stylesheet" href="../css/morrisjs/morris.css">
         <!-- mCustomScrollbar CSS
-                    ============================================ -->
+        ============================================ -->
         <link rel="stylesheet" href="../css/scrollbar/jquery.mCustomScrollbar.min.css">
         <!-- metisMenu CSS
-                    ============================================ -->
+        ============================================ -->
         <link rel="stylesheet" href="../css/metisMenu/metisMenu.min.css">
         <link rel="stylesheet" href="../css/metisMenu/metisMenu-vertical.css">
         <!-- calendar CSS
-                    ============================================ -->
+        ============================================ -->
         <link rel="stylesheet" href="../css/calendar/fullcalendar.min.css">
         <link rel="stylesheet" href="../css/calendar/fullcalendar.print.min.css">
         <!-- style CSS
-                    ============================================ -->
+        ============================================ -->
         <link rel="stylesheet" href="../style.css">
         <!-- responsive CSS
-                    ============================================ -->
+        ============================================ -->
         <link rel="stylesheet" href="../css/responsive.css">
         <!-- modernizr JS
-                    ============================================ -->
+        ============================================ -->
         <script src="../js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
 
@@ -65,7 +65,7 @@
         <!-- cek apa udah login ? -->
         <script>
             if (!(localStorage.getItem('sudah_login') == 1)) {
-                window.location.href = 'login.html';
+                window.location.href = 'login.php';
             }
         </script>
         <!-- end cek apa udah login ? -->
@@ -74,38 +74,47 @@
         <div class="left-sidebar-pro">
             <nav id="sidebar" class="">
                 <div class="sidebar-header">
-                    <a href="index.html"><img class="main-logo" src="../img/logo/logo.png" alt="" /></a>
-                    <strong><img src="img/logo/logosn.png" alt="" /></strong>
+                    <a href="index.php"><img class="main-logo" src="../img/logo/logo.png" alt="" /></a>
+                    <strong><img src="../img/logo/logosn.png" alt="" /></strong>
                 </div>
                 <div class="left-custom-menu-adp-wrap comment-scrollbar">
                     <nav class="sidebar-nav left-sidebar-menu-pro">
                         <ul class="metismenu" id="menu1">
-
-                            <li><a title="Dekstop" href="index.html" aria-expanded="false"><i class="fa fa-desktop icon-wrap sub-icon-mg" aria-hidden="true"></i> <span class="mini-click-non">Dekstop</span></a></li>
-
+                            <li class="#">
+                                <a class="has-arrow" href="index.php">
+                                    <i class="fa big-icon fa-bullseye icon-wrap"></i>
+                                    <span class="mini-click-non">Lapor</span>
+                                </a>
+                                <!--                        <ul class="submenu-angle" aria-expanded="true">
+                                <li><a title="Identitas Pelapor" href="identitas_pelapor.php"><i class="fa fa-user sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Identitas Pelapor</span></a></li>
+                              </ul>-->
+                                <ul class="submenu-angle" aria-expanded="true">
+                                    <li><a title="Data Pelapor" href="data_pelapor.php"><i class="fa fa-table sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data Pelapor</span></a></li>
+                                </ul>
+                            </li>
                             <li class="#">
                                 <a class="has-arrow" href="" aria-expanded="false"><i class="fa big-icon fa-fire-extinguisher icon-wrap"></i> <span class="mini-click-non">Kejadian</span></a>
                                 <ul class="submenu-angle" aria-expanded="true">
-                                    <li><a title="Lapor Kejadian" href="lapor_kejadian.html"><i class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Lapor Kejadian</span></a></li>
+                                    <li><a title="Lapor Kejadian" href="lapor_kejadian.php"><i class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Lapor Kejadian</span></a></li>
                                 </ul>
                                 <ul class="submenu-angle" aria-expanded="true">
-                                    <li><a title="Data Kejadian" href="data_kejadian.html"><i class="fa fa-table sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data Kejadian</span></a></li>
+                                    <li><a title="Data Kejadian" href="data_kejadian.php"><i class="fa fa-table sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data Kejadian</span></a></li>
                                 </ul>
                             </li>
                             <li class="#">
                                 <a class="has-arrow" href="" aria-expanded="false"><i class="fa big-icon fa-users icon-wrap"></i> <span class="mini-click-non">Petugas Damkar</span></a>
+                                <!--                                <ul class="submenu-angle" aria-expanded="true">
+                                                                    <li><a title="Identitas Petugas" href="identitas_petugas.php"><i class="fa fa-user sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Identitas Petugas</span></a></li>
+                                                                </ul>-->
                                 <ul class="submenu-angle" aria-expanded="true">
-                                    <li><a title="Identitas Petugas" href="identitas_petugas.html"><i class="fa fa-user sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Identitas Petugas</span></a></li>
-                                </ul>
-                                <ul class="submenu-angle" aria-expanded="true">
-                                    <li><a title="Data Petugas" href="data_petugas.html"><i class="fa fa-table sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data Petugas</span></a></li>
+                                    <li><a title="Data Petugas" href="data_petugas.php"><i class="fa fa-table sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data Petugas</span></a></li>
                                 </ul>
                             </li>
                             <li class="#">
                                 <a class="has-arrow" href="" aria-expanded="false"><i class="fa big-icon fa-home icon-wrap"></i> <span class="mini-click-non">POS</span></a>
-                                <ul class="submenu-angle" aria-expanded="true">
-                                    <li><a title="Pos Damkar" href="pos_damkar.html"><i class="fa fa-home sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Pos Damkar</span></a></li>
-                                </ul>
+                                <!--                                <ul class="submenu-angle" aria-expanded="true">
+                                                                    <li><a title="Pos Damkar" href="pos_damkar.php"><i class="fa fa-home sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Pos Damkar</span></a></li>
+                                                                </ul>-->
                                 <ul class="submenu-angle" aria-expanded="true">
                                     <li><a title="Data Pos" href="data_pos.php"><i class="fa fa-table sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data Pos</span></a></li>
                                 </ul>
@@ -124,7 +133,7 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="logo-pro">
-                            <a href="index.html"><img class="main-logo" src="img/logo/logo.png" alt="" /></a>
+                            <a href="index.php"><img class="main-logo" src="img/logo/logo.png" alt="" /></a>
                         </div>
                     </div>
                 </div>
@@ -146,7 +155,7 @@
                                         <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
                                             <div class="header-top-menu tabl-d-n">
                                                 <ul class="nav navbar-nav mai-top-nav">
-                                                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a>
+                                                    <li class="nav-item"><a href="index.php" class="nav-link">Home</a>
                                                     </li>
                                                     <li class="nav-item"><a href="#" class="nav-link">About</a>
                                                     </li>
@@ -161,15 +170,15 @@
                                             <div class="header-right-info">
                                                 <ul class="nav navbar-nav mai-top-nav header-right-menu">
                                                     <li class="nav-item">
-                                                        <a href="logout.html" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
+                                                        <a href="logout.php" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
                                                             <i class="fa fa-user adminpro-user-rounded header-riht-inf" aria-hidden="true"></i>
                                                             <span class="admin-name">Akun</span>
                                                             <i class="fa fa-angle-down adminpro-icon adminpro-down-arrow"></i>
                                                         </a>
                                                         <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn" style="margin-top: 60px;width: 100%;">
-                                                            <li><a href="pelapor_ubah.html"><span class="fa fa-lock author-log-ic"></span>Profile</a>
+                                                            <li><a href="pelapor_ubah.php"><span class="fa fa-lock author-log-ic"></span>Profile</a>
                                                             </li>
-                                                            <li><a href="logout.html"><span class="fa fa-lock author-log-ic"></span>Log Out</a>
+                                                            <li><a href="logout.php"><span class="fa fa-lock author-log-ic"></span>Log Out</a>
                                                             </li>
                                                         </ul>
                                                     </li>
@@ -193,32 +202,38 @@
                                 <div class="mobile-menu">
                                     <nav id="dropdown">
                                         <ul class="mobile-menu-nav">
-                                            <li><a data-toggle="collapse" data-target="#Charts" href="index.html">Home <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+                                            <li><a data-toggle="collapse" data-target="#Charts" href="index.php">Home <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
                                             </li>
 
-                                            <li><a data-toggle="collapse" data-target="#demo" href="data_pelapor.html"> DATA LAPOR <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+                                            <li><a data-toggle="collapse" data-target="#demo" href="data_pelapor.php"> DATA LAPOR <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
                                                 <!--                                                <ul id="demo" class="collapse dropdown-header-top">
-                                                                                                <li><a href="identitas_pelapor.html">IDENTITAS PELAPOR</a></li>
-                                                                                                    <li><a href="data_pelapor.html">DATA PELAPOR</a></li>
-                                                                                                </ul>-->
+                                                <li><a href="identitas_pelapor.php">IDENTITAS PELAPOR</a></li>
+                                                <li><a href="data_pelapor.php">DATA PELAPOR</a></li>
+                                              </ul>-->
                                             </li>
-                                            <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_kejadian.html">DATA KEJADIAN <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+                                            <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_kejadian.php">DATA KEJADIAN <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
                                                 <!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
-                                                                                                <li><a href="lapor_kejadian.html">LAPOR KEJADIAN</a></li>
-                                                                                                    <li><a href="data_kejadian.html">DATA KEJADIAN</a></li>
-                                                                                                </ul>-->
+                                                <li><a href="lapor_kejadian.php">LAPOR KEJADIAN</a></li>
+                                                <li><a href="data_kejadian.php">DATA KEJADIAN</a></li>
+                                              </ul>-->
                                             </li>
-                                            <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_petugas.html">DATA PETUGAS<span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+                                            <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_petugas.php">DATA PETUGAS<span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
                                                 <!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
-                                                                                                <li><a href="identitas_petugas.html">IDENTITAS PETUGAS</a></li>
-                                                                                                    <li><a href="data_petugas.html">DATA PETUGAS</a></li>
-                                                                                                </ul>-->
+                                                <li><a href="identitas_petugas.php">IDENTITAS PETUGAS</a></li>
+                                                <li><a href="data_petugas.php">DATA PETUGAS</a></li>
+                                              </ul>-->
                                             </li>
-                                            <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_pos.html">DATA POS <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+                                            <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_pos.php">DATA POS <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
                                                 <!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
-                                                                                                <li><a href="pos_damkar.html">POS DAMKAR</a></li>
-                                                                                                    <li><a href="data_pos.php">DATA POS</a></li>
-                                                                                                </ul>-->
+                                                <li><a href="pos_damkar.php">POS DAMKAR</a></li>
+                                                <li><a href="data_pos.php">DATA POS</a></li>
+                                              </ul>-->
+                                            </li>
+                                            <li><a data-toggle="collapse" data-target="#Tablesmob" href="logout.php">Logout <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+                                                <!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
+                                                <li><a href="pos_damkar.php">POS DAMKAR</a></li>
+                                                <li><a href="data_pos.php">DATA POS</a></li>
+                                              </ul>-->
                                             </li>
                                         </ul>
                                     </nav>
@@ -246,46 +261,58 @@
             </div>
             <!-- sub main -->
 
-            <!-- Static Table Start -->
+            <div class="google-maps-area mg-t-15 mg-b-15">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="sparkline9-list">
+                                <div class="sparkline9-hd">
+                                    <div class="main-sparkline9-hd">
+                                        <center><h1>Google Map <span class="table-project-n"></span></h1></center>
+                                    </div>
+                                </div>
+                                <div class="sparkline9-graph">
+                                    <div class="google-map-single">
+                                        <div id="map1"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="single-pro-review-area">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="review-tab-pro-inner">
-                                <ul id="myTab3" class="tab-review-design">
-                                    <li class="active"><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i> Edit Kejadian Kebakaran</a></li>
-                                    <li><a href="#"><i class="fa fa-file-image-o" aria-hidden="true"></i> Pictures</a></li>
-                                </ul>
                                 <div id="myTabContent" class="tab-content custom-product-edit">
                                     <div class="product-tab-list tab-pane fade active in" id="description">
-                                        <form action="../app/kejadian_ubah.html" method="post">
-                                            <!--<input type="hidden" value="<?= $id_kejadian ?>" name="id_kejadian">-->
-                                            <!--<input required type="hidden" name="tanggal_waktu_kejadian" class="form-control" placeholder="Tanggal Waktu Kejadian">-->
-                                            <input type="hidden" id="id_kj">
-                                            <input type="hidden" id="id_masyarakat_pelapor">
-                                            <input type="hidden" id="tanggal_waktu_kejadian">
+                                        <form action="../app/data_kejadian.php" method="post">
                                             <div class="row">
                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
                                                     <div class="review-content-section">
                                                         <div class="input-group mg-b-pro-edt">
                                                             <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-                                                            <input required id="longitude" type="text" name="longitude" class="form-control" placeholder="Longitude" value="">
+                                                            <input type="text" class="form-control data-input" name="longitude" placeholder="Longitude">
                                                         </div>
                                                         <div class="input-group mg-b-pro-edt">
                                                             <span class="input-group-addon"><i class="fa fa-sticky-note" aria-hidden="true"></i></span>
-                                                            <input required id="deskripsi_kejadian" type="text" name="deskripsi_kejadian" class="form-control" placeholder="Deskripsi Kejadian" value="">
+                                                            <input type="text" class="form-control data-input" name="deskripsi_kejadian" placeholder="Deskripsi Kejadian">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                     <div class="review-content-section">
-                                                        <div class="input-group mg-b-pro-edt">
+                                                          <div class="input-group mg-b-pro-edt">
                                                             <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-                                                            <input required id="latitude" type="text" name="latitude" class="form-control" placeholder="Latitude" value="">
+                                                            <input type="text" class="form-control data-input" name="latitude" placeholder="Latitude">
                                                         </div>
                                                         <div class="input-group mg-b-pro-edt">
                                                             <span class="input-group-addon"><i class="fa fa-camera" aria-hidden="true"></i></span>
-                                                            <input required id="gambar" type="text" name="gambar" class="form-control" placeholder="Gambar" value="">
+                                                            <input type="file" class="form-control data-input" name="gambar" placeholder="Upload Gambar">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -293,10 +320,11 @@
                                             <div class="row">
                                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                     <div class="text-center mg-b-pro-edt custom-pro-edt-ds">
-                                                        <button id="btn_simpan" type="button" class="btn btn-primary waves-effect waves-light m-r-10">Update
+                                                        <button type="submit" id="btnSubmit" class="btn btn-primary waves-effect waves-light m-r-10">Simpan
                                                         </button>
-                                                        <button type="button" onclick="window.history.back()" class="btn btn-primary waves-effect waves-light m-r-10">Batal
-                                                        </button>
+                                                        <input type="reset" class="btn btn-primary waves-effect waves-light m-r-10" value="Batal">
+                                                        <!--<a href="data_kejadian.php" class="btn btn-primary waves-effect waves-light m-r-10">Batal </a>-->
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -308,7 +336,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Static Table End -->
 
             <!-- footer -->
             <div class="footer-copyright-area">
@@ -325,112 +352,121 @@
             <!-- end footer -->
 
             <!-- jquery
-                        ============================================ -->
+            ============================================ -->
             <script src="../js/vendor/jquery-1.11.3.min.js"></script>
             <!-- bootstrap JS
-                        ============================================ -->
+            ============================================ -->
             <script src="../js/bootstrap.min.js"></script>
             <!-- wow JS
-                        ============================================ -->
+            ============================================ -->
             <script src="../js/wow.min.js"></script>
             <!-- price-slider JS
-                        ============================================ -->
+            ============================================ -->
             <script src="../js/jquery-price-slider.js"></script>
             <!-- meanmenu JS
-                        ============================================ -->
+            ============================================ -->
             <script src="../js/jquery.meanmenu.js"></script>
             <!-- owl.carousel JS
-                        ============================================ -->
+            ============================================ -->
             <script src="../js/owl.carousel.min.js"></script>
             <!-- sticky JS
-                        ============================================ -->
+            ============================================ -->
             <script src="../js/jquery.sticky.js"></script>
             <!-- scrollUp JS
-                        ============================================ -->
+            ============================================ -->
             <script src="../js/jquery.scrollUp.min.js"></script>
             <!-- mCustomScrollbar JS
-                        ============================================ -->
+            ============================================ -->
             <script src="../js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
             <script src="../js/scrollbar/mCustomScrollbar-active.js"></script>
             <!-- metisMenu JS
-                        ============================================ -->
+            ============================================ -->
             <script src="../js/metisMenu/metisMenu.min.js"></script>
             <script src="../js/metisMenu/metisMenu-active.js"></script>
             <!-- morrisjs JS
-                        ============================================ -->
-            <script src="../js/morrisjs/raphael-min.js"></script>
-            <script src="../js/morrisjs/morris.js"></script>
-            <script src="../js/morrisjs/morris-active.js"></script>
+            ============================================ -->
+            <!--            <script src="../js/morrisjs/raphael-min.js"></script>
+                        <script src="../js/morrisjs/morris.js"></script>
+                        <script src="../js/morrisjs/morris-active.js"></script>-->
             <!-- morrisjs JS
-                        ============================================ -->
+            ============================================ -->
             <script src="../js/sparkline/jquery.sparkline.min.js"></script>
             <script src="../js/sparkline/jquery.charts-sparkline.js"></script>
             <!-- calendar JS
-                        ============================================ -->
+            ============================================ -->
             <script src="../js/calendar/moment.min.js"></script>
             <script src="../js/calendar/fullcalendar.min.js"></script>
             <script src="../js/calendar/fullcalendar-active.js"></script>
             <!-- plugins JS
-                        ============================================ -->
-            <script src="../js/plugins.js"></script>  
+            ============================================ -->
+            <script src="../js/plugins.js"></script>
+
             <!-- Google map JS
-                        ============================================ -->
-            <script src="../js/google.maps/google.maps-active.js"></script>
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiNUO68DkrsFKFz744_LWMqCNI_GqYciQ&callback=initMap"></script>
+            ============================================ -->
+            <!--<script src="../js/google.maps/google.maps-active.js"></script>-->
+            <script>
+            function initMap() {
+// The location of Uluru
+                var uluru = {lat: -7.782804, lng: 110.373020};
+// The map, centered at Uluru
+                var map = new google.maps.Map(
+                        document.getElementById('map1'), {zoom: 15, center: uluru});
+// The marker, positioned at Uluru
+                var marker = new google.maps.Marker({position: uluru, map: map});
+                console.log('The map is set');
+            }
+            </script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXMNHIbmIKC4y_QUQpQdyhcTiDIKuCx4U&callback=initMap"></script>
+
+
             <!-- main JS
-                        ============================================ -->
+            ============================================ -->
             <script src="../js/main.js"></script>
             <script>
-                                                            var id_kj = window.localStorage.getItem('id_kj');
+            $(document).ready(function () {
+                // Btn submit click event
+                $('#btnSubmit').click(function (e) {
+//                        e.preventDefault();
+                    var objInputData = $('.data-input');
 
-                                                            $.ajax({
-                                                                url: "http://localhost/brian/web/ambil_id_kejadian.php",
-                                                                type: 'POST',
-                                                                dataType: 'json',
-                                                                data: {id_kj: id_kj},
-                                                                success: function (resp) {
-                                                                    $('#id_masyarakat_pelapor').val(resp.id_masyarakat_pelapor);
-                                                                    $('#tanggal_waktu_kejadian').val(resp.tanggal_waktu_kejadian);
-                                                                    $('#longitude').val(resp.longitude);
-                                                                    $('#latitude').val(resp.latitude);
-                                                                    $('#deskripsi_kejadian').val(resp.deskripsi_kejadian);
-                                                                    $('#gambar').val(resp.gambar);
-                                                                    $('#id_kj').val(resp.id_kejadian);
-                                                                }
-                                                            });
+                    for (var x = 0; x < objInputData.length; x++) {
+                        if (objInputData[x].value == '') {
+                            e.preventDefault();
+                            alert('Form data belum lengkap');
+                            return;
+                        }
+                    }
+                    // Ambil semua nilai dari form tersebut
+                    var longitude = objInputData[0].value;
+                    var latitude = objInputData[2].value;
+                    var deskripsi = objInputData[1].value;
+                    var gambar = objInputData[3].value;
+                    var id_profil = window.localStorage.getItem('id_profile');
 
-                                                            $("#btn_simpan").click(simpan_data);
-                                                            function simpan_data() {
+                    $.ajax({
+                        url: 'http://localhost/brian/web/ajax-proses-pelaporan.php',
+                        type: 'POST',
+                        contentType: 'application/x-www-form-urlencoded',
+                        dataType: 'json',
+                        data: {
+                            'longitude': longitude,
+                            'latitude': latitude,
+                            'deskripsi': deskripsi,
+                            'gambar': gambar,
+                            'id_profile': id_profil
+                        },
+                        success: function (response) {
+                            console.log('ok');
+                            console.log(response);
+                        }
+                    });
+                });
 
-//                    alert("tombol simpan telah di klik")
-                                                                var id_masyarakat_pelapor = $("#id_masyarakat_pelapor").val();
-                                                                var tanggal_waktu_kejadian = $("#tanggal_waktu_kejadian").val();
-                                                                var longitude = $("#longitude").val();
-                                                                var latitude = $("#latitude").val();
-                                                                var deskripsi_kejadian = $("#deskripsi_kejadian").val();
-                                                                var gambar = $("#gambar").val();
-                                                                var id_kj = $("#id_kj").val();
-
-                                                                console.log("id_masyarakat_pelapor: " + id_masyarakat_pelapor + "tanggal_waktu_kejadian: " + tanggal_waktu_kejadian + " longitude : " + longitude + " latitude : " + latitude + " deskripsi_kejadian : " + deskripsi_kejadian + " gambar : " + gambar);
-                                                                $.ajax({
-                                                                    url: "http://localhost/brian/web/ajax_kejadian_simpan.php",
-                                                                    type: 'POST',
-                                                                    dataType: 'json',
-                                                                    data: {id_kejadian: id_kj, id_masyarakat_pelapor: id_masyarakat_pelapor, longitude: longitude, latitude: latitude, deskripsi_kejadian: deskripsi_kejadian, gambar: gambar},
-                                                                    success: function (response) {
-                                                                        window.localStorage.removeItem('id_kj');
-                                                                        if (response.status == "Ok") {
-                                                                            alert("Data Berhasil disimpan");
-                                                                            window.location.href = "../app/data_kejadian.html";
-                                                                        } else {
-                                                                            alert("Data Gagal disimpan");
-                                                                            window.location.href = "../app/data_kejadian.html";
-                                                                        }
-                                                                    }
-                                                                });
-                                                            }
-
-
+                document.addEventListener('click', function (e) {
+                    console.log(e.target.classList);
+                });
+            });
             </script>
+
     </body>
 </html>

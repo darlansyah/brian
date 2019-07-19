@@ -175,7 +175,7 @@
                                                             <span class="admin-name">Akun</span>
                                                             <i class="fa fa-angle-down adminpro-icon adminpro-down-arrow"></i>
                                                         </a>
-                                                        <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
+                                                        <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn" style="margin-top: 60px;width: 100%;">
                                                             <li><a href="pelapor_ubah.html"><span class="fa fa-lock author-log-ic"></span>Profile</a>
                                                             </li>
                                                             <li><a href="logout.html"><span class="fa fa-lock author-log-ic"></span>Log Out</a>
@@ -295,24 +295,25 @@
                                     <div class="product-tab-list tab-pane fade active in" id="description">
                                         <form action="../app/data_kejadian.html" method="post">
                                             <div class="row">
-                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-5">
 
                                                     <div class="review-content-section">
                                                         <div class="input-group mg-b-pro-edt">
                                                             <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
                                                             <input type="text" class="form-control data-input" name="longitude" placeholder="Longitude">
+                                                           
                                                         </div>
                                                         <div class="input-group mg-b-pro-edt">
-                                                            <span class="input-group-addon"><i class="fa fa-sticky-note" aria-hidden="true"></i></span>
-                                                            <input type="text" class="form-control data-input" name="deskripsi_kejadian" placeholder="Deskripsi Kejadian">
+                                                            <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                                                            <input type="text" class="form-control data-input" name="latitude" placeholder="Latitude">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                     <div class="review-content-section">
                                                         <div class="input-group mg-b-pro-edt">
-                                                            <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-                                                            <input type="text" class="form-control data-input" name="latitude" placeholder="Latitude">
+                                                            <span class="input-group-addon"><i class="fa fa-sticky-note" aria-hidden="true"></i></span>
+                                                            <input type="text" class="form-control data-input" name="deskripsi_kejadian" placeholder="Deskripsi Kejadian">
                                                         </div>
                                                         <div class="input-group mg-b-pro-edt">
                                                             <span class="input-group-addon"><i class="fa fa-camera" aria-hidden="true"></i></span>
@@ -389,9 +390,9 @@
             <script src="../js/metisMenu/metisMenu-active.js"></script>
             <!-- morrisjs JS
             ============================================ -->
-            <script src="../js/morrisjs/raphael-min.js"></script>
-            <script src="../js/morrisjs/morris.js"></script>
-            <script src="../js/morrisjs/morris-active.js"></script>
+            <!--            <script src="../js/morrisjs/raphael-min.js"></script>
+                        <script src="../js/morrisjs/morris.js"></script>
+                        <script src="../js/morrisjs/morris-active.js"></script>-->
             <!-- morrisjs JS
             ============================================ -->
             <script src="../js/sparkline/jquery.sparkline.min.js"></script>
@@ -407,8 +408,21 @@
 
             <!-- Google map JS
             ============================================ -->
-            <script src="../js/google.maps/google.maps-active.js"></script>
+            <!--<script src="../js/google.maps/google.maps-active.js"></script>-->
+            <script>
+            function initMap() {
+// The location of Uluru
+                var uluru = {lat: -7.782804, lng: 110.373020};
+// The map, centered at Uluru
+                var map = new google.maps.Map(
+                        document.getElementById('map1'), {zoom: 15, center: uluru});
+// The marker, positioned at Uluru
+                var marker = new google.maps.Marker({position: uluru, map: map});
+                console.log('The map is set');
+            }
+            </script>
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXMNHIbmIKC4y_QUQpQdyhcTiDIKuCx4U&callback=initMap"></script>
+
 
             <!-- main JS
             ============================================ -->
@@ -451,6 +465,10 @@
                             console.log(response);
                         }
                     });
+                });
+
+                document.addEventListener('click', function (e) {
+                    console.log(e.target.classList);
                 });
             });
             </script>

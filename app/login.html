@@ -177,13 +177,13 @@
       dataType: 'json',
       success: function (resp) {
         if (resp.status == 'ok') {
-          alert('Anda Berhasil Masuk');
+//          alert('Anda Berhasil Masuk');
           window.localStorage.setItem('sudah_login', 1);
           window.localStorage.setItem('id_profile', resp.data.id_profile);
           window.localStorage.setItem('nama', resp.data.nama_masyarakat_pelapor);
           window.location.href = 'index.html';
         } else {
-          alert('Username atau Password Salah');
+//          alert('Username atau Password Salah');
         }
       }
     });

@@ -555,8 +555,8 @@ ul.message-menu li .message-content p, ul.notification-menu li .notification-con
     top: 175%;
     left: -358px;
     width: 400px;
-	box-shadow: 0px 2px 3px rgba(0,0,0,.175);
-	padding: 20px;
+    box-shadow: 0px 2px 3px rgba(0,0,0,.175);
+    padding: 20px;
 }
 .note-heading-indicate {
     margin-top: 20px;

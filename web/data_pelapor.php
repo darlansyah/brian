@@ -38,7 +38,6 @@ include '../templeting/contenthtml.php';
                                    data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
                                 <thead>
                                     <tr>
-
                                         <th data-field="id">No</th>
                                         <th data-field="name" data-editable="true">Nama</th>
                                         <th data-field="company" data-editable="true">No KTP</th>
