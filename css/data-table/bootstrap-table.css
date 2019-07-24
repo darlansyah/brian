@@ -180,6 +180,8 @@
     display: inline-block;
 }
 
+.fixed-table-toolbar { display: none; }
+
 .fixed-table-toolbar .columns-left {
     margin-right: 5px;
 }

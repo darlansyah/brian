@@ -205,12 +205,12 @@
                                             <li><a data-toggle="collapse" data-target="#Charts" href="index.html">Home <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
                                             </li>
 
-                                            <li><a data-toggle="collapse" data-target="#demo" href="data_pelapor.html"> DATA LAPOR <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                                <!--                                                <ul id="demo" class="collapse dropdown-header-top">
-                                                <li><a href="identitas_pelapor.html">IDENTITAS PELAPOR</a></li>
-                                                <li><a href="data_pelapor.html">DATA PELAPOR</a></li>
-                                              </ul>-->
-                                            </li>
+                                            <!--                                            <li><a data-toggle="collapse" data-target="#demo" href="data_pelapor.html"> DATA LAPOR <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+                                                                                                                                            <ul id="demo" class="collapse dropdown-header-top">
+                                                                                            <li><a href="identitas_pelapor.html">IDENTITAS PELAPOR</a></li>
+                                                                                            <li><a href="data_pelapor.html">DATA PELAPOR</a></li>
+                                                                                          </ul>
+                                                                                        </li>-->
                                             <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_kejadian.html">DATA KEJADIAN <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
                                                 <!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
                                                 <li><a href="lapor_kejadian.html">LAPOR KEJADIAN</a></li>
@@ -229,12 +229,12 @@
                                                 <li><a href="data_pos.php">DATA POS</a></li>
                                               </ul>-->
                                             </li>
-                                            <li><a data-toggle="collapse" data-target="#Tablesmob" href="logout.html">Logout <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                                <!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
+<!--                                            <li><a data-toggle="collapse" data-target="#Tablesmob" href="logout.html">Logout <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+                                                                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
                                                 <li><a href="pos_damkar.html">POS DAMKAR</a></li>
                                                 <li><a href="data_pos.php">DATA POS</a></li>
-                                              </ul>-->
-                                            </li>
+                                              </ul>
+                                            </li>-->
                                         </ul>
                                     </nav>
                                 </div>
@@ -295,13 +295,13 @@
                                     <div class="product-tab-list tab-pane fade active in" id="description">
                                         <form action="../app/data_kejadian.html" method="post">
                                             <div class="row">
-                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-5">
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 
                                                     <div class="review-content-section">
                                                         <div class="input-group mg-b-pro-edt">
                                                             <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
                                                             <input type="text" class="form-control data-input" name="longitude" placeholder="Longitude">
-                                                           
+
                                                         </div>
                                                         <div class="input-group mg-b-pro-edt">
                                                             <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
@@ -317,7 +317,7 @@
                                                         </div>
                                                         <div class="input-group mg-b-pro-edt">
                                                             <span class="input-group-addon"><i class="fa fa-camera" aria-hidden="true"></i></span>
-                                                            <input type="file" class="form-control data-input" name="gambar" placeholder="Upload Gambar">
+                                                            <input type="text" class="form-control data-input" name="gambar" placeholder="Upload Gambar">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -437,7 +437,7 @@
                     for (var x = 0; x < objInputData.length; x++) {
                         if (objInputData[x].value == '') {
                             e.preventDefault();
-                            alert('Form data belum lengkap');
+                            alert('Form Data Belum Lengkap');
                             return;
                         }
                     }
@@ -463,6 +463,7 @@
                         success: function (response) {
                             console.log('ok');
                             console.log(response);
+                            e.preventDefault();
                         }
                     });
                 });

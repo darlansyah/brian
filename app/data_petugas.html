@@ -4,12 +4,12 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Data Table | jeweler - Material Admin Template</title>
+        <title>Aplikasi Pemadam Kebakaran</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- favicon
                     ============================================ -->
-        <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
         <!-- Google Fonts
                     ============================================ -->
         <link href="https://fonts.googleapis.com/css?family=Play:400,700" rel="stylesheet">
@@ -200,12 +200,12 @@
                                             <li><a data-toggle="collapse" data-target="#Charts" href="index.html">Home <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
                                             </li>
 
-                                            <li><a data-toggle="collapse" data-target="#demo" href="data_pelapor.html"> DATA LAPOR <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                                <!--                                                <ul id="demo" class="collapse dropdown-header-top">
-                                                                                                <li><a href="identitas_pelapor.html">IDENTITAS PELAPOR</a></li>
-                                                                                                    <li><a href="data_pelapor.html">DATA PELAPOR</a></li>
-                                                                                                </ul>-->
-                                            </li>
+                                            <!--                                            <li><a data-toggle="collapse" data-target="#demo" href="data_pelapor.html"> DATA LAPOR <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+                                                                                                                                            <ul id="demo" class="collapse dropdown-header-top">
+                                                                                                                                            <li><a href="identitas_pelapor.html">IDENTITAS PELAPOR</a></li>
+                                                                                                                                                <li><a href="data_pelapor.html">DATA PELAPOR</a></li>
+                                                                                                                                            </ul>
+                                                                                        </li>-->
                                             <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_kejadian.html">DATA KEJADIAN <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
                                                 <!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
                                                                                                 <li><a href="lapor_kejadian.html">LAPOR KEJADIAN</a></li>
@@ -379,6 +379,7 @@
                 dataType: 'json',
                 success: function (resp) {
                     $('tbody').html('');
+                    $('.fixed-table-toolbar').html('');
                     //                                                alert('ajax jalan!!');
                     //                                                console.log(resp.length);
                     //                                                console.log(resp[0].nama_masyarakat_pelapor);
