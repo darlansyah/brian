@@ -229,12 +229,12 @@
                                                 <li><a href="data_pos.php">DATA POS</a></li>
                                               </ul>-->
                                             </li>
-<!--                                            <li><a data-toggle="collapse" data-target="#Tablesmob" href="logout.html">Logout <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                                                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
-                                                <li><a href="pos_damkar.html">POS DAMKAR</a></li>
-                                                <li><a href="data_pos.php">DATA POS</a></li>
-                                              </ul>
-                                            </li>-->
+                                            <!--                                            <li><a data-toggle="collapse" data-target="#Tablesmob" href="logout.html">Logout <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+                                                                                                                                            <ul id="Tablesmob" class="collapse dropdown-header-top">
+                                                                                            <li><a href="pos_damkar.html">POS DAMKAR</a></li>
+                                                                                            <li><a href="data_pos.php">DATA POS</a></li>
+                                                                                          </ul>
+                                                                                        </li>-->
                                         </ul>
                                     </nav>
                                 </div>
@@ -293,7 +293,7 @@
                                 </ul>
                                 <div id="myTabContent" class="tab-content custom-product-edit">
                                     <div class="product-tab-list tab-pane fade active in" id="description">
-                                        <form action="../app/data_kejadian.html" method="post">
+                                        <form>
                                             <div class="row">
                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 
@@ -317,7 +317,7 @@
                                                         </div>
                                                         <div class="input-group mg-b-pro-edt">
                                                             <span class="input-group-addon"><i class="fa fa-camera" aria-hidden="true"></i></span>
-                                                            <input type="text" class="form-control data-input" name="gambar" placeholder="Upload Gambar">
+                                                            <input type="file" class="form-control data-input" name="gambar" placeholder="Upload Gambar">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -423,7 +423,6 @@
             </script>
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXMNHIbmIKC4y_QUQpQdyhcTiDIKuCx4U&callback=initMap"></script>
 
-
             <!-- main JS
             ============================================ -->
             <script src="../js/main.js"></script>
@@ -431,7 +430,8 @@
             $(document).ready(function () {
                 // Btn submit click event
                 $('#btnSubmit').click(function (e) {
-//                        e.preventDefault();
+//                    alert('jalan');
+                    e.preventDefault();
                     var objInputData = $('.data-input');
 
                     for (var x = 0; x < objInputData.length; x++) {
@@ -443,36 +443,44 @@
                     }
                     // Ambil semua nilai dari form tersebut
                     var longitude = objInputData[0].value;
-                    var latitude = objInputData[2].value;
-                    var deskripsi = objInputData[1].value;
-                    var gambar = objInputData[3].value;
+                    var latitude = objInputData[1].value
+                    var deskripsi = objInputData[2].value;
+//                    var gambar = objInputData[3].value;
                     var id_profil = window.localStorage.getItem('id_profile');
+
+                    var formData = new FormData($('form')[0]);
+                    formData.append("longitude", longitude);
+                    formData.append("latitude", latitude);
+                    formData.append("deskripsi", deskripsi);
+                    formData.append("id_profil", id_profil);
 
                     $.ajax({
                         url: 'http://localhost/brian/web/ajax-proses-pelaporan.php',
                         type: 'POST',
-                        contentType: 'application/x-www-form-urlencoded',
+//                        contentType: 'application/x-www-form-urlencoded',
                         dataType: 'json',
-                        data: {
-                            'longitude': longitude,
-                            'latitude': latitude,
-                            'deskripsi': deskripsi,
-                            'gambar': gambar,
-                            'id_profile': id_profil
-                        },
+                        data: formData,
+                        contentType: false,
+                        cache: false,
+                        processData: false,
                         success: function (response) {
                             console.log('ok');
                             console.log(response);
                             e.preventDefault();
+                            if (response.status == 'berhasil') {
+                                alert('Laporan Anda Berhasil Masuk');
+                                window.location.href = 'data_kejadian.html';
+                            } else {
+                                alert('Laporan Anda Gagal Masuk');
+                                reload();
+                            }
                         }
                     });
                 });
-
                 document.addEventListener('click', function (e) {
                     console.log(e.target.classList);
                 });
             });
             </script>
-
     </body>
 </html>

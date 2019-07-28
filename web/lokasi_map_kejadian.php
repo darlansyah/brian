@@ -94,9 +94,9 @@
                             </li>
                             <li class="#">
                                 <a class="has-arrow" href="" aria-expanded="false"><i class="fa big-icon fa-fire-extinguisher icon-wrap"></i> <span class="mini-click-non">Kejadian</span></a>
-                                <ul class="submenu-angle" aria-expanded="true">
+<!--                                <ul class="submenu-angle" aria-expanded="true">
                                     <li><a title="Lapor Kejadian" href="lapor_kejadian.php"><i class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Lapor Kejadian</span></a></li>
-                                </ul>
+                                </ul>-->
                                 <ul class="submenu-angle" aria-expanded="true">
                                     <li><a title="Data Kejadian" href="data_kejadian.php"><i class="fa fa-table sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data Kejadian</span></a></li>
                                 </ul>
@@ -306,7 +306,7 @@
                                                 </div>
                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                     <div class="review-content-section">
-                                                          <div class="input-group mg-b-pro-edt">
+                                                        <div class="input-group mg-b-pro-edt">
                                                             <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
                                                             <input type="text" class="form-control data-input" name="latitude" placeholder="Latitude">
                                                         </div>

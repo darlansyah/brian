@@ -402,7 +402,6 @@
                 data: {id_profile: id_profile},
                 success: function (resp) {
                     $('tbody').html('');
-                    $('.fixed-table-toolbar').html('');
                         
                     for (i = 0; i < resp.length; i++) {
                         $('tbody').append('<tr><td>' + resp[i].id_kejadian
@@ -411,7 +410,7 @@
                                 + '</td><td>' + resp[i].longitude
                                 + '</td><td>' + resp[i].latitude
                                 + '</td><td>' + resp[i].deskripsi_kejadian
-                                + '</td><td>' + resp[i].gambar
+                                + '</td><td><img src="http://localhost/brian/'+resp[i].gambar+'" style="height:50px">'
                                 + '</td><td><button id="'
                                 + resp[i].id_kejadian
                                 + '" class="btn btn-outline-primary btn-sm mg-r-5 inputClass"><div><i class="fa fa-pencil"></i></div></button>\n\ <button id="'
