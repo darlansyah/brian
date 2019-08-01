@@ -94,9 +94,9 @@
                             </li>
                             <li class="#">
                                 <a class="has-arrow" href="" aria-expanded="false"><i class="fa big-icon fa-fire-extinguisher icon-wrap"></i> <span class="mini-click-non">Kejadian</span></a>
-<!--                                <ul class="submenu-angle" aria-expanded="true">
-                                    <li><a title="Lapor Kejadian" href="lapor_kejadian.php"><i class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Lapor Kejadian</span></a></li>
-                                </ul>-->
+                                <!--                                <ul class="submenu-angle" aria-expanded="true">
+                                                                    <li><a title="Lapor Kejadian" href="lapor_kejadian.php"><i class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Lapor Kejadian</span></a></li>
+                                                                </ul>-->
                                 <ul class="submenu-angle" aria-expanded="true">
                                     <li><a title="Data Kejadian" href="data_kejadian.php"><i class="fa fa-table sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data Kejadian</span></a></li>
                                 </ul>
@@ -405,19 +405,54 @@
             ============================================ -->
             <!--<script src="../js/google.maps/google.maps-active.js"></script>-->
             <script>
-            function initMap() {
-// The location of Uluru
-                var uluru = {lat: -7.782804, lng: 110.373020};
-// The map, centered at Uluru
+            ambilDataKejadian()
+            function ambilDataKejadian() {
+                $.ajax({
+                    url: 'http://localhost/brian/web/ambil_data_kejadian_by_id.php',
+                    data: {id: <?php echo $_REQUEST['id'] ?>},
+                    dataType: 'json',
+                    type: 'POST',
+                    success: function (response) {
+                        var long_kejadian = response[0].longitude;
+                        var lat_kejadian = response[0].latitude;
+                        console.log("long : " + long_kejadian + " dan lalitude : " + lat_kejadian);
+                        ambilDataPos(long_kejadian, lat_kejadian);
+                    }
+                });
+            }
+
+            function ambilDataPos(long_kejadian, lat_kejadian) {
+                $.ajax({
+                    url: 'http://localhost/brian/web/ambil_data_pos.php',
+                    dataType: 'json',
+                    type: 'POST',
+                    success: function (response) {
+                        var data_pos = response;
+                        initMap(long_kejadian, lat_kejadian, data_pos);
+                    }
+                });
+            }
+
+            function initMap(long_kejadian, lat_kejadian, data_pos) {
+                // The location of Uluru
+                var uluru = {lat: parseFloat(long_kejadian), lng: parseFloat(lat_kejadian)};
+                // The map, centered at Uluru
                 var map = new google.maps.Map(
                         document.getElementById('map1'), {zoom: 15, center: uluru});
-// The marker, positioned at Uluru
+                // The marker, positioned at Uluru
                 var marker = new google.maps.Marker({position: uluru, map: map});
                 console.log('The map is set');
+                Array.prototype.forEach.call(data_pos, function (markerElem) {
+                    var long_pos = markerElem.longitude_pos;
+                    var lat_pos = markerElem.latitude_pos;
+                    console.log("long pos : " + long_pos + " dan lalitude pos : " + lat_pos);
+                    var point_pos = {lat: parseFloat(long_pos), lng: parseFloat(lat_pos)};
+                    var marker = new google.maps.Marker({position: point_pos, map: map});
+
+                });
             }
             </script>
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXMNHIbmIKC4y_QUQpQdyhcTiDIKuCx4U&callback=initMap"></script>
-
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXMNHIbmIKC4y_QUQpQdyhcTiDIKuCx4U"></script>
 
             <!-- main JS
             ============================================ -->
@@ -428,7 +463,6 @@
                 $('#btnSubmit').click(function (e) {
 //                        e.preventDefault();
                     var objInputData = $('.data-input');
-
                     for (var x = 0; x < objInputData.length; x++) {
                         if (objInputData[x].value == '') {
                             e.preventDefault();
@@ -442,7 +476,6 @@
                     var deskripsi = objInputData[1].value;
                     var gambar = objInputData[3].value;
                     var id_profil = window.localStorage.getItem('id_profile');
-
                     $.ajax({
                         url: 'http://localhost/brian/web/ajax-proses-pelaporan.php',
                         type: 'POST',
@@ -461,7 +494,6 @@
                         }
                     });
                 });
-
                 document.addEventListener('click', function (e) {
                     console.log(e.target.classList);
                 });

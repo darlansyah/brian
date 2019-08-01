@@ -3,10 +3,9 @@ session_start();
 require '../functions/kumpulan_fungsi.php';
 authentication();
 $kon = koneksi_db();
-$query = mysqli_query($kon, "SELECT * FROM `petugas` 
-INNER JOIN pos ON petugas.id_pos = pos.id_pos
-JOIN user on user.id_profile = petugas.id_petugas
-ORDER BY petugas.`id_petugas`  DESC");
+$query = mysqli_query($kon, "SELECT * FROM `pos`  
+ORDER BY `pos`.`id_pos`  ASC");
+
 
 include '../templeting/headerhtml.php';
 include '../templeting/content.php';
@@ -22,7 +21,7 @@ include '../templeting/contenthtml.php';
                 <div class="sparkline13-list">
                     <div class="sparkline13-hd">
                         <div class="main-sparkline13-hd">
-                            <h1><span class="table-project-n">Data</span> Pengguna</h1>
+                            <h1><span class="table-project-n">Data</span> Pos</h1>
                         </div>
                     </div>
                     <div class="sparkline13-graph">
@@ -38,14 +37,18 @@ include '../templeting/contenthtml.php';
                                    data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
                                 <thead>
                                     <tr>
-
-                                        <th data-field="id">No</th>
-                                        <th data-field="nip" data-editable="true">No Induk Petugas</th>
-                                        <th data-field="nama" data-editable="true">Nama Petugas</th>
-                                        <th data-field="pos" data-editable="true">Nama Pos</th>
-                                        <th data-field="username" data-editable="true">Username</th>
-                                        <th data-field="level" data-editable="true">Level User</th>
-                                        <th data-field="action">Action</th>
+                                        <th data-field="id">ID</th>
+                                        <th data-field="name" data-editable="true">Nama Pos</th>
+                                        <th data-field="company" data-editable="true">Alamat Pos</th>
+                                        <th data-field="price" data-editable="true">Longitude Pos</th>
+                                        <th data-field="date" data-editable="true">Latitude Pos</th>
+                                        <?php
+                                        if ($_SESSION['level_user'] == 'admin') {
+                                            ?>
+                                       
+                                            <?php
+                                        }
+                                        ?>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -54,24 +57,24 @@ include '../templeting/contenthtml.php';
                                     while ($result = mysqli_fetch_object($query)) {
                                         ?>
                                         <tr>
-
                                             <td><?php echo $no++; ?></td>
-                                            <td><?php echo $result->no_induk_pegawai ?></td>
-                                            <td><?php echo $result->nama_petugas ?></td>
                                             <td><?php echo $result->nama_pos ?></td>
-                                            <td><?php echo $result->username ?></td>
-                                            <td><?php echo $result->level_user ?></td>
-                                            <td>
-                                                <a href="petugas_ubah.php?id=<?= $result->id_petugas; ?>"
-                                                   class="btn btn-outline-primary btn-sm mg-r-5"><div><i class="fa fa-edit"></i></div></a>
-                                                <a href="../petugas/petugas_hapus.php?id=<?= $result->id_petugas; ?>"
-                                                   onclick="return confirm('Anda yakin akan menghapus <?php echo $result->nama_petugas ?>?')"
-                                                   class="btn btn-outline-danger btn-sm mg-r-5"><div><i class="fa fa-trash-o"></i></div></a>
-                                            </td>
+                                            <td><?php echo $result->alamat_pos ?></td>
+                                            <td><?php echo $result->longitude_pos ?></td>
+                                            <td><?php echo $result->latitude_pos ?></td>
+                                            <?php
+                                            if ($_SESSION['level_user'] == 'admin') {
+                                                ?>
+                                      
+                                                <?php
+                                            }
+                                            ?>
+
                                         </tr>
                                         <?php
                                     }
                                     ?>
+
                                 </tbody>
                             </table>
                         </div>

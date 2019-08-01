@@ -76,7 +76,7 @@ authentication();
                                             </div>
                                             <div class="input-group mg-b-pro-edt">
                                                 <span class="input-group-addon"><i class="fa fa-camera" aria-hidden="true"></i></span>
-                                                <input type="text" class="form-control" name="gambar" placeholder="Upload Gambar">
+                                                <input type="file" class="form-control" name="gambar" placeholder="Upload Gambar">
                                             </div>
                                         </div>
                                     </div>

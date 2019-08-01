@@ -7,9 +7,9 @@ $longitude = $_POST['longitude'];
 $latitude = $_POST['latitude'];
 $deskripsi = $_POST['deskripsi'];
 $id_profil = $_POST['id_profil'];
-//print_r($_POST);
-//print_r($_FILES);
-//exit;
+print_r($_POST);
+print_r($_FILES);
+exit;
 
 if (is_array($_FILES)) {
     if (is_uploaded_file($_FILES['gambar']['tmp_name'])) {
@@ -32,4 +32,3 @@ if (mysqli_query($conn, $query)) {
     $status = array( 'status' => 'gagal' );
    echo json_encode($status);
 }
-

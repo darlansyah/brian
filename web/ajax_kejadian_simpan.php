@@ -3,7 +3,7 @@
 include '../functions/kumpulan_fungsi.php';
 $kon = koneksi_db();
 
-$id_kejadian = isset($_REQUEST['id_kejadian']) ? $_REQUEST['id_kejadian'] : 0;
+$id_kejadian = isset($_REQUEST['id_kj']) ? $_REQUEST['id_kj'] : 0;
 $id_masyarakat_pelapor = isset($_REQUEST['id_masyarakat_pelapor']) ? $_REQUEST['id_masyarakat_pelapor'] : 0;
 $longitude = isset($_REQUEST['longitude']) ? $_REQUEST['longitude'] : '';
 $latitude = isset($_REQUEST['latitude']) ? $_REQUEST['latitude'] : '';

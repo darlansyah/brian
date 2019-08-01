@@ -62,10 +62,10 @@ if ($_SESSION['level_user'] == 'admin') {
                     <li calss="#">
                         <a class="has-arrow" href="" aria-expanded="false"><i class="fa big-icon fa-users icon-wrap"></i> <span class="mini-click-non">Petugas Damkar</span></a>
                         <ul class="submenu-angle" aria-expanded="true">
-                            <li><a title="Identitas Petugas" href="identitas_petugas.php"><i class="fa fa-user sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Identitas Petugas</span></a></li>
+                            <li><a title="Identitas Pengguna" href="identitas_petugas.php"><i class="fa fa-user sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Identitas Pengguna</span></a></li>
                         </ul>
                         <ul class="submenu-angle" aria-expanded="true">
-                            <li><a title="Data Petugas" href="data_petugas.php"><i class="fa fa-table sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data Petugas</span></a></li>
+                            <li><a title="Data Pengguna" href="data_petugas.php"><i class="fa fa-table sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data Pengguna</span></a></li>
                         </ul>
                     </li>
                     <li calss="#">

@@ -3,13 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/brian/app/lapor_kejadian.html</file>
             <file>file:/C:/xampp/htdocs/brian/web/data_kejadian.php</file>
-            <file>file:/C:/xampp/htdocs/brian/web/ajax_kejadian_simpan.php</file>
             <file>file:/C:/xampp/htdocs/brian/app/kejadian_ubah.html</file>
-            <file>file:/C:/xampp/htdocs/brian/web/ajax-proses-pelaporan.php</file>
-            <file>file:/C:/xampp/htdocs/brian/app/data_kejadian.html</file>
+            <file>file:/C:/xampp/htdocs/brian/templeting/content.php</file>
+            <file>file:/C:/xampp/htdocs/brian/web/index.php</file>
             <file>file:/C:/xampp/htdocs/brian/app/index.html</file>
+            <file>file:/C:/xampp/htdocs/brian/web/identitas_petugas.php</file>
         </group>
     </open-files>
 </project-private>

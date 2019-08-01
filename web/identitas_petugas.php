@@ -17,7 +17,7 @@ $result = mysqli_query($kon, "SELECT * FROM pos");
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="review-tab-pro-inner">
                     <ul id="myTab3" class="tab-review-design">
-                        <li class="active"><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i> Identitas Petugas</a></li>
+                        <li class="active"><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i> Identitas Pengguna</a></li>
                     </ul>
                     <div id="myTabContent" class="tab-content custom-product-edit">
                         <div class="product-tab-list tab-pane fade active in" id="description">
