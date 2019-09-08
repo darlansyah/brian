@@ -45,6 +45,7 @@ include '../templeting/contenthtml.php';
                                         <th data-field="latitude" data-editable="true">Latitude</th>
                                         <th data-field="deskripsi_kejadian" data-editable="true">Deskripsi</th>
                                         <th data-field="gambar">Gambar</th>
+                                        <th data-field="status">Status</th>
                                         <th data-field="action">Action</th>
                                     </tr>
                                 </thead>
@@ -61,11 +62,12 @@ include '../templeting/contenthtml.php';
                                             <td><?php echo $result->latitude ?></td>
                                             <td><?php echo $result->deskripsi_kejadian ?></td>
                                             <td> <img src="../<?= $result->gambar ?>" style="height:50px" > </td>
+                                            <td><?php echo $result->status ?></td>
                                             <td>
                                                 <a href="lokasi_map_kejadian.php?id=<?= $result->id_kejadian; ?>"
                                                    class="btn btn-outline-primary btn-sm mg-r-5"><div><i class="fa fa-bullseye"></i></div> Lihat Lokasi</a>
-                                                <a href="kejadian_ubah.php?id=<?= $result->id_kejadian; ?>"
-                                                   class="btn btn-outline-primary btn-sm mg-r-5"><div><i class="fa fa-edit"></i></div></a>
+<!--                                                <a href="kejadian_ubah.php?id=<?= $result->id_kejadian; ?>"
+                                                   class="btn btn-outline-primary btn-sm mg-r-5"><div><i class="fa fa-edit"></i></div></a>-->
                                                 <a href="../kejadian/kejadian_hapus.php?id=<?= $result->id_kejadian; ?>"
                                                    onclick="return confirm('Anda yakin akan menghapus <?php echo $result->id_masyarakat_pelapor ?>?')"
                                                    class="btn btn-outline-danger btn-sm mg-r-5"><div><i class="fa fa-trash-o"></i></div></a>

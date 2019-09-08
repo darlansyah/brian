@@ -402,7 +402,7 @@
             var id_mp = window.localStorage.getItem('id_mp');
 
             $.ajax({
-                url: "http://localhost/brian/web/ambil_id_pelapor.php",
+                url: "http://192.168.43.198/brian/web/ambil_id_pelapor.php",
                 type: 'POST',
                 dataType: 'json',
                 data: {id_mp: id_mp},
@@ -427,7 +427,7 @@
 
                 console.log("nama : " + nama_masyarakat_pelapor + " no_ktp : " + no_ktp + " telp : " + telp + " alamat : " + alamat);
                 $.ajax({
-                    url: "http://localhost/brian/web/ajax_pelapor_simpan.php",
+                    url: "http://192.168.43.198/brian/web/ajax_pelapor_simpan.php",
                     type: 'POST',
                     dataType: 'json',
                     data: {id_masyarakat_pelapor: id_mp, nama_masyarakat_pelapor: nama_masyarakat_pelapor, no_ktp: no_ktp, telp: telp, alamat: alamat},

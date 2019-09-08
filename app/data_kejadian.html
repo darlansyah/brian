@@ -395,7 +395,7 @@
             var id_profile = window.localStorage.getItem('id_profile');
 
             $.ajax({
-                url: "http://localhost/brian/web/ambil_data_kejadian.php",
+                url: "http://192.168.43.198/brian/web/ambil_data_kejadian.php",
                 type: 'POST',
                 dataType: 'json',
                 data: {id_profile: id_profile},
@@ -410,7 +410,7 @@
                                 + '</td><td>' + resp[i].longitude
                                 + '</td><td>' + resp[i].latitude
                                 + '</td><td>' + resp[i].deskripsi_kejadian
-                                + '</td><td><img src="http://localhost/brian/'+resp[i].gambar+'" style="height:50px">'
+                                + '</td><td><img src="http://192.168.43.198/brian/'+resp[i].gambar+'" style="height:50px">'
                                 + '</td><td><button id="'
                                 + resp[i].id_kejadian
                                 + '" class="btn btn-outline-primary btn-sm mg-r-5 inputClass"><div><i class="fa fa-pencil"></i></div></button>\n\ <button id="'
@@ -444,7 +444,7 @@
                 alert('ini id-nya ' + id);
                 window.localStorage.setItem('id_kj', id);
                 $.ajax({
-                    url: "http://localhost/brian/web/ajax_kejadian_hapus.php",
+                    url: "http://192.168.43.198/brian/web/ajax_kejadian_hapus.php",
                     type: 'POST',
                     dataType: 'json',
                     data: {id_kj: id},

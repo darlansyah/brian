@@ -3,8 +3,7 @@ session_start();
 require '../functions/kumpulan_fungsi.php';
 authentication();
 $kon = koneksi_db();
-$query = mysqli_query($kon, "SELECT * FROM `pos`  
-ORDER BY `pos`.`id_pos`  ASC");
+$query = mysqli_query($kon, "SELECT * FROM `pos` ORDER BY `pos`.`id_pos`  ASC");
 
 
 include '../templeting/headerhtml.php';
@@ -40,8 +39,10 @@ include '../templeting/contenthtml.php';
                                         <th data-field="id">ID</th>
                                         <th data-field="name" data-editable="true">Nama Pos</th>
                                         <th data-field="company" data-editable="true">Alamat Pos</th>
-                                        <th data-field="price" data-editable="true">Longitude Pos</th>
-                                        <th data-field="date" data-editable="true">Latitude Pos</th>
+                                        <th>Longitude Pos</th>
+                                        <th>Latitude Pos</th>
+                                        <th>Max Armada</th>
+                                        <th>Armada Terpakai</th>
                                         <?php
                                         if ($_SESSION['level_user'] == 'admin') {
                                             ?>
@@ -54,14 +55,15 @@ include '../templeting/contenthtml.php';
                                 <tbody>
                                     <?php
                                     $no = 1;
-                                    while ($result = mysqli_fetch_object($query)) {
-                                        ?>
+                                    while ($result = mysqli_fetch_object($query)) { ?>
                                         <tr>
                                             <td><?php echo $no++; ?></td>
-                                            <td><?php echo $result->nama_pos ?></td>
-                                            <td><?php echo $result->alamat_pos ?></td>
-                                            <td><?php echo $result->longitude_pos ?></td>
-                                            <td><?php echo $result->latitude_pos ?></td>
+                                            <td><?php echo $result->nama_pos; ?></td>
+                                            <td><?php echo $result->alamat_pos; ?></td>
+                                            <td><?php echo $result->longitude_pos; ?></td>
+                                            <td><?php echo $result->latitude_pos; ?></td>
+                                            <td><?php echo $result->armada_max; ?></td>
+                                            <td><?php echo $result->armada; ?></td>
                                             <?php
                                             if ($_SESSION['level_user'] == 'admin') {
                                                 ?>

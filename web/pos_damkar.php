@@ -32,6 +32,10 @@ include '../templeting/contenthtml.php';
                                             <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
                                             <input type="text" class="form-control"  name="longitude_pos" placeholder="Longitude">
                                         </div>
+<!--                                        <div class="input-group mg-b-pro-edt">
+                                            <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control"  name="armada" placeholder="armada">
+                                        </div>-->
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -44,6 +48,10 @@ include '../templeting/contenthtml.php';
                                             <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
                                             <input type="text" class="form-control"  name="latitude_pos" placeholder="Latitude">
                                         </div>
+<!--                                        <div class="input-group mg-b-pro-edt">
+                                            <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control"  name="armada_max" placeholder="Armada Max">
+                                        </div>-->
                                     </div>
                                 </div>
                             </div>
@@ -57,8 +65,9 @@ include '../templeting/contenthtml.php';
                                     </div>
                                 </div>
                             </div>
+                        </form>
                     </div>
-                    </form>
+
                 </div>
             </div>
         </div>

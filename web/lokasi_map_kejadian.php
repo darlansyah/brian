@@ -64,7 +64,7 @@
     <body>
         <!-- cek apa udah login ? -->
         <script>
-            if (!(localStorage.getItem('sudah_login') == 1)) {
+            if (<?=!$_SESSION['sudah_login']?>) {
                 window.location.href = 'login.php';
             }
         </script>
@@ -85,7 +85,7 @@
                                     <i class="fa big-icon fa-bullseye icon-wrap"></i>
                                     <span class="mini-click-non">Lapor</span>
                                 </a>
-                                <!--                        <ul class="submenu-angle" aria-expanded="true">
+                                <!--<ul class="submenu-angle" aria-expanded="true">
                                 <li><a title="Identitas Pelapor" href="identitas_pelapor.php"><i class="fa fa-user sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Identitas Pelapor</span></a></li>
                               </ul>-->
                                 <ul class="submenu-angle" aria-expanded="true">
@@ -94,27 +94,27 @@
                             </li>
                             <li class="#">
                                 <a class="has-arrow" href="" aria-expanded="false"><i class="fa big-icon fa-fire-extinguisher icon-wrap"></i> <span class="mini-click-non">Kejadian</span></a>
-                                <!--                                <ul class="submenu-angle" aria-expanded="true">
-                                                                    <li><a title="Lapor Kejadian" href="lapor_kejadian.php"><i class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Lapor Kejadian</span></a></li>
-                                                                </ul>-->
+                                <!--<ul class="submenu-angle" aria-expanded="true">
+                                    <li><a title="Lapor Kejadian" href="lapor_kejadian.php"><i class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Lapor Kejadian</span></a></li>
+                                    </ul>-->
                                 <ul class="submenu-angle" aria-expanded="true">
                                     <li><a title="Data Kejadian" href="data_kejadian.php"><i class="fa fa-table sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data Kejadian</span></a></li>
                                 </ul>
                             </li>
                             <li class="#">
                                 <a class="has-arrow" href="" aria-expanded="false"><i class="fa big-icon fa-users icon-wrap"></i> <span class="mini-click-non">Petugas Damkar</span></a>
-                                <!--                                <ul class="submenu-angle" aria-expanded="true">
-                                                                    <li><a title="Identitas Petugas" href="identitas_petugas.php"><i class="fa fa-user sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Identitas Petugas</span></a></li>
-                                                                </ul>-->
+                                <!--<ul class="submenu-angle" aria-expanded="true">
+                                    <li><a title="Identitas Petugas" href="identitas_petugas.php"><i class="fa fa-user sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Identitas Petugas</span></a></li>
+                                    </ul>-->
                                 <ul class="submenu-angle" aria-expanded="true">
                                     <li><a title="Data Petugas" href="data_petugas.php"><i class="fa fa-table sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data Petugas</span></a></li>
                                 </ul>
                             </li>
                             <li class="#">
                                 <a class="has-arrow" href="" aria-expanded="false"><i class="fa big-icon fa-home icon-wrap"></i> <span class="mini-click-non">POS</span></a>
-                                <!--                                <ul class="submenu-angle" aria-expanded="true">
-                                                                    <li><a title="Pos Damkar" href="pos_damkar.php"><i class="fa fa-home sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Pos Damkar</span></a></li>
-                                                                </ul>-->
+                                <!--<ul class="submenu-angle" aria-expanded="true">
+                                    <li><a title="Pos Damkar" href="pos_damkar.php"><i class="fa fa-home sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Pos Damkar</span></a></li>
+                                    </ul>-->
                                 <ul class="submenu-angle" aria-expanded="true">
                                     <li><a title="Data Pos" href="data_pos.php"><i class="fa fa-table sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data Pos</span></a></li>
                                 </ul>
@@ -206,31 +206,31 @@
                                             </li>
 
                                             <li><a data-toggle="collapse" data-target="#demo" href="data_pelapor.php"> DATA LAPOR <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                                <!--                                                <ul id="demo" class="collapse dropdown-header-top">
+                                                <!--<ul id="demo" class="collapse dropdown-header-top">
                                                 <li><a href="identitas_pelapor.php">IDENTITAS PELAPOR</a></li>
                                                 <li><a href="data_pelapor.php">DATA PELAPOR</a></li>
                                               </ul>-->
                                             </li>
                                             <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_kejadian.php">DATA KEJADIAN <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                                <!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
+                                                <!--<ul id="Tablesmob" class="collapse dropdown-header-top">
                                                 <li><a href="lapor_kejadian.php">LAPOR KEJADIAN</a></li>
                                                 <li><a href="data_kejadian.php">DATA KEJADIAN</a></li>
                                               </ul>-->
                                             </li>
                                             <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_petugas.php">DATA PETUGAS<span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                                <!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
+                                                <!--<ul id="Tablesmob" class="collapse dropdown-header-top">
                                                 <li><a href="identitas_petugas.php">IDENTITAS PETUGAS</a></li>
                                                 <li><a href="data_petugas.php">DATA PETUGAS</a></li>
                                               </ul>-->
                                             </li>
                                             <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_pos.php">DATA POS <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                                <!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
+                                                <!--<ul id="Tablesmob" class="collapse dropdown-header-top">
                                                 <li><a href="pos_damkar.php">POS DAMKAR</a></li>
                                                 <li><a href="data_pos.php">DATA POS</a></li>
                                               </ul>-->
                                             </li>
                                             <li><a data-toggle="collapse" data-target="#Tablesmob" href="logout.php">Logout <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                                <!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
+                                                <!--<ul id="Tablesmob" class="collapse dropdown-header-top">
                                                 <li><a href="pos_damkar.php">POS DAMKAR</a></li>
                                                 <li><a href="data_pos.php">DATA POS</a></li>
                                               </ul>-->
@@ -289,42 +289,38 @@
                             <div class="review-tab-pro-inner">
                                 <div id="myTabContent" class="tab-content custom-product-edit">
                                     <div class="product-tab-list tab-pane fade active in" id="description">
-                                        <form action="../app/data_kejadian.php" method="post">
-                                            <div class="row">
-                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-
-                                                    <div class="review-content-section">
-                                                        <div class="input-group mg-b-pro-edt">
-                                                            <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-                                                            <input type="text" class="form-control data-input" name="longitude" placeholder="Longitude">
-                                                        </div>
-                                                        <div class="input-group mg-b-pro-edt">
-                                                            <span class="input-group-addon"><i class="fa fa-sticky-note" aria-hidden="true"></i></span>
-                                                            <input type="text" class="form-control data-input" name="deskripsi_kejadian" placeholder="Deskripsi Kejadian">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                    <div class="review-content-section">
-                                                        <div class="input-group mg-b-pro-edt">
-                                                            <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-                                                            <input type="text" class="form-control data-input" name="latitude" placeholder="Latitude">
-                                                        </div>
-                                                        <div class="input-group mg-b-pro-edt">
-                                                            <span class="input-group-addon"><i class="fa fa-camera" aria-hidden="true"></i></span>
-                                                            <input type="file" class="form-control data-input" name="gambar" placeholder="Upload Gambar">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                        <form action="data_petugas.php" method="post">
+                                            <!--                                            <div class="row">
+                                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                        <div class="review-content-section">
+                                                                            <div class="input-group mg-b-pro-edt">
+                                                                                <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                                                                                <input type="text" class="form-control data-input" name="longitude" placeholder="Longitude">
+                                                                            </div>
+                                                                            <div class="input-group mg-b-pro-edt">
+                                                                                <span class="input-group-addon"><i class="fa fa-sticky-note" aria-hidden="true"></i></span>
+                                                                                <input type="text" class="form-control data-input" name="deskripsi_kejadian" placeholder="Deskripsi Kejadian">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                        <div class="review-content-section">
+                                                                            <div class="input-group mg-b-pro-edt">
+                                                                                <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                                                                                <input type="text" class="form-control data-input" name="latitude" placeholder="Latitude">
+                                                                            </div>
+                                                                            <div class="input-group mg-b-pro-edt">
+                                                                                <span class="input-group-addon"><i class="fa fa-camera" aria-hidden="true"></i></span>
+                                                                                <input type="file" class="form-control data-input" name="gambar" placeholder="Upload Gambar">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>-->
                                             <div class="row">
                                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                     <div class="text-center mg-b-pro-edt custom-pro-edt-ds">
-                                                        <button type="submit" id="btnSubmit" class="btn btn-primary waves-effect waves-light m-r-10">Simpan
+                                                        <button type="submit" id="btnSubmit" class="btn btn-primary waves-effect waves-light m-r-10">Kirim Lokasi
                                                         </button>
-                                                        <input type="reset" class="btn btn-primary waves-effect waves-light m-r-10" value="Batal">
-                                                        <!--<a href="data_kejadian.php" class="btn btn-primary waves-effect waves-light m-r-10">Batal </a>-->
-
                                                     </div>
                                                 </div>
                                             </div>
@@ -338,6 +334,7 @@
             </div>
 
             <!-- footer -->
+
             <div class="footer-copyright-area">
                 <div class="container-fluid">
                     <div class="row">
@@ -385,9 +382,9 @@
             <script src="../js/metisMenu/metisMenu-active.js"></script>
             <!-- morrisjs JS
             ============================================ -->
-            <!--            <script src="../js/morrisjs/raphael-min.js"></script>
-                        <script src="../js/morrisjs/morris.js"></script>
-                        <script src="../js/morrisjs/morris-active.js"></script>-->
+            <!--<script src="../js/morrisjs/raphael-min.js"></script>
+                <script src="../js/morrisjs/morris.js"></script>
+                <script src="../js/morrisjs/morris-active.js"></script>-->
             <!-- morrisjs JS
             ============================================ -->
             <script src="../js/sparkline/jquery.sparkline.min.js"></script>
@@ -403,56 +400,139 @@
 
             <!-- Google map JS
             ============================================ -->
-            <!--<script src="../js/google.maps/google.maps-active.js"></script>-->
+            <script src="../js/google.maps/google.maps-active.js"></script>
             <script>
-            ambilDataKejadian()
-            function ambilDataKejadian() {
-                $.ajax({
-                    url: 'http://localhost/brian/web/ambil_data_kejadian_by_id.php',
-                    data: {id: <?php echo $_REQUEST['id'] ?>},
-                    dataType: 'json',
-                    type: 'POST',
-                    success: function (response) {
-                        var long_kejadian = response[0].longitude;
-                        var lat_kejadian = response[0].latitude;
-                        console.log("long : " + long_kejadian + " dan lalitude : " + lat_kejadian);
-                        ambilDataPos(long_kejadian, lat_kejadian);
+                mapInitializer = {
+                    map: null,
+                    latKejadian: 0,
+                    lngKejadian: 0,
+                    idPos: 0,
+                    latPos: 0,
+                    lngPos: 0,
+                    allPos: 0,
+                    locKejadian: null,
+                    locPos: null,
+                    ambilDataKejadian: function () {
+                        $.ajax({
+                            url: 'http://localhost/brian/web/ambil_data_kejadian_by_id.php',
+                            data: {id: <?php echo $_REQUEST['id'] ?>},
+                            dataType: 'json',
+                            type: 'POST',
+                            success: (response) => {
+                                this.latKejadian = response[0].latitude;
+                                this.lngKejadian = response[0].longitude;
+                                this.idPos = response[0].id_pos;
+                                this.ambilDataPos();
+                            }
+                        });
+                    },
+                    ambilDataPos: function () {
+                        $.ajax({
+                            url: 'http://localhost/brian/web/ambil_data_pos.php',
+                            dataType: 'json',
+                            type: 'POST',
+                            success: (response) => {
+                                this.allPos = response;
+                                this.initMap();
+                            }
+                        });
+                    },
+                    initMap: function () {
+                        this.locKejadian = {lat: parseFloat(this.latKejadian), lng: parseFloat(this.lngKejadian)};
+                        this.map = new google.maps.Map(document.getElementById('map1'), {
+                            zoom: 12,
+                            center: this.locKejadian,
+                            mapTypeId: google.maps.MapTypeId.ROADMAP
+                        });
+
+                        new google.maps.Marker({
+                            icon: {
+                                url: 'https://image.flaticon.com/icons/svg/785/785116.svg',
+                                scaledSize : new google.maps.Size(30, 35)
+                            },
+//                            icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png',
+                            position: this.locKejadian,
+                            map: this.map
+                        });
+
+                        Array.prototype.forEach.call(this.allPos, (markerElemen) => {
+                            const long_pos = markerElemen.longitude_pos;
+                            const lat_pos = markerElemen.latitude_pos;
+                            const point_pos = {lat: parseFloat(lat_pos), lng: parseFloat(long_pos)};
+
+                            if (markerElemen.id_pos === this.idPos) {
+                                this.locPos = new google.maps.LatLng(lat_pos, long_pos);
+                            }
+
+                            let marker = new google.maps.Marker({
+                                icon: {
+                                    url: 'https://image.flaticon.com/icons/svg/1166/1166525.svg',
+                                    scaledSize : new google.maps.Size(30, 35)
+                                },
+                                position: point_pos,
+                                map: this.map,
+                                title: markerElemen.nama_pos
+                            });
+                            let message = '<div id="content">'+
+                                '<div id="siteNotice">'+
+                                '</div>'+
+                                '<h4>' + markerElemen.nama_pos + '</h4>'+
+                                '<div id="bodyContent">'+
+                                '<p>' + markerElemen.alamat_pos + '</p>' +
+                                '</div>'+
+                                '</div>';
+
+                            this.addInfoWindow(marker, message);
+                        });
+
+                        this.router.init();
+                    },
+                    addInfoWindow: function (marker, message) {
+                        let infoWindow = new google.maps.InfoWindow({
+                            content: message
+                        });
+                        google.maps.event.addListener(marker, 'click', () => {
+                            infoWindow.open(this.map, marker);
+                        });
+                    },
+                    router: {
+                        directionsHelper_: null,
+//                        stores: [ {name: "store1", location: new google.maps.LatLng(50.82788, 3.76499)}, {name: "store2", location: new google.maps.LatLng(51.02788, 3.2)} ],
+                        calcRoute: function () {
+                            let waypts = [];
+
+                            for (let i in this.stores) {
+                                waypts.push({
+                                    location: this.stores[i].location,
+                                    stopover: true
+                                });
+                            }
+
+                            let request = {
+                                origin: mapInitializer.locPos,
+                                destination: mapInitializer.locKejadian,
+                                waypoints: waypts,
+                                optimizeWaypoints: true,
+                                travelMode: google.maps.DirectionsTravelMode.DRIVING
+                            };
+
+                            this.directionsHelper_.route(request, (response, status) => {
+                                if (status === google.maps.DirectionsStatus.OK) {
+                                    this.directionsDisplay_.setDirections(response);
+                                }
+                            });
+                        },
+                        init: function () {
+                            this.directionsHelper_ = new google.maps.DirectionsService();
+                            this.directionsDisplay_ = new google.maps.DirectionsRenderer();
+                            this.directionsDisplay_.setMap(mapInitializer.map);
+                            this.directionsDisplay_.setOptions({suppressMarkers: true});
+                            this.calcRoute();
+                        }
                     }
-                });
-            }
-
-            function ambilDataPos(long_kejadian, lat_kejadian) {
-                $.ajax({
-                    url: 'http://localhost/brian/web/ambil_data_pos.php',
-                    dataType: 'json',
-                    type: 'POST',
-                    success: function (response) {
-                        var data_pos = response;
-                        initMap(long_kejadian, lat_kejadian, data_pos);
-                    }
-                });
-            }
-
-            function initMap(long_kejadian, lat_kejadian, data_pos) {
-                // The location of Uluru
-                var uluru = {lat: parseFloat(long_kejadian), lng: parseFloat(lat_kejadian)};
-                // The map, centered at Uluru
-                var map = new google.maps.Map(
-                        document.getElementById('map1'), {zoom: 15, center: uluru});
-                // The marker, positioned at Uluru
-                var marker = new google.maps.Marker({position: uluru, map: map});
-                console.log('The map is set');
-                Array.prototype.forEach.call(data_pos, function (markerElem) {
-                    var long_pos = markerElem.longitude_pos;
-                    var lat_pos = markerElem.latitude_pos;
-                    console.log("long pos : " + long_pos + " dan lalitude pos : " + lat_pos);
-                    var point_pos = {lat: parseFloat(long_pos), lng: parseFloat(lat_pos)};
-                    var marker = new google.maps.Marker({position: point_pos, map: map});
-
-                });
-            }
+                };
             </script>
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXMNHIbmIKC4y_QUQpQdyhcTiDIKuCx4U"></script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXMNHIbmIKC4y_QUQpQdyhcTiDIKuCx4U&callback=mapInitializer.ambilDataKejadian"></script>
 
             <!-- main JS
             ============================================ -->
@@ -461,7 +541,7 @@
             $(document).ready(function () {
                 // Btn submit click event
                 $('#btnSubmit').click(function (e) {
-//                        e.preventDefault();
+                    //                        e.preventDefault();
                     var objInputData = $('.data-input');
                     for (var x = 0; x < objInputData.length; x++) {
                         if (objInputData[x].value == '') {
@@ -495,7 +575,7 @@
                     });
                 });
                 document.addEventListener('click', function (e) {
-                    console.log(e.target.classList);
+//                    console.log(e.target.classList);
                 });
             });
             </script>

@@ -144,7 +144,7 @@ include '../templeting/contenthtml.php';
                                             <td><?php echo $result->longitude ?></td>
                                             <td><?php echo $result->latitude ?></td>
                                             <td><?php echo $result->deskripsi_kejadian ?></td>
-                                            <td> <img src="upload/<?= $result->gambar ?>" style="height:50px">' </td>
+                                            <td> <img src="../<?= $result->gambar ?>" style="height:50px">' </td>
                                         </tr>
                                         <?php
                                     }

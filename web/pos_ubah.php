@@ -65,13 +65,13 @@ include '../templeting/contenthtml.php';
                                     <div class="text-center mg-b-pro-edt custom-pro-edt-ds">
                                         <button type="submit" class="btn btn-primary waves-effect waves-light m-r-10">Update    
                                         </button>
-                                        <button type="submit" class="btn btn-primary waves-effect waves-light m-r-10">Batal
+                                        <button type="data_pos.php" class="btn btn-primary waves-effect waves-light m-r-10">Batal
                                         </button>
                                     </div>
                                 </div>
                             </div>
+                        </form>
                     </div>
-                    </form>
                 </div>
             </div>
         </div>

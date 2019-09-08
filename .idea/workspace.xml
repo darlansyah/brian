@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3e74a4ec-2e33-47ad-88d0-07401166d1c4" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/webServers.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app_petugas/data_kejadian.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app_petugas/data_pelapor.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app_petugas/data_petugas.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app_petugas/data_pos.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app_petugas/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app_petugas/logout.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app_petugas/lokasi_map_kejadian.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app_petugas/pelapor_ubah.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ajax_kejadian_selesaikan.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ambil_data_kejadian_by_petugas.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lapor_kejadian.html" afterPath="$PROJECT_DIR$/app/lapor_kejadian.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/login.html" afterPath="$PROJECT_DIR$/app/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/register.html" afterPath="$PROJECT_DIR$/app/register.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_petugas/login.html" afterPath="$PROJECT_DIR$/app_petugas/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nbproject/private/private.xml" afterPath="$PROJECT_DIR$/nbproject/private/private.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/about.php" afterPath="$PROJECT_DIR$/web/about.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/ajax_proses_login.php" afterPath="$PROJECT_DIR$/web/ajax_proses_login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/ajax_proses_pelaporan.php" afterPath="$PROJECT_DIR$/web/ajax_proses_pelaporan.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/ambil_id_petugas.php" afterPath="$PROJECT_DIR$/web/ambil_id_petugas.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/data_kejadian.php" afterPath="$PROJECT_DIR$/web/data_kejadian.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/data_pos.php" afterPath="$PROJECT_DIR$/web/data_pos.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/identitas_pelapor.php" afterPath="$PROJECT_DIR$/web/identitas_pelapor.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.php" afterPath="$PROJECT_DIR$/web/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index_data_kejadian.php" afterPath="$PROJECT_DIR$/web/index_data_kejadian.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/logout.php" afterPath="$PROJECT_DIR$/web/logout.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/lokasi_map_kejadian.php" afterPath="$PROJECT_DIR$/web/lokasi_map_kejadian.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/pos_damkar.php" afterPath="$PROJECT_DIR$/web/pos_damkar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/pos_ubah.php" afterPath="$PROJECT_DIR$/web/pos_ubah.php" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="u386568376_pjm@sql179.main-hosting.eu" type="e3449647:DbNodeDescriptor" />
+      </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="u386568376_pjm@sql179.main-hosting.eu" type="e3449647:DbNodeDescriptor" />
+        <item name="u386568376_pjm" type="e3449647:DbNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>sudah_login</find>
+      <find>marker</find>
+      <find>INSERT INTO notifikasi VALUES</find>
+      <find>j(</find>
+      <find>btn_simpan</find>
+      <find>Bata</find>
+      <find>Action</find>
+      <find>btnSubmit</find>
+      <find>new google</find>
+      <find>firstChild</find>
+      <find>CLICKED MAP</find>
+      <find>map1</find>
+      <find>var</find>
+      <find>Lapor Kejadian</find>
+      <find>Kirim</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>let</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/web/logout.php" />
+        <option value="$PROJECT_DIR$/web/proses_login.php" />
+        <option value="$PROJECT_DIR$/web/ajax_proses_login.php" />
+        <option value="$PROJECT_DIR$/app/login.html" />
+        <option value="&lt;0b91b54c-9be6-49ba-9b08-f5f8b581693b&gt;/api/progress_pinjaman.php" />
+        <option value="&lt;0b91b54c-9be6-49ba-9b08-f5f8b581693b&gt;/api/edit_password_penyalur.php" />
+        <option value="&lt;0b91b54c-9be6-49ba-9b08-f5f8b581693b&gt;/api/model/NotifikasiModel.php" />
+        <option value="&lt;0b91b54c-9be6-49ba-9b08-f5f8b581693b&gt;/api/notification.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/3e2447f6-2379-462b-ad5a-833b03a00059/console.sql" />
+        <option value="&lt;0b91b54c-9be6-49ba-9b08-f5f8b581693b&gt;/api/pengeluaran.php" />
+        <option value="&lt;0b91b54c-9be6-49ba-9b08-f5f8b581693b&gt;/api/notif_pusher.php" />
+        <option value="&lt;0b91b54c-9be6-49ba-9b08-f5f8b581693b&gt;/api/tes.php" />
+        <option value="$PROJECT_DIR$/app_petugas/petugas_ubah.html" />
+        <option value="$PROJECT_DIR$/web/lokasi_map_kejadian.php" />
+        <option value="$PROJECT_DIR$/web/data_pos.php" />
+        <option value="$PROJECT_DIR$/web/ajax_proses_pelaporan.php" />
+        <option value="$PROJECT_DIR$/app_petugas/index.html" />
+        <option value="$PROJECT_DIR$/app_petugas/data_petugas.html" />
+        <option value="$PROJECT_DIR$/app_petugas/data_pos.html" />
+        <option value="$PROJECT_DIR$/app_petugas/lokasi_map_kejadian.php" />
+        <option value="$PROJECT_DIR$/web/ambil_data_kejadian_by_petugas.php" />
+        <option value="$PROJECT_DIR$/web/ajax_kejadian_selesaikan.php" />
+        <option value="$PROJECT_DIR$/app_petugas/data_kejadian.html" />
+        <option value="$PROJECT_DIR$/web/data_kejadian.php" />
+        <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/lapor_kejadian.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1920" />
+    <option name="width" value="1920" />
+    <option name="height" value="1050" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>AngularJS</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="brian" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brian" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="brian" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brian" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="brian" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brian" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app_petugas" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="brian" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brian" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="kejadian" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="brian" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brian" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="masyarakat_pelapor" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="brian" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brian" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/Yarn/Cache/v3/npm-create-react-app-2.0.4-733f4cee5a45c10cc4f9327efb3af71210bcb388/node_modules/create-react-app" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="JavaScriptPreferStrict" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\brian\app_petugas" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3e74a4ec-2e33-47ad-88d0-07401166d1c4" name="Default" comment="" />
+      <created>1566630294195</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1566630294195</updated>
+      <workItem from="1566630295662" duration="3506000" />
+      <workItem from="1566892071694" duration="13643000" />
+      <workItem from="1566988892442" duration="5026000" />
+      <workItem from="1567094386763" duration="16643000" />
+      <workItem from="1567158430399" duration="3908000" />
+      <workItem from="1567337723297" duration="18244000" />
+      <workItem from="1567426780988" duration="491000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="61461000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1912" y="-8" width="1936" height="1066" extended-state="6" />
+    <layout>
+      <window_info id="Remote Host" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15416667" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16822916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16927083" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914045" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914045" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/web/ajax_proses_pelaporan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="20" lean-forward="true" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+          <folding>
+            <marker date="1567353112563" expanded="true" signature="929:1059" ph="INSERT INTO kejadian... " />
+            <marker date="1567353112563" expanded="true" signature="929:1071" ph="INSERT INTO kejadian... " />
+            <marker date="1567353112563" expanded="true" signature="929:1082" ph="INSERT INTO kejadian... " />
+            <marker date="1567353112563" expanded="true" signature="929:1095" ph="INSERT INTO kejadian... " />
+            <marker date="1567353112563" expanded="true" signature="929:1113" ph="INSERT INTO kejadian... " />
+            <marker date="1567353112563" expanded="true" signature="929:1124" ph="INSERT INTO kejadian... " />
+            <marker date="1567353112563" expanded="true" signature="1149:1208" ph="UPDATE pos S... " />
+            <marker date="1567353112563" expanded="true" signature="1587:1604" ph="SELECT * FRO... pos" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lapor_kejadian.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8296">
+          <caret line="488" column="85" lean-forward="false" selection-start-line="488" selection-start-column="85" selection-end-line="488" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8041">
+          <caret line="473" column="78" lean-forward="false" selection-start-line="473" selection-start-column="78" selection-end-line="473" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/lokasi_map_kejadian.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8840">
+          <caret line="520" column="39" lean-forward="false" selection-start-line="520" selection-start-column="39" selection-end-line="520" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/ajax_proses_pelaporan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1567353112563" expanded="true" signature="929:1059" ph="INSERT INTO kejadian... " />
+            <marker date="1567353112563" expanded="true" signature="929:1071" ph="INSERT INTO kejadian... " />
+            <marker date="1567353112563" expanded="true" signature="929:1082" ph="INSERT INTO kejadian... " />
+            <marker date="1567353112563" expanded="true" signature="929:1095" ph="INSERT INTO kejadian... " />
+            <marker date="1567353112563" expanded="true" signature="929:1113" ph="INSERT INTO kejadian... " />
+            <marker date="1567353112563" expanded="true" signature="929:1124" ph="INSERT INTO kejadian... " />
+            <marker date="1567353112563" expanded="true" signature="1149:1208" ph="UPDATE pos S... " />
+            <marker date="1567353112563" expanded="true" signature="1587:1604" ph="SELECT * FRO... pos" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/lokasi_map_kejadian.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7684">
+          <caret line="452" column="87" lean-forward="false" selection-start-line="452" selection-start-column="87" selection-end-line="452" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lapor_kejadian.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8296">
+          <caret line="488" column="85" lean-forward="true" selection-start-line="488" selection-start-column="85" selection-end-line="488" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8041">
+          <caret line="473" column="78" lean-forward="false" selection-start-line="473" selection-start-column="78" selection-end-line="473" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/28274a0e/3e2447f6-2379-462b-ad5a-833b03a00059/u386568376_pjm.penyalur">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/28274a0e/3e2447f6-2379-462b-ad5a-833b03a00059/u386568376_pjm.bos">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/28274a0e/3e2447f6-2379-462b-ad5a-833b03a00059/u386568376_pjm.pengeluaran">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/lokasi_map_kejadian.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3009">
+          <caret line="177" column="43" lean-forward="false" selection-start-line="177" selection-start-column="43" selection-end-line="177" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/ajax_proses_login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lapor_kejadian.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7157">
+          <caret line="421" column="21" lean-forward="true" selection-start-line="421" selection-start-column="21" selection-end-line="422" selection-end-column="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/logout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/proses_login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="28" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="85" column="54" lean-forward="false" selection-start-line="85" selection-start-column="42" selection-end-line="85" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="177" column="43" lean-forward="false" selection-start-line="177" selection-start-column="43" selection-end-line="177" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/ajax_proses_login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/28274a0e/3e2447f6-2379-462b-ad5a-833b03a00059/u386568376_pjm.progres_pinjaman">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/28274a0e/3e2447f6-2379-462b-ad5a-833b03a00059/u386568376_pjm.pinjaman">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/28274a0e/3e2447f6-2379-462b-ad5a-833b03a00059/u386568376_pjm.bunga">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/28274a0e/3e2447f6-2379-462b-ad5a-833b03a00059/u386568376_pjm.peminjam">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/28274a0e/3e2447f6-2379-462b-ad5a-833b03a00059/u386568376_pjm.notifikasi">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3e2447f6-2379-462b-ad5a-833b03a00059/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="52" lean-forward="false" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/28274a0e/3e2447f6-2379-462b-ad5a-833b03a00059/u386568376_pjm.pengeluaran">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/28274a0e/3e2447f6-2379-462b-ad5a-833b03a00059/u386568376_pjm.penyalur">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/28274a0e/3e2447f6-2379-462b-ad5a-833b03a00059/u386568376_pjm.bos">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_petugas/pelapor_ubah.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/ajax_pelapor_simpan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_petugas/petugas_ubah.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="420" column="105" lean-forward="false" selection-start-line="420" selection-start-column="105" selection-end-line="420" selection-end-column="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/ajax_petugas_simpan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+          <folding>
+            <marker date="1562483046000" expanded="true" signature="467:765" ph="UPDATE petug... " />
+            <marker date="1562483046000" expanded="true" signature="811:888" ph="INSERT INTO petugas... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/data_kejadian.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1717">
+          <caret line="289" column="78" lean-forward="false" selection-start-line="289" selection-start-column="72" selection-end-line="289" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/data_pos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="46" lean-forward="true" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
+          <folding>
+            <marker date="1567350295630" expanded="true" signature="135:183" ph="SELECT * FRO... pos" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/ajax_proses_pelaporan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding>
+            <marker date="1567353112563" expanded="true" signature="929:1059" ph="INSERT INTO kejadian... " />
+            <marker date="1567353112563" expanded="true" signature="929:1071" ph="INSERT INTO kejadian... " />
+            <marker date="1567353112563" expanded="true" signature="929:1082" ph="INSERT INTO kejadian... " />
+            <marker date="1567353112563" expanded="true" signature="929:1095" ph="INSERT INTO kejadian... " />
+            <marker date="1567353112563" expanded="true" signature="929:1113" ph="INSERT INTO kejadian... " />
+            <marker date="1567353112563" expanded="true" signature="929:1124" ph="INSERT INTO kejadian... " />
+            <marker date="1567353112563" expanded="true" signature="1149:1208" ph="UPDATE pos S... " />
+            <marker date="1567353112563" expanded="true" signature="1587:1604" ph="SELECT * FRO... pos" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/lokasi_map_kejadian.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="416" column="92" lean-forward="true" selection-start-line="416" selection-start-column="92" selection-end-line="417" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_petugas/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="86" column="36" lean-forward="true" selection-start-line="86" selection-start-column="36" selection-end-line="86" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_petugas/data_petugas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="97" column="38" lean-forward="false" selection-start-line="97" selection-start-column="38" selection-end-line="97" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_petugas/data_pos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="97" column="37" lean-forward="false" selection-start-line="97" selection-start-column="37" selection-end-line="97" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_petugas/data_pelapor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6579">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/ambil_data_kejadian.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <marker date="1563161286000" expanded="true" signature="183:446" ph="SELECT kejad... kejadian" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_petugas/lokasi_map_kejadian.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="111" column="26" lean-forward="true" selection-start-line="111" selection-start-column="26" selection-end-line="111" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/ajax_kejadian_hapus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="28" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="37" />
+          <folding>
+            <marker date="1563864586000" expanded="true" signature="168:221" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/ambil_data_kejadian_by_petugas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding>
+            <marker date="1567356965552" expanded="true" signature="148:497" ph="SELECT kejad... kejadian" />
+            <marker date="1567356965552" expanded="true" signature="148:526" ph="SELECT kejad... kejadian" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/ajax_kejadian_selesaikan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_petugas/data_kejadian.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="409" column="31" lean-forward="true" selection-start-line="409" selection-start-column="31" selection-end-line="409" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/data_kejadian.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="569">
+          <caret line="56" column="44" lean-forward="true" selection-start-line="56" selection-start-column="44" selection-end-line="56" selection-end-column="44" />
+          <folding>
+            <marker date="1567357835172" expanded="true" signature="136:336" ph="SELECT masya... masyarakat_pelapor" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7140">
+          <caret line="420" column="16" lean-forward="false" selection-start-line="420" selection-start-column="16" selection-end-line="420" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lapor_kejadian.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="753">
+          <caret line="425" column="18" lean-forward="true" selection-start-line="425" selection-start-column="18" selection-end-line="425" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/masyarakat_pelapor/masyarakat_pelapor_tambah.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

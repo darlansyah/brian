@@ -300,12 +300,12 @@
                                                     <div class="review-content-section">
                                                         <div class="input-group mg-b-pro-edt">
                                                             <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-                                                            <input type="text" class="form-control data-input" name="longitude" placeholder="Longitude">
+                                                            <input type="text" class="form-control data-input" name="longitude" id="longitude" placeholder="Longitude">
 
                                                         </div>
                                                         <div class="input-group mg-b-pro-edt">
                                                             <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-                                                            <input type="text" class="form-control data-input" name="latitude" placeholder="Latitude">
+                                                            <input type="text" class="form-control data-input" name="latitude" id="latitude" placeholder="Latitude">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -354,132 +354,194 @@
                 </div>
             </div>
             <!-- end footer -->
+        </div>
 
-            <!-- jquery
-            ============================================ -->
-            <script src="../js/vendor/jquery-1.11.3.min.js"></script>
-            <!-- bootstrap JS
-            ============================================ -->
-            <script src="../js/bootstrap.min.js"></script>
-            <!-- wow JS
-            ============================================ -->
-            <script src="../js/wow.min.js"></script>
-            <!-- price-slider JS
-            ============================================ -->
-            <script src="../js/jquery-price-slider.js"></script>
-            <!-- meanmenu JS
-            ============================================ -->
-            <script src="../js/jquery.meanmenu.js"></script>
-            <!-- owl.carousel JS
-            ============================================ -->
-            <script src="../js/owl.carousel.min.js"></script>
-            <!-- sticky JS
-            ============================================ -->
-            <script src="../js/jquery.sticky.js"></script>
-            <!-- scrollUp JS
-            ============================================ -->
-            <script src="../js/jquery.scrollUp.min.js"></script>
-            <!-- mCustomScrollbar JS
-            ============================================ -->
-            <script src="../js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-            <script src="../js/scrollbar/mCustomScrollbar-active.js"></script>
-            <!-- metisMenu JS
-            ============================================ -->
-            <script src="../js/metisMenu/metisMenu.min.js"></script>
-            <script src="../js/metisMenu/metisMenu-active.js"></script>
-            <!-- morrisjs JS
-            ============================================ -->
-            <!--            <script src="../js/morrisjs/raphael-min.js"></script>
-                        <script src="../js/morrisjs/morris.js"></script>
-                        <script src="../js/morrisjs/morris-active.js"></script>-->
-            <!-- morrisjs JS
-            ============================================ -->
-            <script src="../js/sparkline/jquery.sparkline.min.js"></script>
-            <script src="../js/sparkline/jquery.charts-sparkline.js"></script>
-            <!-- calendar JS
-            ============================================ -->
-            <script src="../js/calendar/moment.min.js"></script>
-            <script src="../js/calendar/fullcalendar.min.js"></script>
-            <script src="../js/calendar/fullcalendar-active.js"></script>
-            <!-- plugins JS
-            ============================================ -->
-            <script src="../js/plugins.js"></script>
+        <!-- jquery
+        ============================================ -->
+        <script src="../js/vendor/jquery-1.11.3.min.js"></script>
+        <!-- bootstrap JS
+        ============================================ -->
+        <script src="../js/bootstrap.min.js"></script>
+        <!-- wow JS
+        ============================================ -->
+        <script src="../js/wow.min.js"></script>
+        <!-- price-slider JS
+        ============================================ -->
+        <script src="../js/jquery-price-slider.js"></script>
+        <!-- meanmenu JS
+        ============================================ -->
+        <script src="../js/jquery.meanmenu.js"></script>
+        <!-- owl.carousel JS
+        ============================================ -->
+        <script src="../js/owl.carousel.min.js"></script>
+        <!-- sticky JS
+        ============================================ -->
+        <script src="../js/jquery.sticky.js"></script>
+        <!-- scrollUp JS
+        ============================================ -->
+        <script src="../js/jquery.scrollUp.min.js"></script>
+        <!-- mCustomScrollbar JS
+        ============================================ -->
+        <script src="../js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../js/scrollbar/mCustomScrollbar-active.js"></script>
+        <!-- metisMenu JS
+        ============================================ -->
+        <script src="../js/metisMenu/metisMenu.min.js"></script>
+        <script src="../js/metisMenu/metisMenu-active.js"></script>
+        <!-- morrisjs JS
+        ============================================ -->
+        <!--            <script src="../js/morrisjs/raphael-min.js"></script>
+                    <script src="../js/morrisjs/morris.js"></script>
+                    <script src="../js/morrisjs/morris-active.js"></script>-->
+        <!-- morrisjs JS
+        ============================================ -->
+        <script src="../js/sparkline/jquery.sparkline.min.js"></script>
+        <script src="../js/sparkline/jquery.charts-sparkline.js"></script>
+        <!-- calendar JS
+        ============================================ -->
+        <script src="../js/calendar/moment.min.js"></script>
+        <script src="../js/calendar/fullcalendar.min.js"></script>
+        <script src="../js/calendar/fullcalendar-active.js"></script>
+        <!-- plugins JS
+        ============================================ -->
+        <script src="../js/plugins.js"></script>
 
-            <!-- Google map JS
-            ============================================ -->
-            <!--<script src="../js/google.maps/google.maps-active.js"></script>-->
-            <script>
-            function initMap() {
-// The location of Uluru
-                var uluru = {lat: -7.782804, lng: 110.373020};
-// The map, centered at Uluru
-                var map = new google.maps.Map(
-                        document.getElementById('map1'), {zoom: 15, center: uluru});
-// The marker, positioned at Uluru
-                var marker = new google.maps.Marker({position: uluru, map: map});
-                console.log('The map is set');
-            }
-            </script>
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXMNHIbmIKC4y_QUQpQdyhcTiDIKuCx4U&callback=initMap"></script>
+        <!-- Google map JS
+        ============================================ -->
+        <!--<script src="../js/google.maps/google.maps-active.js"></script>-->
+        <script>
+            mapInitializer = {
+                allPos: null,
+                getDataPos: function () {
+                    $.ajax({
+                        url: 'http://192.168.43.198/brian/web/ambil_data_pos.php',
+                        dataType: 'json',
+                        type: 'POST',
+                        success: (response) => {
+                            this.allPos = response;
+                            this.initMap();
+                            this.addPosMarker();
+                        }
+                    });
+                },
+                initMap: function () {
+                    const uluru = {lat: -7.782804, lng: 110.373020};
+                    this.map = new google.maps.Map(document.getElementById('map1'), {zoom: 15, center: uluru});
+                    let marker = new google.maps.Marker({position: uluru, map: this.map});
+                    let placeMarker = () => {
+                        if(mapZoom === this.map.getZoom()){
+                            marker.setMap(null);
+                            marker = new google.maps.Marker({position: startLocation, map: this.map});
+                            $("#latitude").val(marker.getPosition().lat());
+                            $("#longitude").val(marker.getPosition().lng());
+                        }
+                    };
 
-            <!-- main JS
-            ============================================ -->
-            <script src="../js/main.js"></script>
-            <script>
-            $(document).ready(function () {
-                // Btn submit click event
-                $('#btnSubmit').click(function (e) {
-//                    alert('jalan');
-                    e.preventDefault();
-                    var objInputData = $('.data-input');
+                    google.maps.event.addListener(this.map, 'click', (event) => {
+                        mapZoom = this.map.getZoom();
+                        startLocation = event.latLng;
+                        setTimeout(placeMarker, 600);
+                    });
+                },
+                addPosMarker: function () {
+                    Array.prototype.forEach.call(this.allPos, (markerElemen) => {
+                        const long_pos = markerElemen.longitude_pos;
+                        const lat_pos = markerElemen.latitude_pos;
+                        const point_pos = {lat: parseFloat(lat_pos), lng: parseFloat(long_pos)};
+                        const marker = new google.maps.Marker({
+                            icon: {
+                                url: 'https://image.flaticon.com/icons/svg/1166/1166525.svg',
+                                scaledSize : new google.maps.Size(30, 35)
+                            },
+                            position: point_pos,
+                            map: this.map,
+                            title: markerElemen.nama_pos
+                        });
+                        let message = '<div id="content">'+
+                            '<div id="siteNotice">'+
+                            '</div>'+
+                            '<h4>' + markerElemen.nama_pos + '</h4>'+
+                            '<div id="bodyContent">'+
+                            '<p>' + markerElemen.alamat_pos + '</p>' +
+                            '</div>'+
+                            '</div>';
 
-                    for (var x = 0; x < objInputData.length; x++) {
-                        if (objInputData[x].value == '') {
+                        this.addInfoWindow(marker, message);
+                    });
+                },
+                addInfoWindow: function (marker, message) {
+                    let infoWindow = new google.maps.InfoWindow({
+                        content: message
+                    });
+                    google.maps.event.addListener(marker, 'click', () => {
+                        infoWindow.open(this.map, marker);
+                    });
+                }
+            };
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXMNHIbmIKC4y_QUQpQdyhcTiDIKuCx4U&callback=mapInitializer.getDataPos"></script>
+
+        <!-- main JS
+        ============================================ -->
+        <script src="../js/main.js"></script>
+        <script>
+        $(document).ready(function () {
+            let submitter = {
+                validate: function () {
+                    let objInputData = $('.data-input');
+                    for (let x = 0; x < objInputData.length; x++) {
+                        if (objInputData[x].value === '') {
                             e.preventDefault();
                             alert('Form Data Belum Lengkap');
                             return;
                         }
                     }
-                    // Ambil semua nilai dari form tersebut
-                    var longitude = objInputData[0].value;
-                    var latitude = objInputData[1].value
-                    var deskripsi = objInputData[2].value;
-                    var gambar = objInputData[3].value;
-                    var id_profil = window.localStorage.getItem('id_profile');
+                    this.setData(objInputData);
+                },
+                setData: function (objInputData) {
+                    let longitude = objInputData[0].value;
+                    let latitude = objInputData[1].value;
+                    let deskripsi = objInputData[2].value;
+                    let gambar = objInputData[3].value;
+                    let id_profil = window.localStorage.getItem('id_profile');
 
-                    var formData = new FormData($('form')[0]);
-                    formData.append("longitude", longitude);
-                    formData.append("latitude", latitude);
-                    formData.append("deskripsi", deskripsi);
-                    formData.append("id_profil", id_profil);
+                    this.formData = new FormData($('form')[0]);
+                    this.formData.append("longitude", longitude);
+                    this.formData.append("latitude", latitude);
+                    this.formData.append("deskripsi", deskripsi);
+                    this.formData.append("id_profil", id_profil);
 
+                    this.commit();
+                },
+                commit: function () {
                     $.ajax({
-                        url: 'http://localhost/brian/web/ajax-proses-pelaporan.php',
+                        url: 'http://192.168.43.198/brian/web/ajax_proses_pelaporan.php',
                         type: 'POST',
-//                        contentType: 'application/x-www-form-urlencoded',
                         dataType: 'json',
-                        data: formData,
+                        data: this.formData,
                         contentType: false,
                         cache: false,
                         processData: false,
                         success: function (response) {
-                            console.log('ok');
                             console.log(response);
-                            e.preventDefault();
-                            if (response.status == 'berhasil') {
+                            if (response.status === 'berhasil') {
                                 alert('Laporan Anda Berhasil Masuk');
                                 window.location.href = 'data_kejadian.html';
                             } else {
-                                alert('Laporan Anda Gagal Masuk');
-                                reload();
+                                alert('Laporan Anda Gagal Masuk: ' + response.error);
                             }
+                        },
+                        error: function(XMLHttpRequest, textStatus, errorThrown) {
+                            alert("Status: " + textStatus); alert("Error: " + errorThrown);
                         }
                     });
-                });
-                document.addEventListener('click', function (e) {
-                    console.log(e.target.classList);
-                });
+                }
+            };
+            $('#btnSubmit').click(function (e) {
+                e.preventDefault();
+                submitter.validate();
             });
-            </script>
+        });
+        </script>
     </body>
 </html>
