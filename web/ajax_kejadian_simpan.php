@@ -10,7 +10,6 @@ $latitude = isset($_REQUEST['latitude']) ? $_REQUEST['latitude'] : '';
 $deskripsi_kejadian = isset($_REQUEST['deskripsi_kejadian']) ? $_REQUEST['deskripsi_kejadian'] : '';
 //$gambar = isset($_REQUEST['gambar']) ? $_REQUEST['gambar'] : '';
 
-
 if (is_array($_FILES)) {
     if (is_uploaded_file($_FILES['gambar']['tmp_name'])) {
 

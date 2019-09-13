@@ -4,7 +4,12 @@ include '../functions/kumpulan_fungsi.php';
 authentication();
 //
 $kon = koneksi_db();
-$query = mysqli_query($kon, "SELECT masyarakat_pelapor.telp, masyarakat_pelapor.nama_masyarakat_pelapor as nama_masyarakat,kejadian.* FROM masyarakat_pelapor INNER JOIN kejadian ON masyarakat_pelapor.id_masyarakat_pelapor = kejadian.id_masyarakat_pelapor order by tanggal_waktu_kejadian desc limit 10");
+$query = mysqli_query($kon, 
+        "SELECT mp.nama_masyarakat_pelapor as nama_masyarakat, mp.telp,kejadian.*, "
+        . "pos.* "
+        . "FROM masyarakat_pelapor mp "
+        . "INNER JOIN kejadian ON mp.id_masyarakat_pelapor = kejadian.id_masyarakat_pelapor "
+        . "JOIN pos ON kejadian.id_pos = pos.id_pos");
 
 // admin & petugas
 $res_admin = mysqli_query($kon, "SELECT * FROM user");
@@ -21,10 +26,6 @@ $num_petugas = mysqli_num_rows($res_petugas);
 //total pos
 $res_pos = mysqli_query($kon, "SELECT * FROM pos");
 $num_pos = mysqli_num_rows($res_pos);
-
-//var_dump($num_kejadian);
-//die;
-
 
 include '../templeting/headerhtml.php';
 include '../templeting/content.php';
@@ -129,6 +130,7 @@ include '../templeting/contenthtml.php';
                                         <th>Latitude</th>
                                         <th>Deskripsi Kejadian</th>
                                         <th>Gambar</th>
+                                        <th>Nama Pos</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -144,7 +146,8 @@ include '../templeting/contenthtml.php';
                                             <td><?php echo $result->longitude ?></td>
                                             <td><?php echo $result->latitude ?></td>
                                             <td><?php echo $result->deskripsi_kejadian ?></td>
-                                            <td> <img src="../<?= $result->gambar ?>" style="height:50px">' </td>
+                                            <td> <img src="../<?= $result->gambar ?>" style="height:50px"> </td>
+                                            <td><?php echo $result->nama_pos ?></td
                                         </tr>
                                         <?php
                                     }
@@ -159,7 +162,6 @@ include '../templeting/contenthtml.php';
     </div>
 </div>
 <!-- Static Table End -->
-<!-- end sub main -->
 
 <?php
 include '../templeting/footer.php';

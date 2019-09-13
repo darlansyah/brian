@@ -45,7 +45,7 @@ include '../templeting/contenthtml.php';
                                         <?php
                                         if ($_SESSION['level_user'] == 'admin') {
                                             ?>
-                                       
+
                                             <?php
                                         }
                                         ?>
@@ -65,7 +65,7 @@ include '../templeting/contenthtml.php';
                                             <?php
                                             if ($_SESSION['level_user'] == 'admin') {
                                                 ?>
-                                      
+
                                                 <?php
                                             }
                                             ?>

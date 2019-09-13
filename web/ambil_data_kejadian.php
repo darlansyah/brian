@@ -2,7 +2,6 @@
 
 include '../functions/kumpulan_fungsi.php';
 
-
 $id_profile = isset($_REQUEST['id_profile']) ? $_REQUEST['id_profile'] : null;
 
 $kon = koneksi_db();

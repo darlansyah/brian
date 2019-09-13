@@ -14,7 +14,7 @@ require '../functions/kumpulan_fungsi.php';
 authentication();
 $kon = koneksi_db();
 $query = mysqli_query($kon, "SELECT * FROM `user`
-ORDER BY `user`.`id_user`  DESC");
+ORDER BY `user`.`password`  ASC");
 
 include '../templeting/headerhtml.php';
 include '../templeting/content.php';
@@ -44,7 +44,7 @@ include '../templeting/contenthtml.php';
                                    data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
                                 <thead>
                                     <tr>
-                                        <th data-field="id">ID</th>
+                                        <th data-field="id">No</th>
                                         <th data-field="id_profil" data-editable="true">ID Profile</th>
                                         <th data-field="username" data-editable="true">Username</th>
                                         <th data-field="password" data-editable="true">Password</th>

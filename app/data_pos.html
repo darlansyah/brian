@@ -274,7 +274,7 @@
                                                data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
                                             <thead>
                                                 <tr>
-                                                    <th data-field="id">ID</th>
+                                                    <th data-field="id">ID Pos</th>
                                                     <th data-field="name" data-editable="true">Nama Pos</th>
                                                     <th data-field="company" data-editable="true">Alamat Pos</th>
                                                     <th data-field="price" data-editable="true">Longitude Pos</th>
@@ -374,7 +374,7 @@
                         ============================================ -->
             <script src="../js/main.js"></script>            <script>
             $.ajax({
-                url: "http://192.168.43.198/brian/web/ambil_data_pos.php",
+                url: "http://localhost/brian/web/ambil_data_pos.php",
                 type: 'POST',
                 dataType: 'json',
                 success: function (resp) {

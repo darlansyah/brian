@@ -2,7 +2,6 @@
 
 include '../functions/kumpulan_fungsi.php';
 
-
 $id_profile = $_REQUEST['id_profile'];
 
 $kon = koneksi_db();
@@ -13,8 +12,7 @@ $query = mysqli_query($kon, "
     JOIN pos ON pos.id_pos = kejadian.id_pos
     JOIN petugas ON petugas.id_pos = pos.id_pos
     WHERE petugas.id_petugas = '$id_profile'
-    AND kejadian.status = ''
-");
+    AND kejadian.status = '' ");
 
 $data = array();
 while ($result = mysqli_fetch_object($query)) {

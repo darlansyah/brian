@@ -13,7 +13,7 @@ if (mysqli_num_rows($query) > 0) {
     flash('pos', '<b> Fail - </b>Data tidak ditemukan...', 'alert alert-bordered alert-danger');
     echo "
         <script>
-            window.location.href='pos_ubah.php';
+            window.location.href='../pos_ubah.php';
         </script>
     ";
 }
@@ -32,7 +32,7 @@ include '../templeting/contenthtml.php';
                 </ul>
                 <div id="myTabContent" class="tab-content custom-product-edit">
                     <div class="product-tab-list tab-pane fade active in" id="description">
-                        <form action="../pos/pos_simpan.php" method="post">
+                        <form action="pos_simpan.php" method="post">
                             <input type="hidden" value="<?= $id_pos ?>" name="id_pos">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -45,6 +45,10 @@ include '../templeting/contenthtml.php';
                                             <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
                                             <input type="text" class="form-control"  name="longitude_pos"  value="<?php echo $result->longitude_pos; ?>" placeholder="Longitude">
                                         </div>
+                                        <div class="input-group mg-b-pro-edt">
+                                            <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control"  name="armada"  value="<?php echo $result->armada; ?>" placeholder="Armada">
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -56,6 +60,10 @@ include '../templeting/contenthtml.php';
                                         <div class="input-group mg-b-pro-edt">
                                             <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
                                             <input type="text" class="form-control"  name="latitude_pos" value="<?php echo $result->latitude_pos; ?>" placeholder="Latitude">
+                                        </div>
+                                        <div class="input-group mg-b-pro-edt">
+                                            <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control"  name="armada_max"  value="<?php echo $result->armada_max; ?>" placeholder="Armada Max">
                                         </div>
                                     </div>
                                 </div>

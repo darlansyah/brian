@@ -177,7 +177,7 @@
                                                             <i class="fa fa-angle-down adminpro-icon adminpro-down-arrow"></i>
                                                         </a>
                                                         <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn" style="margin-top: 60px;width: 100%;">
-                                                            <li><a href="pelapor_ubah.html"><span class="fa fa-lock author-log-ic"></span>Profile</a>
+                                                            <li><a href="../app_petugas/petugas_ubah.html"><span class="fa fa-lock author-log-ic"></span>Profile</a>
                                                             </li>
                                                             <li><a href="logout.html"><span class="fa fa-lock author-log-ic"></span>Log Out</a>
                                                             </li>
@@ -218,18 +218,18 @@
                                                     <li><a href="data_kejadian.html">DATA KEJADIAN</a></li>
                                                     </ul>-->
                                             </li>
-                                            <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_petugas.html">DATA PETUGAS<span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                                <!--<ul id="Tablesmob" class="collapse dropdown-header-top">
+<!--                                            <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_petugas.html">DATA PETUGAS<span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
                                                     <li><a href="identitas_petugas.html">IDENTITAS PETUGAS</a></li>
                                                     <li><a href="data_petugas.html">DATA PETUGAS</a></li>
-                                                    </ul>-->
+                                                    </ul>
                                             </li>
                                             <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_pos.html">DATA POS <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                                <!--<ul id="Tablesmob" class="collapse dropdown-header-top">
+                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
                                                     <li><a href="pos_damkar.html">POS DAMKAR</a></li>
                                                     <li><a href="data_pos.php">DATA POS</a></li>
-                                                    </ul>-->
-                                            </li>
+                                                    </ul>
+                                            </li>-->
                                         </ul>
                                     </nav>
                                 </div>
@@ -397,7 +397,7 @@
             <script>
 
             $.ajax({
-                url: "http://192.168.43.198/brian/web/ambil_data_pelapor.php",
+                url: "http://localhost/brian/web/ambil_data_pelapor.php",
                 type: 'POST',
                 dataType: 'json',
                 success: function (resp) {
@@ -410,7 +410,13 @@
                     var no;
                     for (i = 0; i < resp.length; i++) {
                         no = i + 1;
-                        $('tbody').append('<tr><td>' + no + '</td><td>' + resp[i].nama_masyarakat_pelapor + '</td><td>' + resp[i].no_ktp + '</td><td>' + resp[i].telp + '</td><td>' + resp[i].alamat + '</td><td><button id="' + resp[i].id_masyarakat_pelapor + '" class="btn btn-outline-primary btn-sm mg-r-5 inputClass"><div><i class="fa fa-pencil"></i></div></button> <button id="' + resp[i].id_masyarakat_pelapor + '" class="btn btn-outline-danger btn-sm mg-r-5 delateClass"><div><i class="fa fa-trash"></i></div></button></td>');
+                        $('tbody').append('<tr><td>' + no + '</td><td>' 
+                                + resp[i].nama_masyarakat_pelapor + '</td><td>' 
+                                + '</td><td><img src="http://localhost/brian/'+resp[i].no_ktp+'" style="height:50px">'
+                                + resp[i].telp + '</td><td>' 
+                                + resp[i].alamat + '</td><td><button id="' 
+                                + resp[i].id_masyarakat_pelapor + '" class="btn btn-outline-primary btn-sm mg-r-5 inputClass"><div><i class="fa fa-pencil"></i></div></button> <button id="' 
+                                + resp[i].id_masyarakat_pelapor + '" class="btn btn-outline-danger btn-sm mg-r-5 delateClass"><div><i class="fa fa-trash"></i></div></button></td>');
                     }
 
                     $('.inputClass').each(function () {
@@ -430,31 +436,31 @@
 
                 }
             });
-            function edit_data(id) {
-                alert('ini id-nya' + id);
-                window.localStorage.setItem('id_mp', id);
-                window.location.href = '../app/pelapor_ubah.html';
-            }
+//            function edit_data(id) {
+//                alert('ini id-nya' + id);
+//                window.localStorage.setItem('id_mp', id);
+//                window.location.href = '../app/pelapor_ubah.html';
+//            }
 
-            function hapus_data(id) {
-                alert('ini id-nya' + id);
-                window.localStorage.setItem('id_mp', id);
-                $.ajax({
-                    url: "http://192.168.43.198/brian/web/ajax_pelapor_hapus.php",
-                    type: 'POST',
-                    dataType: 'json',
-                    data: {id_mp: id},
-                    success: function (response) {
-                        if (response.status == "Ok") {
-                            alert("Data Berhasil Dihapus");
-                            window.location.href = "../app/data_pelapor.html";
-                        } else {
-                            alert("Data Gagal Dihapus");
-                            window.location.href = "../app/data_pelapor.html";
-                        }
-                    }
-                });
-            }
+//            function hapus_data(id) {
+//                alert('ini id-nya' + id);
+//                window.localStorage.setItem('id_mp', id);
+//                $.ajax({
+//                    url: "http://localhost/brian/web/ajax_pelapor_hapus.php",
+//                    type: 'POST',
+//                    dataType: 'json',
+//                    data: {id_mp: id},
+//                    success: function (response) {
+//                        if (response.status == "Ok") {
+//                            alert("Data Berhasil Dihapus");
+//                            window.location.href = "../app/data_pelapor.html";
+//                        } else {
+//                            alert("Data Gagal Dihapus");
+//                            window.location.href = "../app/data_pelapor.html";
+//                        }
+//                    }
+//                });
+//            }
             </script>
     </body>
 </html>

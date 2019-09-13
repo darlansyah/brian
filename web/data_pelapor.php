@@ -54,18 +54,16 @@ include '../templeting/contenthtml.php';
 
                                         <tr>
                                             <td><?php echo $no++; ?></td>
-                                            <td><?php echo $result->nama_masyarakat_pelapor ?></td>
-                                            <td><?php echo $result->no_ktp ?></td>
-                                            <td><?php echo $result->telp ?></td>
-                                            <td><?php echo $result->alamat ?></td>
+                                            <td><?php echo $result->nama_masyarakat_pelapor; ?></td>
+                                            <td><img src="../<?= $result->no_ktp ?>" style="height:50px" ></td>
+                                            <td><?php echo $result->telp; ?></td>
+                                            <td><?php echo $result->alamat; ?></td>
                                             <td>
-                                                <a href="masyarakat_pelapor_ubah.php?id=<?= $result->id_masyarakat_pelapor; ?>"
+                                                <a href="../masyarakat_pelapor/masyarakat_pelapor_ubah.php?id=<?= $result->id_masyarakat_pelapor; ?>"
                                                    class="btn btn-outline-primary btn-sm mg-r-5"><div><i class="fa fa-edit"></i></div></a>
                                                 <a href="../masyarakat_pelapor/masyarakat_pelapor_hapus.php?id=<?= $result->id_masyarakat_pelapor; ?>"
                                                    onclick="return confirm('Anda yakin akan menghapus <?php echo $result->nama_masyarakat_pelapor ?>?')"
                                                    class=""><i class="fa fa-trash-o"></i></a>
-    <!--                                                   <a href="lapor_kejadian.php?id=<?= $result->id_masyarakat_pelapor; ?>"
-                                                   class="btn btn-outline-primary btn-sm mg-r-5"><div><i class="fa fa-edit"></i></div></a>-->
                                             </td>
                                         </tr>
                                         <?php

@@ -374,7 +374,7 @@
             <script src="../js/main.js"></script>      
             <script>
             $.ajax({
-                url: "http://192.168.43.198/brian/web/ambil_data_petugas.php",
+                url: "http://localhost/brian/web/ambil_data_petugas.php",
                 type: 'POST',
                 dataType: 'json',
                 success: function (resp) {
@@ -387,7 +387,7 @@
                     for (i = 0; i < resp.length; i++) {
                         no = i + 1;
                         $('tbody').append('<tr><td>' + no + '</td><td>' + resp[i].no_induk_pegawai + '</td><td>'
-                                + resp[i].nama_petugas + '</td><td>' + resp[i].id_pos + '</td>');
+                                + resp[i].nama_petugas + '</td><td>' + resp[i].nama_pos + '</td>');
                     }
 
                     $('.inputClass').each(function () {

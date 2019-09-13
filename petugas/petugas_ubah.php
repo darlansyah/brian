@@ -13,7 +13,7 @@ if (mysqli_num_rows($query) > 0) {
     flash('petugas', '<b> Fail - </b>Data tidak ditemukan...', 'alert alert-bordered alert-danger');
     echo "
         <script>
-            window.location.href='petugas_ubah.php';
+            window.location.href='../petugas/petugas_ubah.php';
         </script>
     ";
 }
@@ -56,8 +56,6 @@ include '../templeting/contenthtml.php';
                                                             <?php
                                                         }
                                                         ?>
-
-
                                             </select>
                                         </div>
                                     </div>

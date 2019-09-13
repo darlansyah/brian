@@ -6,7 +6,7 @@ $kon = koneksi_db();
 $query = mysqli_query($kon, "SELECT * FROM `petugas` 
 INNER JOIN pos ON petugas.id_pos = pos.id_pos
 JOIN user on user.id_profile = petugas.id_petugas
-ORDER BY petugas.`id_petugas`  DESC");
+ORDER BY petugas.`no_induk_pegawai`  ASC");
 
 include '../templeting/headerhtml.php';
 include '../templeting/content.php';
@@ -56,10 +56,11 @@ include '../templeting/contenthtml.php';
 
                                             <td><?php echo $no++; ?></td>
                                             <td><?php echo $result->no_induk_pegawai ?></td>
-                                            <td><?php echo $result->nama_petugas ?></td>
-                                            <td><?php echo $result->nama_pos ?></td>
+                                            <td><?php echo $result->level_user == 'admin' ? 'Admin' : $result->nama_petugas ?></td>
+                                            <td><?php echo $result->level_user == 'admin' ? '-' : $result->nama_pos ?></td>
                                             <td><?php echo $result->username ?></td>
                                             <td><?php echo $result->level_user ?></td>
+
                                         </tr>
                                         <?php
                                     }
@@ -80,10 +81,3 @@ include '../templeting/footer.php';
 include '../templeting/footerhtml.php';
 ?>
 <?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-

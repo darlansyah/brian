@@ -397,7 +397,7 @@
             <script>
 
             $.ajax({
-                url: "http://192.168.43.198/brian/web/ambil_data_pelapor.php",
+                url: "http://localhost/brian/web/ambil_data_pelapor.php",
                 type: 'POST',
                 dataType: 'json',
                 success: function (resp) {
@@ -440,7 +440,7 @@
                 alert('ini id-nya' + id);
                 window.localStorage.setItem('id_mp', id);
                 $.ajax({
-                    url: "http://192.168.43.198/brian/web/ajax_pelapor_hapus.php",
+                    url: "http://localhost/brian/web/ajax_pelapor_hapus.php",
                     type: 'POST',
                     dataType: 'json',
                     data: {id_mp: id},

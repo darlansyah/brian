@@ -12,7 +12,7 @@ if (mysqli_num_rows($query) > 0) {
     flash('kejadian', '<b> Fail - </b>Data tidak ditemukan...', 'alert alert-bordered alert-danger');
     echo "
         <script>
-            window.location.href='kejadian_ubah.php';
+            window.location.href='../kejadian/kejadian_ubah.php';
         </script>
     ";
 }

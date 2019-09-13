@@ -202,34 +202,34 @@
                                             <li><a data-toggle="collapse" data-target="#Charts" href="index.html">Home <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
                                             </li>
 
-                                            <!--<li><a data-toggle="collapse" data-target="#demo" href="data_pelapor.html"> DATA LAPOR <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                                <ul id="demo" class="collapse dropdown-header-top">
+                                            <li><a data-toggle="collapse" data-target="#demo" href="data_pelapor.html"> DATA LAPOR <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+                                                <!--<ul id="demo" class="collapse dropdown-header-top">
                                                 <li><a href="identitas_pelapor.html">IDENTITAS PELAPOR</a></li>
                                                 <li><a href="data_pelapor.html">DATA PELAPOR</a></li>
-                                                </ul>
-                                                </li>-->
+                                              </ul>-->
+                                            </li>
                                             <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_kejadian.html">DATA KEJADIAN <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                                <!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
+                                                <!--<ul id="Tablesmob" class="collapse dropdown-header-top">
                                                 <li><a href="lapor_kejadian.html">LAPOR KEJADIAN</a></li>
                                                 <li><a href="data_kejadian.html">DATA KEJADIAN</a></li>
                                               </ul>-->
                                             </li>
-                                            <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_petugas.html">DATA PETUGAS<span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                                <!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
+                                            <!--<li><a data-toggle="collapse" data-target="#Tablesmob" href="data_petugas.html">DATA PETUGAS<span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
                                                 <li><a href="identitas_petugas.html">IDENTITAS PETUGAS</a></li>
                                                 <li><a href="data_petugas.html">DATA PETUGAS</a></li>
-                                              </ul>-->
+                                                </ul>
                                             </li>
                                             <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_pos.html">DATA POS <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                                <!--                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
+                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
                                                 <li><a href="pos_damkar.html">POS DAMKAR</a></li>
-                                                <li><a href="data_pos.php">DATA POS</a></li>
-                                              </ul>-->
-                                            </li>
+                                                <li><a href="data_pos.html">DATA POS</a></li>
+                                                </ul>
+                                            </li>-->
                                             <!--<li><a data-toggle="collapse" data-target="#Tablesmob" href="logout.html">Logout <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
                                                 <ul id="Tablesmob" class="collapse dropdown-header-top">
                                                 <li><a href="pos_damkar.html">POS DAMKAR</a></li>
-                                                <li><a href="data_pos.php">DATA POS</a></li>
+                                                <li><a href="data_pos.html">DATA POS</a></li>
                                                 </ul>
                                                 </li>-->
                                         </ul>
@@ -423,10 +423,10 @@
             <!-- main JS
             ============================================ -->
             <script src="../js/main.js"></script>
-            
+
             <script>
-              alert("OI");
-       "use strict";
+            alert("OI");
+            "use strict";
 
             $(document).ready(function () {
                 // Btn submit click event
@@ -456,7 +456,7 @@
                     formData.append("id_profil", id_profil);
 
                     $.ajax({
-                        url: 'http://192.168.43.198/brian/web/ajax_proses_pelaporan.php',
+                        url: 'http://localhost/brian/web/ajax_proses_pelaporan.php',
                         type: 'POST',
 //                        contentType: 'application/x-www-form-urlencoded',
                         dataType: 'json',

@@ -174,7 +174,7 @@
                                                             <i class="fa fa-angle-down adminpro-icon adminpro-down-arrow"></i>
                                                         </a>
                                                         <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn" style="margin-top: 60px;width: 100%;">
-                                                            <li><a href="pelapor_ubah.html"><span class="fa fa-lock author-log-ic"></span>Profile</a>
+                                                            <li><a href="../app_petugas/petugas_ubah.html"><span class="fa fa-lock author-log-ic"></span>Profile</a>
                                                             </li>
                                                             <li><a href="logout.html"><span class="fa fa-lock author-log-ic"></span>Log Out</a>
                                                             </li>
@@ -202,30 +202,30 @@
                                         <ul class="mobile-menu-nav">
                                             <li><a data-toggle="collapse" data-target="#Charts" href="index.html">Home <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
                                             </li>
-                                            <!--<li><a data-toggle="collapse" data-target="#demo" href="data_pelapor.html"> DATA LAPOR <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                            <ul id="demo" class="collapse dropdown-header-top">
+                                            <li><a data-toggle="collapse" data-target="#demo" href="data_pelapor.html"> DATA LAPOR <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+<!--                                        <ul id="demo" class="collapse dropdown-header-top">
                                             <li><a href="identitas_pelapor.html">IDENTITAS PELAPOR</a></li>
                                             <li><a href="data_pelapor.html">DATA PELAPOR</a></li>
-                                            </ul>
-                                            </li>-->
+                                            </ul>-->
+                                            </li>
                                             <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_kejadian.html">DATA KEJADIAN <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
                                             <!--<ul id="Tablesmob" class="collapse dropdown-header-top">
                                             <li><a href="lapor_kejadian.html">LAPOR KEJADIAN</a></li>
                                             <li><a href="data_kejadian.html">DATA KEJADIAN</a></li>
                                             </ul>-->
                                             </li>
-                                            <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_petugas.html">DATA PETUGAS<span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                            <!--<ul id="Tablesmob" class="collapse dropdown-header-top">
+<!--                                        <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_petugas.html">DATA PETUGAS<span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+                                            <ul id="Tablesmob" class="collapse dropdown-header-top">
                                             <li><a href="identitas_petugas.html">IDENTITAS PETUGAS</a></li>
                                             <li><a href="data_petugas.html">DATA PETUGAS</a></li>
-                                            </ul>-->
+                                            </ul>
                                             </li>
                                             <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_pos.html">DATA POS <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                            <!--<ul id="Tablesmob" class="collapse dropdown-header-top">
+                                            <ul id="Tablesmob" class="collapse dropdown-header-top">
                                             <li><a href="pos_damkar.html">POS DAMKAR</a></li>
                                             <li><a href="data_pos.php">DATA POS</a></li>
-                                            </ul>-->
-                                            </li>
+                                            </ul>
+                                            </li>-->
                                         </ul>
                                     </nav>
                                 </div>
@@ -393,7 +393,7 @@
                 id_profile: window.localStorage.getItem('id_profile'),
                 get: function () {
                     $.ajax({
-                        url: "http://192.168.43.198/brian/web/ambil_data_kejadian_by_petugas.php",
+                        url: "http://localhost/brian/web/ambil_data_kejadian_by_petugas.php",
                         type: 'POST',
                         dataType: 'json',
                         data: {id_profile: this.id_profile},
@@ -404,7 +404,7 @@
                 },
                 selesaikan: function (id) {
                     $.ajax({
-                        url: "http://192.168.43.198/brian/web/ajax_kejadian_selesaikan.php",
+                        url: "http://localhost/brian/web/ajax_kejadian_selesaikan.php",
                         type: 'POST',
                         dataType: 'json',
                         data: {
@@ -436,7 +436,7 @@
                             + '</td><td>' + resp[i].longitude
                             + '</td><td>' + resp[i].latitude
                             + '</td><td>' + resp[i].deskripsi_kejadian
-                            + '</td><td><img src="http://192.168.43.198/brian/'+resp[i].gambar+'" style="height:50px">'
+                            + '</td><td><img src="http://localhost/brian/'+resp[i].gambar+'" style="height:50px">'
                             + '</td><td><a id="' + resp[i].id_kejadian + '" class="lihat btn btn-outline-primary btn-sm mg-r-5"><div><i class="fa fa-bullseye"></i></div> Lihat Lokasi</a>\n\ '
                             + '<button id="' + resp[i].id_kejadian + '" class="btn btn-outline-danger btn-sm mg-r-5 selesaikan"><div><i class="fa fa-check"></i></div></button></td>'
                         );

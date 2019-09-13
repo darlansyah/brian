@@ -21,9 +21,6 @@ $password = isset($_REQUEST['password']) ? $_REQUEST['password'] : '';
 $nama = isset($_REQUEST['nama']) ? $_REQUEST['nama'] : '';
 $level_user = isset($_REQUEST['level_user']) ? $_REQUEST['level_user'] : 'petugas';
 
-//$id_profil = isset($_REQUEST['id_profil']) ? $_REQUEST['id_profil'] : '';
-//var_dump($level_user);
-//die;
 if ($id_user != 0) {
     $query = mysqli_query($kon, "UPDATE admin SET id_profile = '1',
                                                  username = '$username',
@@ -43,23 +40,4 @@ if ($query) {
     document.location.href ='data_user.php';
     </script>
     ";
-    // header('location:index.php?konten=masyarakat_pelapor_tambah');
 }
-// end my script
-//
-// if ($query) {
-//    flash('kejadian', '<b> Success - </b>Data berhasil disimpan...', 'alert alert-bordered alert-success');
-        //  echo "
-        //    <script>
-        //      window.location.href='index.php?konten=kejadian';
-        // </script>
-        //";
-//} else {
-        //  flash('kejadian', '<b> Fail - </b>Data gagal disimpan...', 'alert alert-bordered alert-danger');
-        //echo"
-        //  <script>
-        //    window.location.href='index.php?konten=kejadian';
-        // </script>
-        //";
-//}
-//

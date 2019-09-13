@@ -191,7 +191,7 @@
                                                             <i class="fa fa-angle-down adminpro-icon adminpro-down-arrow"></i>
                                                         </a>
                                                         <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn" style="margin-top: 60px;width: 100%;">
-                                                            <li><a href="pelapor_ubah.html"><span class="fa fa-lock author-log-ic"></span>Profile</a>
+                                                            <li><a href="petugas_ubah.html"><span class="fa fa-lock author-log-ic"></span>Profile</a>
                                                             </li>
                                                             <li><a href="logout.html"><span class="fa fa-lock author-log-ic"></span>Log Out</a>
                                                             </li>
@@ -220,30 +220,30 @@
                                             <li><a data-toggle="collapse" data-target="#Charts" href="index.html">Home <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
                                             </li>
 
-                                            <!--<li><a data-toggle="collapse" data-target="#demo" href="data_pelapor.html"> DATA LAPOR <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                                <ul id="demo" class="collapse dropdown-header-top">
+                                            <li><a data-toggle="collapse" data-target="#demo" href="data_pelapor.html"> DATA LAPOR <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+<!--                                            <ul id="demo" class="collapse dropdown-header-top">
                                                 <li><a href="identitas_pelapor.html">IDENTITAS PELAPOR</a></li>
                                                 <li><a href="data_pelapor.html">DATA PELAPOR</a></li>
-                                                </ul>
-                                                </li>-->
+                                                </ul>-->
+                                                </li>
                                             <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_kejadian.html">DATA KEJADIAN <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
                                                 <!--<ul id="Tablesmob" class="collapse dropdown-header-top">
                                                     <li><a href="lapor_kejadian.html">LAPOR KEJADIAN</a></li>
                                                     <li><a href="data_kejadian.html">DATA KEJADIAN</a></li>
                                                     </ul>-->
                                             </li>
-                                            <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_petugas.html">DATA PETUGAS<span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                                <!--<ul id="Tablesmob" class="collapse dropdown-header-top">
+<!--                                            <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_petugas.html">DATA PETUGAS<span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
                                                     <li><a href="identitas_petugas.html">IDENTITAS PETUGAS</a></li>
                                                     <li><a href="data_petugas.html">DATA PETUGAS</a></li>
-                                                    </ul>-->
+                                                    </ul>
                                             </li>
                                             <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_pos.html">DATA POS <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                                <!--<ul id="Tablesmob" class="collapse dropdown-header-top">
+                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
                                                     <li><a href="pos_damkar.html">POS DAMKAR</a></li>
                                                     <li><a href="data_pos.html">DATA POS</a></li>
-                                                    </ul>-->
-                                            </li>
+                                                    </ul>
+                                            </li>-->
                                         </ul>
                                     </nav>
                                 </div>
@@ -302,6 +302,14 @@
                                                 <div class="input-group mg-b-pro-edt">
                                                     <span class="input-group-addon"><i class="fa fa-sticky-note" aria-hidden="true"></i></span>
                                                     <input readonly id="no_induk_pegawai" type="text" name="no_induk_pegawai" class="form-control" placeholder="No Induk Pegawai" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="review-content-section">
+                                                <div class="input-group mg-b-pro-edt">
+                                                    <span class="input-group-addon"><i class="fa fa-sticky-note" aria-hidden="true"></i></span>
+                                                    <input readonly id="id_pos" type="text" name="id_pos" class="form-control" placeholder="Id Pos" value="">
                                                 </div>
                                             </div>
                                         </div>
@@ -397,15 +405,27 @@
             <script>
 
                                                     var id_ptgs = window.localStorage.getItem('id_profile');
+                                                    
                                                     $.ajax({
-                                                        url: "http://192.168.43.198/brian/web/ambil_id_petugas.php",
+                                                        url: "http://localhost/brian/web/ambil_id_petugas.php",
                                                         type: 'POST',
                                                         dataType: 'json',
                                                         data: {id_ptgs: id_ptgs},
                                                         success: function (resp) {
-                                                            $('#nama_petugas').val(resp.nama_petugas);
-                                                            $('#no_induk_pegawai').val(resp.no_induk_pegawai);
-                                                            $('#nama_pos').val(resp.nama_pos);
+                                                            if (resp.status == 'Ok') {
+//                                                                alert('Berhasil mendapatkan data petugas');
+                                                                $('#nama_petugas').val(resp.nama_petugas);
+                                                                $('#no_induk_pegawai').val(resp.no_induk_pegawai);
+                                                                $('#nama_pos').val(resp.nama_pos);
+                                                                $('#id_pos').val(resp.id_pos);
+                                                            }
+                                                            else {
+                                                                alert('Gagal mendapatkan data petugas');
+                                                            }
+                                                        },
+                                                        error: function (xhr, ajaxOptions, thrownError) {
+                                                          alert(xhr.status);
+                                                          alert(thrownError);
                                                         }
                                                     });
                                                     $("#btn_simpan").click(simpan_data);
@@ -418,7 +438,7 @@
 
                                                         console.log("nama : " + nama_petugas + " no_induk_pegawai: " + no_induk_pegawai + " id_pos : " + id_pos);
                                                         $.ajax({
-                                                            url: "http://192.168.43.198/brian/web/ajax_petugas_simpan.php",
+                                                            url: "http://localhost/brian/web/ajax_petugas_simpan.php",
                                                             type: 'POST',
                                                             dataType: 'json',
                                                             data: {id_petugas: id_ptgs, nama_petugas: nama_petugas, no_induk_pegawai: no_induk_pegawai, id_pos: id_pos},

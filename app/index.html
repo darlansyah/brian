@@ -63,11 +63,11 @@
 
     <body>
         <!-- cek apa udah login ? -->
-        <script>
+<!--        <script>
             if (!(localStorage.getItem('sudah_login') == 1)) {
                 window.location.href = 'login.html';
             }
-        </script>
+        </script>-->
         <!-- end cek apa udah login ? -->
 
         <!-- sidebar -->
@@ -295,17 +295,38 @@
                                     <div class="product-tab-list tab-pane fade active in" id="description">
                                         <form>
                                             <div class="row">
-                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="review-content-section">
+                                                        <div class="input-group mg-b-pro-edt">
+                                                            <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                                                            <input type="text" class="form-control data-input" id="nama_masyarakat_pelapor" name="nama_masyarakat_pelapor" placeholder="Nama Pelapor">
+                                                        </div>
+                                                        <div class="input-group mg-b-pro-edt">
+                                                            <span class="input-group-addon"><i class="fa fa-sticky-note" aria-hidden="true"></i></span>
+                                                            <input type="file" class="form-control data-input" id="no_ktp" name="no_ktp" placeholder="No KTP">
+                                                        </div>
+                                                        <div class="input-group mg-b-pro-edt">
+                                                            <span class="input-group-addon"><i class="fa fa-mobile-phone" aria-hidden="true"></i></span>
+                                                            <input type="text" class="form-control data-input" id="telp" name="telp" placeholder="No Telephone">
+                                                        </div>
+                                                        <div class="input-group mg-b-pro-edt">
+                                                            <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                                                            <input type="text" class="form-control data-input" id="alamat" name="alamat" placeholder="Alamat">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                     <div class="review-content-section">
                                                         <div class="input-group mg-b-pro-edt">
                                                             <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-                                                            <input type="text" class="form-control data-input" id="longitude" name="longitude" placeholder="Longitude">
+                                                            <input readonly class="form-control data-input" id="longitude" name="longitude" placeholder="Longitude">
 
                                                         </div>
                                                         <div class="input-group mg-b-pro-edt">
                                                             <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-                                                            <input type="text" class="form-control data-input" id="latitude" name="latitude" placeholder="Latitude">
+                                                            <input readonly class="form-control data-input" id="latitude" name="latitude" placeholder="Latitude">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -409,114 +430,109 @@
         <!-- Google map JS
         ============================================ -->
         <script>
-  alert("OI");
-       "use strict";
+            alert("OI");
+            "use strict";
 
-mapInitializer = {
-  allPos: null,
-  getDataPos: function getDataPos() {
+            mapInitializer = {
+                allPos: null,
+                getDataPos: function getDataPos() {
 
-  //  alert("getDataPos");
-    var _this = this;
+                    var _this = this;
 
-    $.ajax({
-      url: 'http://192.168.43.198/brian/web/ambil_data_pos.php',
-      dataType: 'json',
-      type: 'POST',
-      success: function success(response) {
-        _this.allPos = response;
+                    $.ajax({
+                        url: 'http://localhost/brian/web/ambil_data_pos.php',
+                        dataType: 'json',
+                        type: 'POST',
+                        success: function success(response) {
+                            _this.allPos = response;
 
-        _this.getMyLocation();
-      }
-    });
-  },
-  getMyLocation: function() {
-    var _this = this;
+                            _this.getMyLocation();
+                        }
+                    });
+                },
+                getMyLocation: function () {
+                    var _this = this;
 
-    navigator.geolocation.getCurrentPosition(function(location) {
-      //alert(location.coords.latitude);
-      //alert(location.coords.longitude);
-      //alert(location.coords.accuracy);
+                    navigator.geolocation.getCurrentPosition(function (location) {
+                        var lat = location.coords.latitude;
+                        var lng = location.coords.longitude;
 
-      var lat = location.coords.latitude;
-      var lng = location.coords.longitude;
+                        $("#latitude").val(lat);
+                        $("#longitude").val(lng);
 
-        $("#latitude").val(lat);
-        $("#longitude").val(lng);
+                        _this.initMap(lat, lng);
+                        _this.addPosMarker();
+                    });
+                },
+                initMap: function initMap(latUser, lngUser) {
+                    var _this2 = this;
 
-      _this.initMap(lat, lng);
-      _this.addPosMarker();
-    });
-  },
-  initMap: function initMap(latUser, lngUser) {
-    var _this2 = this;
+                    var uluru = {
+                        lat: latUser,
+                        lng: lngUser
+                    };
+                    this.map = new google.maps.Map(document.getElementById('map1'), {
+                        zoom: 15,
+                        center: uluru
+                    });
+                    var marker = new google.maps.Marker({
+                        position: uluru,
+                        map: this.map
+                    });
 
-    var uluru = {
-      lat: latUser,
-      lng: lngUser
-    };
-    this.map = new google.maps.Map(document.getElementById('map1'), {
-      zoom: 15,
-      center: uluru
-    });
-    var marker = new google.maps.Marker({
-      position: uluru,
-      map: this.map
-    });
+                    var placeMarker = function placeMarker() {
+                        if (mapZoom === _this2.map.getZoom()) {
+                            marker.setMap(null);
+                            marker = new google.maps.Marker({
+                                position: startLocation,
+                                map: _this2.map
+                            });
+                            $("#latitude").val(marker.getPosition().lat());
+                            $("#longitude").val(marker.getPosition().lng());
+                        }
+                    };
 
-    var placeMarker = function placeMarker() {
-      if (mapZoom === _this2.map.getZoom()) {
-        marker.setMap(null);
-        marker = new google.maps.Marker({
-          position: startLocation,
-          map: _this2.map
-        });
-        $("#latitude").val(marker.getPosition().lat());
-        $("#longitude").val(marker.getPosition().lng());
-      }
-    };
+                    google.maps.event.addListener(this.map, 'click', function (event) {
+                        mapZoom = _this2.map.getZoom();
+                        startLocation = event.latLng;
+                        setTimeout(placeMarker, 600);
+                    });
+                },
+                addPosMarker: function addPosMarker() {
+                    var _this3 = this;
 
-    google.maps.event.addListener(this.map, 'click', function (event) {
-      mapZoom = _this2.map.getZoom();
-      startLocation = event.latLng;
-      setTimeout(placeMarker, 600);
-    });
-  },
-  addPosMarker: function addPosMarker() {
-    var _this3 = this;
+                    Array.prototype.forEach.call(this.allPos, function (markerElemen) {
+                        var lat_pos = markerElemen.longitude_pos;
+                        var long_pos = markerElemen.latitude_pos;
+                        var point_pos = {
+                            lat: parseFloat(lat_pos),
+                            lng: parseFloat(long_pos)
+                        };
+                        var marker = new google.maps.Marker({
+                            icon: {
+                                url: 'https://image.flaticon.com/icons/svg/1166/1166525.svg',
+                                scaledSize: new google.maps.Size(30, 35)
+                            },
+                            position: point_pos,
+                            map: _this3.map,
+                            title: markerElemen.nama_pos
+                        });
+                        var message = '<div id="content">' + '<div id="siteNotice">' + '</div>' + '<h4>' + markerElemen.nama_pos + '</h4>' + '<div id="bodyContent">' + '<p>' + markerElemen.alamat_pos + '</p>' + '</div>' + '</div>';
 
-    Array.prototype.forEach.call(this.allPos, function (markerElemen) {
-      var long_pos = markerElemen.longitude_pos;
-      var lat_pos = markerElemen.latitude_pos;
-      var point_pos = {
-        lat: parseFloat(lat_pos),
-        lng: parseFloat(long_pos)
-      };
-      var marker = new google.maps.Marker({
-        icon: {
-          url: 'https://image.flaticon.com/icons/svg/1166/1166525.svg',
-          scaledSize: new google.maps.Size(30, 35)
-        },
-        position: point_pos,
-        map: _this3.map,
-        title: markerElemen.nama_pos
-      });
-      var message = '<div id="content">' + '<div id="siteNotice">' + '</div>' + '<h4>' + markerElemen.nama_pos + '</h4>' + '<div id="bodyContent">' + '<p>' + markerElemen.alamat_pos + '</p>' + '</div>' + '</div>';
+                        _this3.addInfoWindow(marker, message);
+                    });
+                },
+                addInfoWindow: function addInfoWindow(marker, message) {
+                    var _this4 = this;
 
-      _this3.addInfoWindow(marker, message);
-    });
-  },
-  addInfoWindow: function addInfoWindow(marker, message) {
-    var _this4 = this;
-
-    var infoWindow = new google.maps.InfoWindow({
-      content: message
-    });
-    google.maps.event.addListener(marker, 'click', function () {
-      infoWindow.open(_this4.map, marker);
-    });
-  }
-};
+                    var infoWindow = new google.maps.InfoWindow({
+                        content: message
+                    });
+                    google.maps.event.addListener(marker, 'click', function () {
+                        infoWindow.open(_this4.map, marker);
+                    });
+                }
+            };
         </script>
         <!--<script src="../js/google.maps/google.maps-active.js"></script>-->
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXMNHIbmIKC4y_QUQpQdyhcTiDIKuCx4U&callback=mapInitializer.getDataPos"></script>
@@ -541,21 +557,30 @@ mapInitializer = {
                         this.commit();
                     },
                     setData: function (objInputData) {
-                        let longitude = objInputData[0].value;
-                        let latitude = objInputData[1].value;
-                        let deskripsi = objInputData[2].value;
-                        let gambar = objInputData[3].value;
-                        let id_profil = window.localStorage.getItem('id_profile');
-
+                        let nama_masyarakat_pelapor = objInputData[0].value;
+                        let no_ktp = objInputData[1].value;
+                        let telp = objInputData[2].value;
+                        let alamat = objInputData[3].value;
+                        let longitude = objInputData[4].value;
+                        let latitude = objInputData[5].value;
+                        let deskripsi = objInputData[6].value;
+                        let gambar = objInputData[7].value;
+//                        let id_profil = window.localStorage.getItem('id_profile');
+                        
                         this.formData = new FormData($('form')[0]);
+                        this.formData.append("nama_masyarakat_pelapor", nama_masyarakat_pelapor);
+                        this.formData.append("no_ktp", no_ktp);
+                        this.formData.append("telp", telp);
+                        this.formData.append("alamat", alamat);
                         this.formData.append("longitude", longitude);
                         this.formData.append("latitude", latitude);
                         this.formData.append("deskripsi", deskripsi);
-                        this.formData.append("id_profil", id_profil);
+                        this.formData.append("gambar", gambar);
+//                        this.formData.append("id_profil", id_profil);
                     },
                     commit: function () {
                         $.ajax({
-                            url: 'http://192.168.43.198/brian/web/ajax_proses_pelaporan.php',
+                            url: 'http://localhost/brian/web/ajax_proses_pelaporan.php',
                             type: 'POST',
                             dataType: 'json',
                             data: this.formData,
@@ -571,8 +596,9 @@ mapInitializer = {
                                     alert('Laporan Anda Gagal Masuk: ' + response.error);
                                 }
                             },
-                            error: function(XMLHttpRequest, textStatus, errorThrown) {
-                                alert("Status: " + textStatus); alert("Error: " + errorThrown);
+                            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                                alert("Status: " + textStatus);
+                                alert("Error: " + errorThrown);
                             }
                         });
                     }

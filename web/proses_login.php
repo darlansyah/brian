@@ -8,9 +8,7 @@ $kon = koneksi_db();
 $username = isset($_REQUEST['username']) ? $_REQUEST['username'] : null;
 $pass = isset($_REQUEST['pass']) ? $_REQUEST['pass'] : null;
 
-
 $result = mysqli_query($kon, "SELECT * FROM user WHERE username = '$username' AND password = '$pass'");
-
 
 if (mysqli_num_rows($result) == 1) {
 

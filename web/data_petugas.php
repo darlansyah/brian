@@ -6,7 +6,7 @@ $kon = koneksi_db();
 $query = mysqli_query($kon, "SELECT * FROM `petugas` 
 INNER JOIN pos ON petugas.id_pos = pos.id_pos
 JOIN user on user.id_profile = petugas.id_petugas
-ORDER BY petugas.`id_petugas`  DESC");
+ORDER BY petugas.`no_induk_pegawai`  ASC");
 
 include '../templeting/headerhtml.php';
 include '../templeting/content.php';
@@ -54,15 +54,14 @@ include '../templeting/contenthtml.php';
                                     while ($result = mysqli_fetch_object($query)) {
                                         ?>
                                         <tr>
-
                                             <td><?php echo $no++; ?></td>
                                             <td><?php echo $result->no_induk_pegawai ?></td>
-                                            <td><?php echo $result->nama_petugas ?></td>
-                                            <td><?php echo $result->nama_pos ?></td>
+                                            <td><?php echo $result->level_user == 'admin' ? 'Admin' : $result->nama_petugas ?></td>
+                                            <td><?php echo $result->level_user == 'admin' ? '-' : $result->nama_pos ?></td>
                                             <td><?php echo $result->username ?></td>
                                             <td><?php echo $result->level_user ?></td>
                                             <td>
-                                                <a href="petugas_ubah.php?id=<?= $result->id_petugas; ?>"
+                                                <a href="../petugas/petugas_ubah.php?id=<?= $result->id_petugas; ?>"
                                                    class="btn btn-outline-primary btn-sm mg-r-5"><div><i class="fa fa-edit"></i></div></a>
                                                 <a href="../petugas/petugas_hapus.php?id=<?= $result->id_petugas; ?>"
                                                    onclick="return confirm('Anda yakin akan menghapus <?php echo $result->nama_petugas ?>?')"

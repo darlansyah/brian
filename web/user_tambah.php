@@ -12,7 +12,6 @@ if ($_SESSION['level_user'] != 'admin') {
 include '../functions/kumpulan_fungsi.php';
 authentication();
 
-
 include '../templeting/headerhtml.php';
 include '../templeting/content.php';
 include '../templeting/logo.php';
@@ -50,7 +49,6 @@ include '../templeting/contenthtml.php';
 
                                             <input type="checkbox" name="level_user" value="admin"> Level Admin<br>
                                         </div>
-
                                     </div>
                                 </div>
 

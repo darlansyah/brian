@@ -19,27 +19,10 @@ if ($_SESSION['level_user'] == 'admin') {
             <nav class="sidebar-nav left-sidebar-menu-pro">
                 <ul class="metismenu" id="menu1">
                     <li class="#">
-                    <li><a title="Dekstop" href="index.php" aria-expanded="false"><i class="fa fa-desktop icon-wrap sub-icon-mg" aria-hidden="true"></i> <span class="mini-click-non">Dekstop</span></a></li>
-                    </li>
-                    <?php
-                    if ($_SESSION['level_user'] == 'admin') {
-                        ?>
-<!--                        <li class="#">
-                            <a class="has-arrow" href="#">
-                                <i class='fa big-icon fa-users icon-wrap'></i>
-                                <span class='mini-click-non'>Admin</span>
-                            </a>
-                            <ul class="submenu-angle" aria-expanded="true">
-                                <li><a title="Identitas Admin" href="user_tambah.php"><i class="fa fa-user sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro"> Admin</span></a></li>
-                            </ul>
-                            <ul class='submenu-angle' aria-expanded='true'>
-                                <li><a title="Data Admin" href="data_user.php"><i class='fa fa-table sub-icon-mg' aria-hidden="true"></i> <span class="mini-sub-pro">Data Admin</span></a></li>
-                            </ul>
-                        </li>-->
-                    <?php }
-                    ?>
+                    <li><a title="Dekstop" href="../web/index.php" aria-expanded="false"><i class="fa fa-desktop icon-wrap sub-icon-mg" aria-hidden="true"></i> <span class="mini-click-non">Dekstop</span></a></li>
+                    
                     <li class="#">
-                        <a class="has-arrow" href="index.html">
+                        <a class="has-arrow" href="">
                             <i class="fa big-icon fa-bullseye icon-wrap"></i>
                             <span class="mini-click-non">Lapor</span>
                         </a>
@@ -47,7 +30,7 @@ if ($_SESSION['level_user'] == 'admin') {
                             <li><a title="Identitas Pelapor" href="identitas_pelapor.php"><i class="fa fa-user sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Identitas Pelapor</span></a></li>
                         </ul>-->
                         <ul class="submenu-angle" aria-expanded="true">
-                            <li><a title="Data Pelapor" href="data_pelapor.php"><i class="fa fa-table sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data Pelapor</span></a></li>
+                            <li><a title="Data Pelapor" href="../web/data_pelapor.php"><i class="fa fa-table sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data Pelapor</span></a></li>
                         </ul>
                     </li>
                     <li calss="#">
@@ -56,16 +39,16 @@ if ($_SESSION['level_user'] == 'admin') {
                             <li><a title="Lapor Kejadian" href="lapor_kejadian.php"><i class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Lapor Kejadian</span></a></li>
                         </ul>-->
                         <ul class="submenu-angle" aria-expanded="true">
-                            <li><a title="Data Kejadian" href="data_kejadian.php"><i class="fa fa-table sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data Kejadian</span></a></li>
+                            <li><a title="Data Kejadian" href="../web/data_kejadian.php"><i class="fa fa-table sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data Kejadian</span></a></li>
                         </ul>
                     </li>
                     <li calss="#">
                         <a class="has-arrow" href="" aria-expanded="false"><i class="fa big-icon fa-users icon-wrap"></i> <span class="mini-click-non">Petugas Damkar</span></a>
                         <ul class="submenu-angle" aria-expanded="true">
-                            <li><a title="Identitas Pengguna" href="identitas_petugas.php"><i class="fa fa-user sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Identitas Pengguna</span></a></li>
+                            <li><a title="Identitas Pengguna" href="../web/identitas_petugas.php"><i class="fa fa-user sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Identitas Pengguna</span></a></li>
                         </ul>
                         <ul class="submenu-angle" aria-expanded="true">
-                            <li><a title="Data Pengguna" href="data_petugas.php"><i class="fa fa-table sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data Pengguna</span></a></li>
+                            <li><a title="Data Pengguna" href="../web/data_petugas.php"><i class="fa fa-table sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data Pengguna</span></a></li>
                         </ul>
                     </li>
                     <li calss="#">
@@ -74,14 +57,14 @@ if ($_SESSION['level_user'] == 'admin') {
                         if ($_SESSION['level_user'] == 'admin') {
                             ?>
                             <ul class="submenu-angle" aria-expanded="true">
-                                <li><a title="Pos Damkar" href="pos_damkar.php"><i class="fa fa-home sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Pos Damkar</span></a></li>
+                                <li><a title="Pos Damkar" href="../web/pos_damkar.php"><i class="fa fa-home sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Pos Damkar</span></a></li>
                             </ul>
                             <?php
                         }
                         ?>
 
                         <ul class="submenu-angle" aria-expanded="true">
-                            <li><a title="Data Pos" href="data_pos.php"><i class="fa fa-table sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data Pos</span></a></li>
+                            <li><a title="Data Pos" href="../web/data_pos.php"><i class="fa fa-table sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Data Pos</span></a></li>
                         </ul>
                     </li>
                     <li><a title="Landing Page" href="#" aria-expanded="false"><i class="fa fa-bookmark icon-wrap sub-icon-mg" aria-hidden="true"></i> <span class="mini-click-non">Landing Page</span></a></li>

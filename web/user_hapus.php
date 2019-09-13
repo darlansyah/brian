@@ -17,8 +17,6 @@ $id_user = $_GET['id'];
 
 $kon = koneksi_db();
 
-// $id_pelapor= isset($_REQUEST['id_pelapor']) ? $_REQUEST['id_pelapor'] : 0;
-
 $query = mysqli_query($kon, "DELETE FROM user WHERE id_user='$id_user'");
 
 if ($query) {

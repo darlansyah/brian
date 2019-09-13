@@ -27,10 +27,6 @@ if (mysqli_num_rows($query) > 0) {
         </script>
     ";
 }
-//
-//var_dump($result);
-//die;
-
 
 include '../templeting/headerhtml.php';
 include '../templeting/content.php';

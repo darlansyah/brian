@@ -9,14 +9,6 @@ include '../templeting/contenthtml.php';
 ?>
 <?php
 authentication();
-//$id = $_GET['id'];
-////var_dump($id);
-////exit();
-//$kon = koneksi_db();
-//$query = mysqli_query($kon, "SELECT * from masyarakat_pelapor where id_masyarakat_pelapor=" . $id . "");
-//$squery = mysqli_fetch_row($query);
-//var_dump($a);
-//exit();
 ?>
 
 <!-- Single pro tab review Start-->

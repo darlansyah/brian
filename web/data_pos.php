@@ -36,7 +36,7 @@ include '../templeting/contenthtml.php';
                                    data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
                                 <thead>
                                     <tr>
-                                        <th data-field="id">ID</th>
+                                        <th data-field="id">ID Pos</th>
                                         <th data-field="name" data-editable="true">Nama Pos</th>
                                         <th data-field="company" data-editable="true">Alamat Pos</th>
                                         <th>Longitude Pos</th>
@@ -68,7 +68,7 @@ include '../templeting/contenthtml.php';
                                             if ($_SESSION['level_user'] == 'admin') {
                                                 ?>
                                                 <td>
-                                                    <a href="pos_ubah.php?id=<?= $result->id_pos; ?>"
+                                                    <a href="../pos/pos_ubah.php?id=<?= $result->id_pos; ?>"
                                                        class="btn btn-outline-primary btn-sm mg-r-5"><div><i class="fa fa-edit"></i></div></a>
                                                     <a href="../pos/pos_hapus.php?id=<?= $result->id_pos; ?>"
                                                        onclick="return confirm('Anda Yakin Akan Menghapus <?php echo $result->nama_pos ?>?')"

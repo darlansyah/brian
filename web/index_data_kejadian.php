@@ -5,8 +5,6 @@ authentication();
 
 $kon = koneksi_db();
 $query = mysqli_query($kon, "SELECT masyarakat_pelapor.nama_masyarakat_pelapor as nama_masyarakat,kejadian.* FROM masyarakat_pelapor INNER JOIN kejadian ON masyarakat_pelapor.id_masyarakat_pelapor = kejadian.id_masyarakat_pelapor");
-//print_r($query);
-//exit();
 
 include '../templeting/headerhtml.php';
 include '../templeting/content.php';
@@ -59,7 +57,7 @@ include '../templeting/contenthtml.php';
                                             <td><?php echo $result->longitude ?></td>
                                             <td><?php echo $result->latitude ?></td>
                                             <td><?php echo $result->deskripsi_kejadian ?></td>
-                                               <td> <img src="../<?= $result->gambar ?>" style="height:50px" > </td>
+                                            <td> <img src="../<?= $result->gambar ?>" style="height:50px">' </td>
                                         </tr>
                                         <?php
                                     }

@@ -414,7 +414,7 @@
                 allPos: null,
                 getDataPos: function () {
                     $.ajax({
-                        url: 'http://192.168.43.198/brian/web/ambil_data_pos.php',
+                        url: 'http://localhost/brian/web/ambil_data_pos.php',
                         dataType: 'json',
                         type: 'POST',
                         success: (response) => {
@@ -515,7 +515,7 @@
                 },
                 commit: function () {
                     $.ajax({
-                        url: 'http://192.168.43.198/brian/web/ajax_proses_pelaporan.php',
+                        url: 'http://localhost/brian/web/ajax_proses_pelaporan.php',
                         type: 'POST',
                         dataType: 'json',
                         data: this.formData,

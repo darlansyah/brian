@@ -2,7 +2,6 @@
 
 include '../functions/kumpulan_fungsi.php';
 
-
 $id_kejadian = isset($_REQUEST['id']) ? $_REQUEST['id'] : null;
 
 $kon = koneksi_db();

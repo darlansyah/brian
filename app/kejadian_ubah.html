@@ -383,7 +383,7 @@
             <script>
                     var id_kj = window.localStorage.getItem('id_kj');
                     $.ajax({
-                        url: "http://192.168.43.198/brian/web/ambil_id_kejadian.php",
+                        url: "http://localhost/brian/web/ambil_id_kejadian.php",
                         type: 'POST',
                         dataType: 'json',
                         data: {id_kj: id_kj},
@@ -420,7 +420,7 @@
                         
                         console.log("id_masyarakat_pelapor: " + id_masyarakat_pelapor + "tanggal_waktu_kejadian: " + tanggal_waktu_kejadian + " longitude : " + longitude + " latitude : " + latitude + " deskripsi_kejadian : " + deskripsi_kejadian + " gambar : " + gambar);
                         $.ajax({
-                            url: "http://192.168.43.198/brian/web/ajax_kejadian_simpan.php",
+                            url: "http://localhost/brian/web/ajax_kejadian_simpan.php",
                             type: 'POST',
                             dataType: 'json',
                             data: formData,

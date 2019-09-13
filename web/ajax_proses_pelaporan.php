@@ -3,24 +3,30 @@ include '../functions/kumpulan_fungsi.php';
 
 $conn = koneksi_db();
 
-//$longitude = $_GET['longitude'];
-//$latitude = $_GET['latitude'];
-//$deskripsi = $_GET['deskripsi'];
-//$id_profil = $_GET['id_profil'];
-
+$nama_masyarakat_pelapor = $_POST['nama_masyarakat_pelapor'];
+//$no_ktp = $_POST['no_ktp'];
+$telp = $_POST['telp'];
+$alamat = $_POST['alamat'];
 $longitude = $_POST['longitude'];
 $latitude = $_POST['latitude'];
 $deskripsi = $_POST['deskripsi'];
-$id_profil = $_POST['id_profil'];
+//$id_profil = $_POST['id_profil'];
 
 if (is_array($_FILES)) {
     if (is_uploaded_file($_FILES['gambar']['tmp_name'])) {
-
         $sourcePath2 = $_FILES['gambar']['tmp_name'];
         $fotobaru2 = date('dmYHis') . $_FILES['gambar']['name'];
         $targetPath2 = "../upload/" . $fotobaru2;
         move_uploaded_file($sourcePath2, $targetPath2);
-        $path_database = "upload/" . $fotobaru2;
+        $path_database_kejadian = "upload/" . $fotobaru2;
+    }
+    
+    if (is_uploaded_file($_FILES['no_ktp']['tmp_name'])) {
+        $sourcePath2 = $_FILES['no_ktp']['tmp_name'];
+        $fotobaru2 = date('dmYHis') . $_FILES['no_ktp']['name'];
+        $targetPath2 = "../upload_ktp/" . $fotobaru2;
+        move_uploaded_file($sourcePath2, $targetPath2);
+        $path_database_ktp = "upload_ktp/" . $fotobaru2;
     }
 }
 
@@ -28,19 +34,32 @@ $pos_id = getIdPosTerdekat();
 
 if ($pos_id == null) {
     $status = array(
-        'status' => 'gagal',
-        'error' => 'Tidak ada armada tersedia'
+        'status' => 'Gagal',
+        'error' => 'Tidak Ada Armada Tersedia'
     );
     echo json_encode($status);
     die();
 }
 
+// Insert into table masyarakat_pelapor
+$query = "INSERT INTO masyarakat_pelapor(no_ktp, nama_masyarakat_pelapor, telp, alamat) VALUES("
+        . "'".$path_database_ktp."',"
+        . "'".$nama_masyarakat_pelapor."',"
+        . "'".$telp."',"
+        . "'".$alamat."')";
+
+mysqli_query($conn, $query);
+
+$last_id = mysqli_insert_id($conn);
+
 $query = "INSERT INTO kejadian(id_masyarakat_pelapor, longitude, latitude, deskripsi_kejadian, gambar, id_pos)  
-          VALUES($id_profil, $longitude, $latitude, '$deskripsi', '$path_database', $pos_id)";
+          VALUES($last_id, $longitude, $latitude, '$deskripsi', '$path_database_kejadian', $pos_id)";
 
-mysqli_query($conn, "UPDATE pos SET armada = armada + 1 WHERE id_pos = '$pos_id'");
+mysqli_query($conn, $query);
 
-if (mysqli_query($conn, $query)) {
+$result = mysqli_query($conn, "UPDATE pos SET armada = armada + 1 WHERE id_pos = '$pos_id'");
+
+if ($result) {
     $status  = array( 'status' => 'berhasil' );
     echo json_encode($status);
 } else {
@@ -88,8 +107,8 @@ class Result {
     public function __construct($pos) {
         $this->pos = $pos;
         $this->armadaFree = $pos->armada_max - $pos->armada;
-        $this->lat = $pos->latitude_pos;
-        $this->lng = $pos->longitude_pos;
+        $this->lat = $pos->longitude_pos;
+        $this->lng = $pos->latitude_pos;
     }
 
     public function hitung($latUser, $lngUser) {

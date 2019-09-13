@@ -387,7 +387,7 @@
             var id_ptgs = window.localStorage.getItem('id_ptgs');
 
             $.ajax({
-                url: "http://192.168.43.198/tugas_akhir/ambil_data_petugas.php",
+                url: "http://localhost/tugas_akhir/ambil_data_petugas.php",
                 type: 'POST',
                 dataType: 'json',
                 data: {id_ptgs: id_ptgs},
@@ -410,7 +410,7 @@
 
                 console.log("no_induk_pegawai : " + no_induk_pegawai + " nama_petugas : " + nama_petugas + " id_pos : " + id_pos);
                 $.ajax({
-                    url: "http://192.168.43.198/tugas_akhir/ajax_petugas_simpan.php",
+                    url: "http://localhost/tugas_akhir/ajax_petugas_simpan.php",
                     type: 'POST',
                     dataType: 'json',
                     data: {id_petugas: id_ptgs, no_induk_pegawai: no_induk_pegawai, nama_petugas: nama_petugas, id_pos: id_pos},

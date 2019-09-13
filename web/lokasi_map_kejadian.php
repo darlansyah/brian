@@ -456,8 +456,8 @@
                         });
 
                         Array.prototype.forEach.call(this.allPos, (markerElemen) => {
-                            const long_pos = markerElemen.longitude_pos;
-                            const lat_pos = markerElemen.latitude_pos;
+                            const long_pos = markerElemen.latitude_pos;
+                            const lat_pos = markerElemen.longitude_pos;
                             const point_pos = {lat: parseFloat(lat_pos), lng: parseFloat(long_pos)};
 
                             if (markerElemen.id_pos === this.idPos) {
