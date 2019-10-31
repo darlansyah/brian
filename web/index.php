@@ -2,14 +2,14 @@
 session_start();
 include '../functions/kumpulan_fungsi.php';
 authentication();
-//
+
 $kon = koneksi_db();
 $query = mysqli_query($kon, 
         "SELECT mp.nama_masyarakat_pelapor as nama_masyarakat, mp.telp,kejadian.*, "
         . "pos.* "
         . "FROM masyarakat_pelapor mp "
         . "INNER JOIN kejadian ON mp.id_masyarakat_pelapor = kejadian.id_masyarakat_pelapor "
-        . "JOIN pos ON kejadian.id_pos = pos.id_pos");
+        . "JOIN pos ON kejadian.id_pos = pos.id_pos order by kejadian.tanggal_waktu_kejadian DESC");
 
 // admin & petugas
 $res_admin = mysqli_query($kon, "SELECT * FROM user");
@@ -42,7 +42,7 @@ include '../templeting/contenthtml.php';
                 if ($_SESSION['level_user'] == "admin") {
                     ?>
 
-                <a href ="index_data_akun.php">
+                <a href ="../index_dashboard_web/index_data_akun.php">
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                             <div class="admin-content analysis-progrebar-ctn res-mg-t-15">
                                 <h4 class="text-left text-uppercase"><b>Data Akun</b></h4>
@@ -60,7 +60,7 @@ include '../templeting/contenthtml.php';
                 }
                 ?>
 
-                <a href ="index_data_kejadian.php">
+                <a href ="../index_dashboard_web/index_data_kejadian.php">
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="margin-bottom:1px;">
                         <div class="admin-content analysis-progrebar-ctn res-mg-t-30">
                             <h4 class="text-left text-uppercase"><b>Kejadian</b></h4>
@@ -74,7 +74,7 @@ include '../templeting/contenthtml.php';
                         </div>
                     </div>
                 </a>
-                <a href ="index_data_petugas.php">
+                <a href ="../index_dashboard_web/index_data_petugas.php">
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                         <div class="admin-content analysis-progrebar-ctn res-mg-t-30">
                             <h4 class="text-left text-uppercase"><b>Petugas</b></h4>
@@ -87,7 +87,7 @@ include '../templeting/contenthtml.php';
                         </div>
                     </div>
                 </a>
-                <a href ="index_data_pos.php">
+                <a href ="../index_dashboard_web/index_data_pos.php">
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                         <div class="admin-content analysis-progrebar-ctn res-mg-t-30">
                             <h4 class="text-left text-uppercase"><b>Pos</b></h4>

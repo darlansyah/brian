@@ -389,21 +389,6 @@
                         $('tbody').append('<tr><td>' + no + '</td><td>' + resp[i].no_induk_pegawai + '</td><td>'
                                 + resp[i].nama_petugas + '</td><td>' + resp[i].nama_pos + '</td>');
                     }
-
-                    $('.inputClass').each(function () {
-                        $(this).click(function () {
-                            var id = $(this).attr('id');
-                            //Do whatever the edit function should do with the id
-                            edit_data(id);
-                        });
-                    });
-                    $('.delateClass').each(function () {
-                        $(this).click(function () {
-                            var id = $(this).attr('id');
-                            //Do whatever the edit function should do with the id
-                            hapus_data(id);
-                        });
-                    });
                 }
             });
 

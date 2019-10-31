@@ -3,7 +3,7 @@ session_start();
 require '../functions/kumpulan_fungsi.php';
 authentication();
 $kon = koneksi_db();
-$query = mysqli_query($kon, "SELECT * FROM `pos` ORDER BY `pos`.`id_pos`  ASC");
+$query = mysqli_query($kon, "SELECT * FROM `pos` ORDER BY `pos`.`id_pos` ASC");
 
 
 include '../templeting/headerhtml.php';

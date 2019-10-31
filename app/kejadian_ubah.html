@@ -264,182 +264,227 @@
                                             <input type="hidden" id="id_kj">
                                             <input type="hidden" id="id_masyarakat_pelapor">
                                             <input type="hidden" id="tanggal_waktu_kejadian">
-                                            <div class="row">
-                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                    <div class="review-content-section">
-                                                        <div class="input-group mg-b-pro-edt">
-                                                            <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-                                                            <input required id="longitude" type="text" name="longitude" class="form-control" placeholder="Longitude" value="">
-                                                        </div>
-                                                        <div class="input-group mg-b-pro-edt">
-                                                            <span class="input-group-addon"><i class="fa fa-sticky-note" aria-hidden="true"></i></span>
-                                                            <input required id="deskripsi_kejadian" type="text" name="deskripsi_kejadian" class="form-control" placeholder="Deskripsi Kejadian" value="">
-                                                        </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                <div class="review-content-section">
+                                                    <div class="input-group mg-b-pro-edt">
+                                                        <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                                                        <input type="text" class="form-control data-input" id="nama_masyarakat_pelapor" name="nama_masyarakat_pelapor" placeholder="Nama Pelapor">
                                                     </div>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                    <div class="review-content-section">
-                                                        <div class="input-group mg-b-pro-edt">
-                                                            <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-                                                            <input required id="latitude" type="text" name="latitude" class="form-control" placeholder="Latitude" value="">
-                                                        </div>
-                                                        <div class="input-group mg-b-pro-edt">
-                                                            <span class="input-group-addon"><i class="fa fa-camera" aria-hidden="true"></i></span>
-                                                            <input type="file" class="form-control data-input" name="gambar" placeholder="Upload Gambar">
-                                                        </div>
+                                                    <div class="input-group mg-b-pro-edt">
+                                                        <span class="input-group-addon"><i class="fa fa-sticky-note" aria-hidden="true"></i></span>
+                                                        <input type="file" class="form-control data-input" id="no_ktp" name="no_ktp" placeholder="No KTP">
+                                                    </div>
+                                                    <div class="input-group mg-b-pro-edt">
+                                                        <span class="input-group-addon"><i class="fa fa-mobile-phone" aria-hidden="true"></i></span>
+                                                        <input type="text" class="form-control data-input" id="telp" name="telp" placeholder="No Telephone">
+                                                    </div>
+                                                    <div class="input-group mg-b-pro-edt">
+                                                        <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                                                        <input type="text" class="form-control data-input" id="alamat" name="alamat" placeholder="Alamat">
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                    <div class="text-center mg-b-pro-edt custom-pro-edt-ds">
-                                                        <button id="btn_simpan" type="button" class="btn btn-primary waves-effect waves-light m-r-10">Update
-                                                        </button>
-                                                        <button type="button" onclick="window.history.back()" class="btn btn-primary waves-effect waves-light m-r-10">Batal
-                                                        </button>
+
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                <div class="review-content-section">
+                                                    <div class="input-group mg-b-pro-edt">
+                                                        <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                                                        <input readonly class="form-control data-input" id="longitude" name="longitude" placeholder="Longitude">
+                                                    </div>
+                                                    <div class="input-group mg-b-pro-edt">
+                                                        <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                                                        <input readonly class="form-control data-input" id="latitude" name="latitude" placeholder="Latitude">
                                                     </div>
                                                 </div>
                                             </div>
-                                        </form>
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                <div class="review-content-section">
+                                                    <div class="input-group mg-b-pro-edt">
+                                                        <span class="input-group-addon"><i class="fa fa-sticky-note" aria-hidden="true"></i></span>
+                                                        <input type="text" class="form-control data-input" id="deskripsi_kejadian" name="deskripsi_kejadian" placeholder="Deskripsi Kejadian">
+                                                    </div>
+                                                    Intensitas Kebakaran : 
+                                                    <div class="input-group mg-b-pro-edt">
+                                                        <span class="input-group-addon"><i class="fa fa-bank" aria-hidden="true"></i></span>
+                                                        <select class="form-control data-input" id="intensitas" name="intensitas">
+                                                            <option value="1">Berat</option>
+                                                            <option value="2">Sedang</option>
+                                                            <option value="3" selected>Ringan</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="input-group mg-b-pro-edt">
+                                                        <span class="input-group-addon"><i class="fa fa-camera" aria-hidden="true"></i></span>
+                                                        <input type="file" class="form-control data-input" name="gambar" placeholder="Upload Gambar">
+                                                    </div>
+                                                </div>
+                                            </div>
                                     </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="text-center mg-b-pro-edt custom-pro-edt-ds">
+                                                <button id="btn_simpan" type="button" class="btn btn-primary waves-effect waves-light m-r-10">Update
+                                                </button>
+                                                <button type="button" onclick="window.history.back()" class="btn btn-primary waves-effect waves-light m-r-10">Batal
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Static Table End -->
+        </div>
+        <!-- Static Table End -->
 
-            <!-- footer -->
-            <div class="footer-copyright-area">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="footer-copy-right">
-                                <p>Aplikasi Pemadam Kebakaran Kabupaten Bekasi</p>
-                            </div>
+        <!-- footer -->
+        <div class="footer-copyright-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer-copy-right">
+                            <p>Aplikasi Pemadam Kebakaran Kabupaten Bekasi</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- end footer -->
+        </div>
+        <!-- end footer -->
 
-            <!-- jquery
-                        ============================================ -->
-            <script src="../js/vendor/jquery-1.11.3.min.js"></script>
-            <!-- bootstrap JS
-                        ============================================ -->
-            <script src="../js/bootstrap.min.js"></script>
-            <!-- wow JS
-                        ============================================ -->
-            <script src="../js/wow.min.js"></script>
-            <!-- price-slider JS
-                        ============================================ -->
-            <script src="../js/jquery-price-slider.js"></script>
-            <!-- meanmenu JS
-                        ============================================ -->
-            <script src="../js/jquery.meanmenu.js"></script>
-            <!-- owl.carousel JS
-                        ============================================ -->
-            <script src="../js/owl.carousel.min.js"></script>
-            <!-- sticky JS
-                        ============================================ -->
-            <script src="../js/jquery.sticky.js"></script>
-            <!-- scrollUp JS
-                        ============================================ -->
-            <script src="../js/jquery.scrollUp.min.js"></script>
-            <!-- mCustomScrollbar JS
-                        ============================================ -->
-            <script src="../js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-            <script src="../js/scrollbar/mCustomScrollbar-active.js"></script>
-            <!-- metisMenu JS
-                        ============================================ -->
-            <script src="../js/metisMenu/metisMenu.min.js"></script>
-            <script src="../js/metisMenu/metisMenu-active.js"></script>
-            <!-- morrisjs JS
-                        ============================================ -->
-            <script src="../js/morrisjs/raphael-min.js"></script>
-            <script src="../js/morrisjs/morris.js"></script>
-            <script src="../js/morrisjs/morris-active.js"></script>
-            <!-- morrisjs JS
-                        ============================================ -->
-            <script src="../js/sparkline/jquery.sparkline.min.js"></script>
-            <script src="../js/sparkline/jquery.charts-sparkline.js"></script>
-            <!-- calendar JS
-                        ============================================ -->
-            <script src="../js/calendar/moment.min.js"></script>
-            <script src="../js/calendar/fullcalendar.min.js"></script>
-            <script src="../js/calendar/fullcalendar-active.js"></script>
-            <!-- plugins JS
-                        ============================================ -->
-            <script src="../js/plugins.js"></script>  
-            <!-- Google map JS
-                        ============================================ -->
-            <script src="../js/google.maps/google.maps-active.js"></script>
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiNUO68DkrsFKFz744_LWMqCNI_GqYciQ&callback=initMap"></script>
-            <!-- main JS
-                        ============================================ -->
-            <script src="../js/main.js"></script>
-            <script>
-                    var id_kj = window.localStorage.getItem('id_kj');
-                    $.ajax({
-                        url: "http://localhost/brian/web/ambil_id_kejadian.php",
-                        type: 'POST',
-                        dataType: 'json',
-                        data: {id_kj: id_kj},
-                        success: function (resp) {
-                            $('#id_masyarakat_pelapor').val(resp.id_masyarakat_pelapor);
-                            $('#tanggal_waktu_kejadian').val(resp.tanggal_waktu_kejadian);
-                            $('#longitude').val(resp.longitude);
-                            $('#latitude').val(resp.latitude);
-                            $('#deskripsi_kejadian').val(resp.deskripsi_kejadian);
-                            $('#gambar').val(resp.gambar);
-                            $('#id_kj').val(resp.id_kejadian);
-                        }
-                    });
+        <!-- jquery
+                    ============================================ -->
+        <script src="../js/vendor/jquery-1.11.3.min.js"></script>
+        <!-- bootstrap JS
+                    ============================================ -->
+        <script src="../js/bootstrap.min.js"></script>
+        <!-- wow JS
+                    ============================================ -->
+        <script src="../js/wow.min.js"></script>
+        <!-- price-slider JS
+                    ============================================ -->
+        <script src="../js/jquery-price-slider.js"></script>
+        <!-- meanmenu JS
+                    ============================================ -->
+        <script src="../js/jquery.meanmenu.js"></script>
+        <!-- owl.carousel JS
+                    ============================================ -->
+        <script src="../js/owl.carousel.min.js"></script>
+        <!-- sticky JS
+                    ============================================ -->
+        <script src="../js/jquery.sticky.js"></script>
+        <!-- scrollUp JS
+                    ============================================ -->
+        <script src="../js/jquery.scrollUp.min.js"></script>
+        <!-- mCustomScrollbar JS
+                    ============================================ -->
+        <script src="../js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../js/scrollbar/mCustomScrollbar-active.js"></script>
+        <!-- metisMenu JS
+                    ============================================ -->
+        <script src="../js/metisMenu/metisMenu.min.js"></script>
+        <script src="../js/metisMenu/metisMenu-active.js"></script>
+        <!-- morrisjs JS
+                    ============================================ -->
+        <script src="../js/morrisjs/raphael-min.js"></script>
+        <script src="../js/morrisjs/morris.js"></script>
+        <script src="../js/morrisjs/morris-active.js"></script>
+        <!-- morrisjs JS
+                    ============================================ -->
+        <script src="../js/sparkline/jquery.sparkline.min.js"></script>
+        <script src="../js/sparkline/jquery.charts-sparkline.js"></script>
+        <!-- calendar JS
+                    ============================================ -->
+        <script src="../js/calendar/moment.min.js"></script>
+        <script src="../js/calendar/fullcalendar.min.js"></script>
+        <script src="../js/calendar/fullcalendar-active.js"></script>
+        <!-- plugins JS
+                    ============================================ -->
+        <script src="../js/plugins.js"></script>  
+        <!-- Google map JS
+                    ============================================ -->
+        <script src="../js/google.maps/google.maps-active.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiNUO68DkrsFKFz744_LWMqCNI_GqYciQ&callback=initMap"></script>
+        <!-- main JS
+                    ============================================ -->
+        <script src="../js/main.js"></script>
+        <script>
+            var id_kj = window.localStorage.getItem('id_kj');
+            $.ajax({
+                url: "http://localhost/brian/web/ambil_id_kejadian.php",
+                type: 'POST',
+                dataType: 'json',
+                data: {id_kj: id_kj},
+                success: function (resp) {
+                    $('#id_masyarakat_pelapor').val(resp.id_masyarakat_pelapor);
+                    $('#nama_masyarakat_pelapor').val(resp.nama_masyarakat_pelapor);
+//                                                                $('#no_ktp').val(resp.no_ktp);
+                    $('#telp').val(resp.telp);
+                    $('#alamat').val(resp.alamat);
+                    $('#tanggal_waktu_kejadian').val(resp.tanggal_waktu_kejadian);
+                    $('#longitude').val(resp.longitude);
+                    $('#latitude').val(resp.latitude);
+                    $('#deskripsi_kejadian').val(resp.deskripsi_kejadian);
+//                                                                $('#gambar').val(resp.gambar);
+                    $('#kategori').val(resp.kategori);
+                    $('#id_kj').val(resp.id_kejadian);
+                }
+            });
 
-                    $("#btn_simpan").click(simpan_data);
-                    function simpan_data() {
+            $("#btn_simpan").click(simpan_data);
+            function simpan_data() {
 
-        //                    alert("tombol simpan telah di klik")
-                        var id_masyarakat_pelapor = $("#id_masyarakat_pelapor").val();
-                        var tanggal_waktu_kejadian = $("#tanggal_waktu_kejadian").val();
-                        var longitude = $("#longitude").val();
-                        var latitude = $("#latitude").val();
-                        var deskripsi_kejadian = $("#deskripsi_kejadian").val();
-                        var gambar = $("#gambar").val();
-                        var id_kj = $("#id_kj").val();
-                        
-                    var formData = new FormData($('form')[0]);
-                    formData.append("id_masyarakat_pelapor", id_masyarakat_pelapor);
-                    formData.append("tanggal_waktu_kejadian", tanggal_waktu_kejadian);
-                    formData.append("longitude", longitude);
-                    formData.append("latitude", latitude);
-                    formData.append("deskripsi_kejadian", deskripsi_kejadian);
-                    formData.append("id_kj", id_kj);
-                        
-                        console.log("id_masyarakat_pelapor: " + id_masyarakat_pelapor + "tanggal_waktu_kejadian: " + tanggal_waktu_kejadian + " longitude : " + longitude + " latitude : " + latitude + " deskripsi_kejadian : " + deskripsi_kejadian + " gambar : " + gambar);
-                        $.ajax({
-                            url: "http://localhost/brian/web/ajax_kejadian_simpan.php",
-                            type: 'POST',
-                            dataType: 'json',
-                            data: formData,
-                            contentType: false,
-                            cache: false,
-                            processData: false,
+                //alert("tombol simpan telah di klik")
+                var id_masyarakat_pelapor = $("#id_masyarakat_pelapor").val();
+                var nama_masyarakat_pelapor = $("#nama_masyarakat_pelapor").val();
+                var no_ktp = $("#no_ktp").val();
+                var telp = $("#telp").val();
+                var alamat = $("#alamat").val();
+                var tanggal_waktu_kejadian = $("#tanggal_waktu_kejadian").val();
+                var longitude = $("#longitude").val();
+                var latitude = $("#latitude").val();
+                var deskripsi_kejadian = $("#deskripsi_kejadian").val();
+                var gambar = $("#gambar").val();
+                var kategori = $("#kategori").val();
+                var id_kj = $("#id_kj").val();
+
+                var formData = new FormData($('form')[0]);
+                formData.append("id_masyarakat_pelapor", id_masyarakat_pelapor);
+                formData.append("nama_masyarakat_pelapor", nama_masyarakat_pelapor);
+                formData.append("no_ktp", no_ktp);
+                formData.append("telp", telp);
+                formData.append("alamat", alamat);
+                formData.append("tanggal_waktu_kejadian", tanggal_waktu_kejadian);
+                formData.append("longitude", longitude);
+                formData.append("latitude", latitude);
+                formData.append("deskripsi_kejadian", deskripsi_kejadian);
+                formData.append("kategori", kategori);
+                formData.append("gambar", gambar);
+                formData.append("id_kj", id_kj);
+
+                console.log("id_masyarakat_pelapor: " + id_masyarakat_pelapor + "tanggal_waktu_kejadian: " + tanggal_waktu_kejadian + " longitude : " + longitude + " latitude : " + latitude + " deskripsi_kejadian : " + deskripsi_kejadian + " gambar : " + gambar);
+                $.ajax({
+                    url: "http://localhost/brian/web/ajax_kejadian_simpan.php",
+                    type: 'POST',
+                    dataType: 'json',
+                    data: formData,
+                    contentType: false,
+                    cache: false,
+                    processData: false,
 //                            {id_kejadian: id_kj, id_masyarakat_pelapor: id_masyarakat_pelapor, longitude: longitude, latitude: latitude, deskripsi_kejadian: deskripsi_kejadian, gambar: gambar},
-                            success: function (response) {
-                                window.localStorage.removeItem('id_kj');
-                                if (response.status == "Ok") {
-                                    alert("Data Berhasil disimpan");
-                                    window.location.href = "../app/data_kejadian.html";
-                                } else {
-                                    alert("Data Gagal disimpan");
-                                    window.location.href = "../app/data_kejadian.html";
-                                }
-                            }
-                        });
+                    success: function (response) {
+                        window.localStorage.removeItem('id_kj');
+                        if (response.status == "Ok") {
+                            alert("Data Berhasil disimpan");
+                            window.location.href = "../app/data_kejadian.html";
+                        } else {
+                            alert("Data Gagal disimpan");
+                            window.location.href = "../app/data_kejadian.html";
+                        }
                     }
-            </script>
+                });
+            }
+        </script>
     </body>
 </html>

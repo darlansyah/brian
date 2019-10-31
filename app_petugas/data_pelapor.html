@@ -218,18 +218,18 @@
                                                     <li><a href="data_kejadian.html">DATA KEJADIAN</a></li>
                                                     </ul>-->
                                             </li>
-<!--                                            <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_petugas.html">DATA PETUGAS<span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
-                                                    <li><a href="identitas_petugas.html">IDENTITAS PETUGAS</a></li>
-                                                    <li><a href="data_petugas.html">DATA PETUGAS</a></li>
-                                                    </ul>
-                                            </li>
-                                            <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_pos.html">DATA POS <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                                <ul id="Tablesmob" class="collapse dropdown-header-top">
-                                                    <li><a href="pos_damkar.html">POS DAMKAR</a></li>
-                                                    <li><a href="data_pos.php">DATA POS</a></li>
-                                                    </ul>
-                                            </li>-->
+                                            <!--                                            <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_petugas.html">DATA PETUGAS<span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+                                                                                            <ul id="Tablesmob" class="collapse dropdown-header-top">
+                                                                                                <li><a href="identitas_petugas.html">IDENTITAS PETUGAS</a></li>
+                                                                                                <li><a href="data_petugas.html">DATA PETUGAS</a></li>
+                                                                                                </ul>
+                                                                                        </li>
+                                                                                        <li><a data-toggle="collapse" data-target="#Tablesmob" href="data_pos.html">DATA POS <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+                                                                                            <ul id="Tablesmob" class="collapse dropdown-header-top">
+                                                                                                <li><a href="pos_damkar.html">POS DAMKAR</a></li>
+                                                                                                <li><a href="data_pos.php">DATA POS</a></li>
+                                                                                                </ul>
+                                                                                        </li>-->
                                         </ul>
                                     </nav>
                                 </div>
@@ -288,8 +288,7 @@
                                                                 <th data-field="company" data-editable="true">No KTP</th>
                                                                 <th data-field="price" data-editable="true">No Telephone</th>
                                                                 <th data-field="date" data-editable="true">Alamat</th>
-                                                                <th data-field="action">Action</th>
-                                                            </tr>
+                                                           </tr>
                                                         </thead>
                                                         <tbody>
 
@@ -400,67 +399,22 @@
                 url: "http://localhost/brian/web/ambil_data_pelapor.php",
                 type: 'POST',
                 dataType: 'json',
+                data: {id_profile: window.localStorage.getItem('id_profile')},
                 success: function (resp) {
                     console.log(resp);
                     $('tbody').html('');
                     $('fixed-table-toolbar').html('');
-                    //                                                alert('ajax jalan!!');
-                    //                                                console.log(resp.length);
-                    //                                                console.log(resp[0].nama_masyarakat_pelapor);
                     var no;
                     for (i = 0; i < resp.length; i++) {
                         no = i + 1;
-                        $('tbody').append('<tr><td>' + no + '</td><td>' 
-                                + resp[i].nama_masyarakat_pelapor + '</td><td>' 
-                                + '</td><td><img src="http://localhost/brian/'+resp[i].no_ktp+'" style="height:50px">'
-                                + resp[i].telp + '</td><td>' 
-                                + resp[i].alamat + '</td><td><button id="' 
-                                + resp[i].id_masyarakat_pelapor + '" class="btn btn-outline-primary btn-sm mg-r-5 inputClass"><div><i class="fa fa-pencil"></i></div></button> <button id="' 
-                                + resp[i].id_masyarakat_pelapor + '" class="btn btn-outline-danger btn-sm mg-r-5 delateClass"><div><i class="fa fa-trash"></i></div></button></td>');
+                        $('tbody').append('<tr><td>' + no + '</td><td>'
+                                + resp[i].nama_masyarakat_pelapor + '</td><td>'
+                                + '<img src="http://localhost/brian/' + resp[i].no_ktp + '" style="height:50px">' + '</td><td>'
+                                + resp[i].telp + '</td><td>'
+                                + resp[i].alamat + '</td><td><button id="');
                     }
-
-                    $('.inputClass').each(function () {
-                        $(this).click(function () {
-                            var id = $(this).attr('id');
-                            //Do whatever the edit function should do with the id
-                            edit_data(id);
-                        });
-                    });
-                    $('.delateClass').each(function () {
-                        $(this).click(function () {
-                            var id = $(this).attr('id');
-                            //Do whatever the edit function should do with the id
-                            hapus_data(id);
-                        });
-                    });
-
                 }
             });
-//            function edit_data(id) {
-//                alert('ini id-nya' + id);
-//                window.localStorage.setItem('id_mp', id);
-//                window.location.href = '../app/pelapor_ubah.html';
-//            }
-
-//            function hapus_data(id) {
-//                alert('ini id-nya' + id);
-//                window.localStorage.setItem('id_mp', id);
-//                $.ajax({
-//                    url: "http://localhost/brian/web/ajax_pelapor_hapus.php",
-//                    type: 'POST',
-//                    dataType: 'json',
-//                    data: {id_mp: id},
-//                    success: function (response) {
-//                        if (response.status == "Ok") {
-//                            alert("Data Berhasil Dihapus");
-//                            window.location.href = "../app/data_pelapor.html";
-//                        } else {
-//                            alert("Data Gagal Dihapus");
-//                            window.location.href = "../app/data_pelapor.html";
-//                        }
-//                    }
-//                });
-//            }
             </script>
     </body>
 </html>

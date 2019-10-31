@@ -62,12 +62,13 @@
     </head>
 
     <body>
+
         <!-- cek apa udah login ? -->
-<!--        <script>
-            if (!(localStorage.getItem('sudah_login') == 1)) {
-                window.location.href = 'login.html';
-            }
-        </script>-->
+        <!--        <script>
+                    if (!(localStorage.getItem('sudah_login') == 1)) {
+                        window.location.href = 'login.html';
+                    }
+                </script>-->
         <!-- end cek apa udah login ? -->
 
         <!-- sidebar -->
@@ -124,7 +125,7 @@
                     </nav>
                 </div>
             </nav>
-        </div>
+        </div> 
         <!-- end sidebar -->
 
         <!-- Start Welcome area -->
@@ -322,7 +323,6 @@
                                                         <div class="input-group mg-b-pro-edt">
                                                             <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
                                                             <input readonly class="form-control data-input" id="longitude" name="longitude" placeholder="Longitude">
-
                                                         </div>
                                                         <div class="input-group mg-b-pro-edt">
                                                             <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
@@ -335,6 +335,15 @@
                                                         <div class="input-group mg-b-pro-edt">
                                                             <span class="input-group-addon"><i class="fa fa-sticky-note" aria-hidden="true"></i></span>
                                                             <input type="text" class="form-control data-input" name="deskripsi_kejadian" placeholder="Deskripsi Kejadian">
+                                                        </div>
+                                                        Intensitas Kebakaran : 
+                                                        <div class="input-group mg-b-pro-edt">
+                                                            <span class="input-group-addon"><i class="fa fa-bank" aria-hidden="true"></i></span>
+                                                            <select class="form-control data-input" id="intensitas" name="intensitas">
+                                                                <option value="1">Berat</option>
+                                                                <option value="2">Sedang</option>
+                                                                <option value="3" selected>Ringan</option>
+                                                            </select>
                                                         </div>
                                                         <div class="input-group mg-b-pro-edt">
                                                             <span class="input-group-addon"><i class="fa fa-camera" aria-hidden="true"></i></span>
@@ -369,6 +378,7 @@
                         <div class="col-lg-12">
                             <div class="footer-copy-right">
                                 <p>Aplikasi Pemadam Kebakaran Kabupaten Bekasi</p>
+
                             </div>
                         </div>
                     </div>
@@ -565,8 +575,10 @@
                         let latitude = objInputData[5].value;
                         let deskripsi = objInputData[6].value;
                         let gambar = objInputData[7].value;
+                        let intensitas = objInputData[7].value;
+
 //                        let id_profil = window.localStorage.getItem('id_profile');
-                        
+
                         this.formData = new FormData($('form')[0]);
                         this.formData.append("nama_masyarakat_pelapor", nama_masyarakat_pelapor);
                         this.formData.append("no_ktp", no_ktp);
@@ -576,6 +588,8 @@
                         this.formData.append("latitude", latitude);
                         this.formData.append("deskripsi", deskripsi);
                         this.formData.append("gambar", gambar);
+                        this.formData.append("intensitas",intensitas);
+                        // intensitas
 //                        this.formData.append("id_profil", id_profil);
                     },
                     commit: function () {

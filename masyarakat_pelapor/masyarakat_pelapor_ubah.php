@@ -3,7 +3,6 @@ session_start();
 include '../functions/kumpulan_fungsi.php';
 authentication();
 $id_masyarakat_pelapor = $_GET['id'];
-
 $kon = koneksi_db();
 
 $query = mysqli_query($kon, "SELECT * FROM masyarakat_pelapor WHERE id_masyarakat_pelapor='$id_masyarakat_pelapor'");
@@ -17,7 +16,6 @@ if (mysqli_num_rows($query) > 0) {
         </script>
     ";
 }
-
 
 include '../templeting/headerhtml.php';
 include '../templeting/content.php';
@@ -73,7 +71,7 @@ include '../templeting/contenthtml.php';
                                 </div>
                             </div>
                         </div>
-                </div>
+                    </div>
                 </form>
             </div>
         </div>

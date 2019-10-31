@@ -44,22 +44,3 @@ if ($query) {
     </script>
     ";
 }
-// end my script
-//
-// if ($query) {
-//    flash('kejadian', '<b> Success - </b>Data berhasil disimpan...', 'alert alert-bordered alert-success');
-        //  echo "
-        //    <script>
-        //      window.location.href='index.php?konten=kejadian';
-        // </script>
-        //";
-//} else {
-        //  flash('kejadian', '<b> Fail - </b>Data gagal disimpan...', 'alert alert-bordered alert-danger');
-        //echo"
-        //  <script>
-        //    window.location.href='index.php?konten=kejadian';
-        // </script>
-        //";
-//}
-//
-           

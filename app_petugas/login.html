@@ -158,36 +158,35 @@
   <!-- main JS
   ============================================ -->
   <script src="../js/main.js"></script>
-  <script>
+    <script>
 
+    $('#login').click(proses_login);
 
-  $('#login').click(proses_login);
-  
-  function proses_login(event) {
-    var username = $('#username').val();
-    var pass = $('#pass').val();
-    // console.log(username);
+    function proses_login(event) {
+      var username = $('#username').val();
+      var pass = $('#pass').val();
+      // console.log(username);
 
-    $.ajax({
-      url: "http://localhost/brian/web/ajax_proses_login.php",
-      type: 'POST',
-      data: {username: username, pass: pass},
-      dataType: 'json',
-      success: function (resp) {
-//          console.log(resp);
-        if (resp.status == 'ok') {
-          alert('Anda Berhasil Masuk');
-          window.localStorage.setItem('sudah_login', 1);
-          window.localStorage.setItem('id_profile', resp.data.id_profile);
-          window.localStorage.setItem('nama', resp.data.nama_masyarakat_pelapor);
-          window.location.href = 'index.html';
-        } else {
-          alert('Username atau Password Salah');
-          event.preventDefault();
+      $.ajax({
+        url: "http://localhost/brian/web/ajax_proses_login.php",
+        type: 'POST',
+        data: {username: username, pass: pass},
+        dataType: 'json',
+        success: function (resp) {
+  //          console.log(resp);
+          if (resp.status == 'ok') {
+            alert('Anda Berhasil Masuk');
+            window.localStorage.setItem('sudah_login', 1);
+            window.localStorage.setItem('id_profile', resp.data.id_profile);
+            window.localStorage.setItem('nama', resp.data.nama_masyarakat_pelapor);
+            window.location.href = 'index.html';
+          } else {
+            alert('Username atau Password Salah');
+            event.preventDefault();
+          }
         }
-      }
-    });
-  }
-  </script>
+      });
+    }
+    </script>
 </body>
 </html>

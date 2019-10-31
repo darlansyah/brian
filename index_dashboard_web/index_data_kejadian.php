@@ -4,7 +4,7 @@ include '../functions/kumpulan_fungsi.php';
 authentication();
 
 $kon = koneksi_db();
-$query = mysqli_query($kon, "SELECT masyarakat_pelapor.nama_masyarakat_pelapor as nama_masyarakat,kejadian.* FROM masyarakat_pelapor INNER JOIN kejadian ON masyarakat_pelapor.id_masyarakat_pelapor = kejadian.id_masyarakat_pelapor");
+$query = mysqli_query($kon, "SELECT masyarakat_pelapor.nama_masyarakat_pelapor as nama_masyarakat,kejadian.* FROM masyarakat_pelapor INNER JOIN kejadian ON masyarakat_pelapor.id_masyarakat_pelapor = kejadian.id_masyarakat_pelapor ORDER BY kejadian.tanggal_waktu_kejadian DESC");
 
 include '../templeting/headerhtml.php';
 include '../templeting/content.php';
@@ -42,7 +42,7 @@ include '../templeting/contenthtml.php';
                                         <th data-field="longitude" data-editable="true">Longitude</th>
                                         <th data-field="latitude" data-editable="true">Latitude</th>
                                         <th data-field="deskripsi_kejadian" data-editable="true">Deskripsi</th>
-                                        <th data-field="gambar" data-editable="true">Gambar</th>
+                                        <th data-field="gambar" >Gambar</th>
                                     </tr>
                                 </thead>
                                 <tbody>

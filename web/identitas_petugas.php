@@ -7,7 +7,7 @@ include '../templeting/content.php';
 include '../templeting/logo.php';
 include '../templeting/contenthtml.php';
 $kon = koneksi_db();
-$result = mysqli_query($kon, "SELECT * FROM pos");
+$result = mysqli_query($kon, "SELECT * FROM petugas");
 ?>
 
 <!-- Single pro tab review Start-->
@@ -44,8 +44,6 @@ $result = mysqli_query($kon, "SELECT * FROM pos");
                                                         <?php
                                                     }
                                                     ?>
-
-
                                                 </select>
                                             </div>
                                         </div>

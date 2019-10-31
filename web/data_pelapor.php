@@ -3,10 +3,8 @@ session_start();
 require '../functions/kumpulan_fungsi.php';
 authentication();
 $kon = koneksi_db();
-$query = mysqli_query($kon, "SELECT * FROM `masyarakat_pelapor`  
-    JOIN user on user.id_profile = masyarakat_pelapor.id_masyarakat_pelapor 
-ORDER BY masyarakat_pelapor.`id_masyarakat_pelapor`  DESC");
 
+$query = mysqli_query($kon, "SELECT * FROM masyarakat_pelapor ORDER BY id_masyarakat_pelapor DESC");
 
 include '../templeting/headerhtml.php';
 include '../templeting/content.php';
@@ -40,7 +38,7 @@ include '../templeting/contenthtml.php';
                                     <tr>
                                         <th data-field="id">No</th>
                                         <th data-field="name" data-editable="true">Nama</th>
-                                        <th data-field="company" data-editable="true">No KTP</th>
+                                        <th data-field="company" >No KTP</th>
                                         <th data-field="price" data-editable="true">No Telephone</th>
                                         <th data-field="date" data-editable="true">Alamat</th>
                                         <th data-field="action">Action</th>
@@ -50,12 +48,13 @@ include '../templeting/contenthtml.php';
                                     <?php
                                     $no = 1;
                                     while ($result = mysqli_fetch_object($query)) {
+                                        
                                         ?>
 
                                         <tr>
                                             <td><?php echo $no++; ?></td>
                                             <td><?php echo $result->nama_masyarakat_pelapor; ?></td>
-                                            <td><img src="../<?= $result->no_ktp ?>" style="height:50px" ></td>
+                                            <td><img src="../<?= $result->no_ktp ?>" style="height:50px" /></td>
                                             <td><?php echo $result->telp; ?></td>
                                             <td><?php echo $result->alamat; ?></td>
                                             <td>
